@@ -1,0 +1,33 @@
+# Entornos Python
+venv/
+.venv/
+test_env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Datos crudos y externos
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.parquet
+data/external/*.csv
+data/external/*.xlsx
+data/external/*.parquet
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Editores
+.vscode/
+.idea/

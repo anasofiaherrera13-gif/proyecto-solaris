@@ -1,0 +1,20 @@
+{
+    "fecha": "2026-09-15 23:12:17",
+    "random_seed": 42,
+    "auc_cv": 0.9613760747354497,
+    "auc_train": 0.9995492724867725,
+    "auc_test": 0.9556574074074073,
+    "diferencia_auc": 0.043891865079365155,
+    "precision_moroso": 0.9191489361702128,
+    "recall_moroso": 0.6,
+    "f1_moroso": 0.7260504201680672,
+    "accuracy": 0.933739837398374,
+    "estado_leakage": "Diferencia aceptable - pipeline validado",
+    "metodo_optimizacion": "GridSearchCV",
+    "mejores_hiperparametros": {
+        "classifier__max_depth": 20,
+        "classifier__min_samples_leaf": 1,
+        "classifier__min_samples_split": 2,
+        "classifier__n_estimators": 400
+    }
+}
