@@ -1,0 +1,5 @@
+﻿Algoritmo,Interpretabilidad (25%),Velocidad_entrenamiento (5%),Rendimiento (25%),Coste_produccion (5%),Sensibilidad_outliers (15%),Robustez_variables_irrelevantes (10%),Manejo_datos_mixtos (8%),Time_to_market (7%),Puntaje_ponderado,AUC_medio,AUC_std,Tiempo_segundos
+Random Forest,3,2,5,3,5,5,3,4,4.0200000000000005,0.9699929728835979,0.005185674263894114,5.817878799978644
+Regresión Logística,5,5,4,5,2,3,3,5,3.94,0.9474470899470899,0.004209380231831437,0.39458109997212887
+XGBoost,3,5,5,4,4,4,3,3,3.9000000000000004,0.9728819444444445,0.0027229698854977216,1.5519378000171855
+SVM RBF,2,4,3,2,2,2,2,3,2.4200000000000004,0.9202612433862434,0.009684190563336553,3.979168999940157
