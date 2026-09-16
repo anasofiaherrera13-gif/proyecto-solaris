@@ -56,7 +56,7 @@ Sin embargo, el **recall de la clase Moroso (0.6278)** todavía se encuentra por
 Clonar el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/anasofiaherrera13-gif/proyecto-solaris.git
 cd proyecto-solaris
 ```
 
