@@ -16,7 +16,6 @@ __pycache__/
 .env.*
 
 # Datos crudos y externos
-data/raw/*.csv
 data/raw/*.xlsx
 data/raw/*.parquet
 data/external/*.csv

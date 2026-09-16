@@ -131,7 +131,9 @@ notebooks/03_modeling_pipeline.ipynb
 
 ### Dataset crudo
 
-El dataset crudo no se versiona en Git. Para ejecutar los notebooks 01 y 02 desde cero, debe obtenerse desde la fuente autorizada del curso o proyecto y ubicarse con este nombre:
+El dataset utilizado en el proyecto es ficticio y se incluye en el repositorio para facilitar la reproducibilidad completa del flujo.
+
+Se encuentra en:
 
 ```text
 data/raw/SOLARIS_FrescaMar_cartera_credito.csv
