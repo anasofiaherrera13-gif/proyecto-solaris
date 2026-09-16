@@ -40,7 +40,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 RANDOM_SEED = 42
 MODEL_VERSION = "v1"
-MODEL_DATE = "20260915"
+MODEL_DATE = "20260916"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data" / "processed"
