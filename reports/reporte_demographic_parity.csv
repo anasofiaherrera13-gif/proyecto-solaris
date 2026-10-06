@@ -1,0 +1,25 @@
+variable_sensible,subgrupo,n,tasa_prediccion_positiva
+rango_edad,50-59,384,0.1224
+rango_edad,≤29,454,0.0991
+rango_edad,30-39,363,0.1212
+rango_edad,40-49,334,0.1138
+rango_edad,70+,370,0.0757
+rango_edad,60-69,377,0.0796
+nivel_educativo,Tecnólogo,429,0.1026
+nivel_educativo,Secundaria,607,0.0939
+nivel_educativo,Técnico,499,0.1042
+nivel_educativo,Universitario,592,0.1098
+nivel_educativo,Primaria,145,0.0966
+nivel_educativo,Posgrado,188,0.0904
+ciudad_auditoria,Cali,205,0.1171
+ciudad_auditoria,Bucaramanga,194,0.0928
+ciudad_auditoria,Manizales,218,0.1284
+ciudad_auditoria,Ibagué,197,0.0812
+ciudad_auditoria,Cúcuta,200,0.095
+ciudad_auditoria,Pereira,214,0.1262
+ciudad_auditoria,Medellín,217,0.1152
+ciudad_auditoria,Bogotá,225,0.12
+ciudad_auditoria,Villavicencio,191,0.0942
+ciudad_auditoria,Barranquilla,202,0.0941
+ciudad_auditoria,Santa Marta,198,0.0657
+ciudad_auditoria,Cartagena,199,0.0754

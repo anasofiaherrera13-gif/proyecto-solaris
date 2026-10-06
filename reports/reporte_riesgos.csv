@@ -1,0 +1,4 @@
+Variable_Dimension,Tipo_Riesgo,Nivel_Severidad,Evidencia_Cuantitativa,Impacto_Potencial
+ciudad,Equalized Odds - brecha TPR,ALTO,TPR Medellín=0.7333; TPR Cartagena=0.4800; brecha TPR=0.2533; brecha FPR=0.0176,"El modelo detecta una proporción considerablemente menor de clientes realmente morosos en algunas ciudades, especialmente Cartagena."
+rango_edad,Equalized Odds - brecha TPR,MEDIO,TPR 30-39=0.7368; TPR 60-69=0.5490; brecha TPR=0.1878; brecha FPR=0.0096,La capacidad para detectar correctamente la mora varía entre grupos de edad.
+nivel_educativo,Equalized Odds - brecha TPR,MEDIO,TPR Técnico=0.6765; TPR Posgrado=0.5517; brecha TPR=0.1248; brecha FPR=0.0076,La sensibilidad del modelo para detectar mora es diferente entre niveles educativos.

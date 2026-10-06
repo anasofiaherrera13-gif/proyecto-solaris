@@ -1,0 +1,25 @@
+variable_sensible,subgrupo,n,accuracy,auc_roc,f1
+rango_edad,50-59,384,0.9271,0.9629,0.75
+rango_edad,≤29,454,0.9229,0.9569,0.6903
+rango_edad,30-39,363,0.9532,0.975,0.8317
+rango_edad,40-49,334,0.9431,0.9742,0.7912
+rango_edad,70+,370,0.9486,0.9501,0.7324
+rango_edad,60-69,377,0.9337,0.9311,0.6914
+nivel_educativo,Tecnólogo,429,0.9441,0.965,0.7692
+nivel_educativo,Secundaria,607,0.9292,0.9529,0.7034
+nivel_educativo,Técnico,499,0.9439,0.9779,0.7667
+nivel_educativo,Universitario,592,0.9341,0.9469,0.7547
+nivel_educativo,Primaria,145,0.9379,0.977,0.7429
+nivel_educativo,Posgrado,188,0.9255,0.9384,0.6957
+ciudad_auditoria,Cali,205,0.9463,0.941,0.7925
+ciudad_auditoria,Bucaramanga,194,0.9124,0.9642,0.6667
+ciudad_auditoria,Manizales,218,0.9312,0.9534,0.7692
+ciudad_auditoria,Ibagué,197,0.9492,0.9537,0.7619
+ciudad_auditoria,Cúcuta,200,0.92,0.976,0.6923
+ciudad_auditoria,Pereira,214,0.9252,0.9612,0.75
+ciudad_auditoria,Medellín,217,0.9493,0.98,0.8
+ciudad_auditoria,Bogotá,225,0.9511,0.9484,0.8254
+ciudad_auditoria,Villavicencio,191,0.9529,0.9784,0.7692
+ciudad_auditoria,Barranquilla,202,0.9356,0.9609,0.7347
+ciudad_auditoria,Santa Marta,198,0.9394,0.9578,0.6667
+ciudad_auditoria,Cartagena,199,0.9196,0.9462,0.6

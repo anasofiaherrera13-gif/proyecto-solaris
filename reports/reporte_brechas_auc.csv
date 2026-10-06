@@ -1,0 +1,4 @@
+variable,auc_max,grupo_mejor_auc,auc_min,grupo_peor_auc,brecha_auc,evaluacion
+rango_edad,0.975,30-39,0.9311,60-69,0.0439,OK
+nivel_educativo,0.9779,Técnico,0.9384,Posgrado,0.0395,OK
+ciudad_auditoria,0.98,Medellín,0.941,Cali,0.039,OK

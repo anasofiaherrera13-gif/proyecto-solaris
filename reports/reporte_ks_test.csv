@@ -1,0 +1,9 @@
+variable,n_referencia,n_reciente,estadistico_KS,p_valor,alerta
+saldo_actual,12164,136,0.0937,0.178593,OK
+cuotas_pagadas,12164,136,0.0556,0.781354,OK
+score_externo,11111,121,0.0551,0.839061,OK
+cuotas_totales,12164,136,0.0353,0.994281,OK
+edad,11327,126,0.0502,0.894598,OK
+ingreso_mensual,12164,136,0.1101,0.071764,OK
+ciudad,12164,136,,,NO APLICA - CATEGÓRICA
+nivel_educativo,12164,136,,,NO APLICA - CATEGÓRICA

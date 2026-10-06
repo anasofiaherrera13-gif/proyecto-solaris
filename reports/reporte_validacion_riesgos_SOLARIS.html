@@ -1,0 +1,1744 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+Reporte de Validación y Riesgos - SOLARIS
+</title>
+
+
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background-color: #f3f4f6;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    padding: 45px 55px;
+    box-shadow: 0px 2px 14px rgba(0,0,0,0.08);
+}
+
+h1 {
+    color: #17365d;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #17365d;
+    margin-top: 38px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #dbe2ea;
+}
+
+h3 {
+    color: #263f5f;
+    margin-top: 25px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.tabla th {
+    background-color: #eaf0f6;
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla td {
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.resumen {
+    background-color: #f4f7fa;
+    border-left: 5px solid #17365d;
+    padding: 18px 22px;
+    margin: 20px 0;
+}
+
+.alerta {
+    background-color: #fff2f2;
+    border-left: 5px solid #b91c1c;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.ok {
+    background-color: #f0f9f4;
+    border-left: 5px solid #15803d;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.nota {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.limitacion {
+    background-color: #fffbea;
+    border-left: 5px solid #ca8a04;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+code {
+    background-color: #edf0f3;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .contenedor {
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="contenedor">
+
+
+<h1>
+Reporte de Validación y Riesgos
+</h1>
+
+<p class="subtitulo">
+Proyecto SOLARIS · QUANTUM ANALYTICS · Módulo 4
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- 1. RESUMEN EJECUTIVO -->
+<!-- ====================================================== -->
+
+<h2>
+1. Resumen ejecutivo
+</h2>
+
+
+<div class="resumen">
+
+<p>
+La validación temporal del modelo SOLARIS no encontró evidencia
+estadísticamente significativa de <i>covariate shift</i> en las seis
+variables numéricas prioritarias.
+
+Todas presentaron valores p superiores a 0.05 en el KS Test,
+por lo que ninguna activó el análisis mediante PSI.
+
+La ventana reciente estuvo compuesta por
+<strong>136 distribuidores</strong> vinculados entre el
+20 de mayo y el 30 de junio de 2025, frente a
+<strong>12.164 observaciones históricas</strong> de referencia.
+
+Debido al tamaño reducido de la ventana reciente,
+los resultados deben interpretarse como evidencia de monitoreo
+y no como prueba definitiva de ausencia de degradación.
+</p>
+
+
+<p>
+En la validación por subgrupos no se identificaron diferencias
+de AUC-ROC superiores a 0.05 ni alertas de Demographic Parity
+superiores a 0.10.
+
+Sin embargo, Equalized Odds reveló diferencias importantes
+en la capacidad del modelo para identificar correctamente
+a los clientes realmente morosos.
+
+La brecha de TPR alcanzó
+<strong>0.2533 por ciudad</strong>,
+<strong>0.1878 por rango de edad</strong> y
+<strong>0.1248 por nivel educativo</strong>.
+
+Estos resultados constituyen los principales riesgos identificados
+y requieren acciones de mitigación y monitoreo antes del despliegue.
+</p>
+
+</div>
+
+
+
+<!-- ====================================================== -->
+<!-- 2. DATOS ANALIZADOS -->
+<!-- ====================================================== -->
+
+<h2>
+2. Datos analizados
+</h2>
+
+
+<p>
+El análisis consideró únicamente distribuidores con estado
+<strong>Al día</strong> o <strong>Moroso</strong>,
+manteniendo la misma población utilizada por el modelo y
+excluyendo los registros con estado
+<strong>Cancelado</strong>.
+</p>
+
+
+<ul>
+
+<li>
+<strong>Datos de referencia:</strong>
+12.164 observaciones entre el
+1 de enero de 2015 y el 19 de mayo de 2025.
+</li>
+
+<li>
+<strong>Datos recientes:</strong>
+136 observaciones entre el
+20 de mayo y el 30 de junio de 2025.
+</li>
+
+<li>
+<strong>Fecha de corte:</strong>
+19 de mayo de 2025.
+</li>
+
+<li>
+<strong>Ventana reciente:</strong>
+6 semanas.
+</li>
+
+<li>
+<strong>Total analizado:</strong>
+12.300 observaciones.
+</li>
+
+</ul>
+
+
+<p class="nota">
+
+La variable temporal disponible es
+<code>fecha_vinculacion</code>.
+
+Por tanto, este análisis permite estudiar cambios en el perfil
+de los distribuidores vinculados recientemente frente al histórico,
+pero no demuestra cambios en el comportamiento posterior de
+clientes ya existentes.
+
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- 3. DISTRIBUTIONAL SHIFT -->
+<!-- ====================================================== -->
+
+<h2>
+3. Resultados de Distributional Shift
+</h2>
+
+
+<h3>
+KS Test
+</h3>
+
+
+<p>
+El Test de Kolmogórov-Smirnov se aplicó a las variables numéricas
+prioritarias del modelo.
+
+Los criterios utilizados fueron:
+</p>
+
+<ul>
+
+<li>
+<strong>CRÍTICO:</strong>
+p &lt; 0.01
+</li>
+
+<li>
+<strong>REVISAR:</strong>
+p &lt; 0.05
+</li>
+
+<li>
+<strong>OK:</strong>
+p ≥ 0.05
+</li>
+
+</ul>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable</th>
+      <th>n_referencia</th>
+      <th>n_reciente</th>
+      <th>estadistico_KS</th>
+      <th>p_valor</th>
+      <th>alerta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>saldo_actual</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>0.093700</td>
+      <td>0.178593</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>cuotas_pagadas</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>0.055600</td>
+      <td>0.781354</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>score_externo</td>
+      <td>11111</td>
+      <td>121</td>
+      <td>0.055100</td>
+      <td>0.839061</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>cuotas_totales</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>0.035300</td>
+      <td>0.994281</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>edad</td>
+      <td>11327</td>
+      <td>126</td>
+      <td>0.050200</td>
+      <td>0.894598</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>ingreso_mensual</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>0.110100</td>
+      <td>0.071764</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>ciudad</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>—</td>
+      <td>—</td>
+      <td>NO APLICA - CATEGÓRICA</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>12164</td>
+      <td>136</td>
+      <td>—</td>
+      <td>—</td>
+      <td>NO APLICA - CATEGÓRICA</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="ok">
+
+<strong>Resultado:</strong>
+
+No se encontró evidencia estadísticamente significativa de
+covariate shift en las variables numéricas evaluadas.
+
+La variable más cercana al umbral fue
+<code>ingreso_mensual</code>,
+con:
+
+<strong>KS = 0.1101</strong>
+
+y
+
+<strong>p = 0.071764</strong>.
+
+</div>
+
+
+
+<h3>
+Population Stability Index (PSI)
+</h3>
+
+
+
+    <p>
+        Ninguna variable presentó una alerta
+        <strong>REVISAR</strong> o <strong>CRÍTICO</strong>
+        en el KS Test.
+    </p>
+
+    <p>
+        Por esta razón, de acuerdo con el procedimiento definido
+        para la actividad, no fue necesario calcular PSI para esta
+        ventana temporal.
+    </p>
+
+    <p>
+        Para futuras evaluaciones se utilizarán los siguientes criterios:
+    </p>
+
+    <ul>
+        <li>PSI &lt; 0.1: ESTABLE</li>
+        <li>0.1 ≤ PSI &lt; 0.2: MODERADO</li>
+        <li>PSI ≥ 0.2: CRÍTICO</li>
+    </ul>
+    
+
+
+
+<!-- ====================================================== -->
+<!-- 4. VALIDACIÓN POR SUBGRUPOS -->
+<!-- ====================================================== -->
+
+<h2>
+4. Validación por subgrupos
+</h2>
+
+
+<p>
+El desempeño del modelo fue evaluado sobre el conjunto de prueba
+independiente compuesto por
+<strong>2.460 observaciones</strong>.
+
+Se calcularon las métricas
+Accuracy, AUC-ROC y F1
+para los siguientes grupos:
+</p>
+
+<ul>
+
+<li>Rango de edad</li>
+<li>Nivel educativo</li>
+<li>Ciudad</li>
+
+</ul>
+
+
+<p>
+Solo se consideraron grupos con más de
+<strong>30 observaciones</strong>.
+</p>
+
+
+
+<h3>
+Brechas de AUC-ROC
+</h3>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable</th>
+      <th>auc_max</th>
+      <th>grupo_mejor_auc</th>
+      <th>auc_min</th>
+      <th>grupo_peor_auc</th>
+      <th>brecha_auc</th>
+      <th>evaluacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>0.9750</td>
+      <td>30-39</td>
+      <td>0.9311</td>
+      <td>60-69</td>
+      <td>0.0439</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>0.9779</td>
+      <td>Técnico</td>
+      <td>0.9384</td>
+      <td>Posgrado</td>
+      <td>0.0395</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>0.9800</td>
+      <td>Medellín</td>
+      <td>0.9410</td>
+      <td>Cali</td>
+      <td>0.0390</td>
+      <td>OK</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="ok">
+
+Ninguna dimensión presentó una diferencia de
+AUC-ROC superior al umbral de
+<strong>0.05</strong>.
+
+La mayor brecha fue de
+<strong>0.0439</strong>
+por rango de edad.
+
+</div>
+
+
+
+<h3>
+Resultados completos por subgrupo
+</h3>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable_sensible</th>
+      <th>subgrupo</th>
+      <th>n</th>
+      <th>accuracy</th>
+      <th>auc_roc</th>
+      <th>f1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>50-59</td>
+      <td>384</td>
+      <td>0.9271</td>
+      <td>0.9629</td>
+      <td>0.7500</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>≤29</td>
+      <td>454</td>
+      <td>0.9229</td>
+      <td>0.9569</td>
+      <td>0.6903</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>30-39</td>
+      <td>363</td>
+      <td>0.9532</td>
+      <td>0.9750</td>
+      <td>0.8317</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>40-49</td>
+      <td>334</td>
+      <td>0.9431</td>
+      <td>0.9742</td>
+      <td>0.7912</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>70+</td>
+      <td>370</td>
+      <td>0.9486</td>
+      <td>0.9501</td>
+      <td>0.7324</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>60-69</td>
+      <td>377</td>
+      <td>0.9337</td>
+      <td>0.9311</td>
+      <td>0.6914</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Tecnólogo</td>
+      <td>429</td>
+      <td>0.9441</td>
+      <td>0.9650</td>
+      <td>0.7692</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Secundaria</td>
+      <td>607</td>
+      <td>0.9292</td>
+      <td>0.9529</td>
+      <td>0.7034</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Técnico</td>
+      <td>499</td>
+      <td>0.9439</td>
+      <td>0.9779</td>
+      <td>0.7667</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Universitario</td>
+      <td>592</td>
+      <td>0.9341</td>
+      <td>0.9469</td>
+      <td>0.7547</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Primaria</td>
+      <td>145</td>
+      <td>0.9379</td>
+      <td>0.9770</td>
+      <td>0.7429</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Posgrado</td>
+      <td>188</td>
+      <td>0.9255</td>
+      <td>0.9384</td>
+      <td>0.6957</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cali</td>
+      <td>205</td>
+      <td>0.9463</td>
+      <td>0.9410</td>
+      <td>0.7925</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bucaramanga</td>
+      <td>194</td>
+      <td>0.9124</td>
+      <td>0.9642</td>
+      <td>0.6667</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Manizales</td>
+      <td>218</td>
+      <td>0.9312</td>
+      <td>0.9534</td>
+      <td>0.7692</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Ibagué</td>
+      <td>197</td>
+      <td>0.9492</td>
+      <td>0.9537</td>
+      <td>0.7619</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cúcuta</td>
+      <td>200</td>
+      <td>0.9200</td>
+      <td>0.9760</td>
+      <td>0.6923</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Pereira</td>
+      <td>214</td>
+      <td>0.9252</td>
+      <td>0.9612</td>
+      <td>0.7500</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Medellín</td>
+      <td>217</td>
+      <td>0.9493</td>
+      <td>0.9800</td>
+      <td>0.8000</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bogotá</td>
+      <td>225</td>
+      <td>0.9511</td>
+      <td>0.9484</td>
+      <td>0.8254</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Villavicencio</td>
+      <td>191</td>
+      <td>0.9529</td>
+      <td>0.9784</td>
+      <td>0.7692</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Barranquilla</td>
+      <td>202</td>
+      <td>0.9356</td>
+      <td>0.9609</td>
+      <td>0.7347</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Santa Marta</td>
+      <td>198</td>
+      <td>0.9394</td>
+      <td>0.9578</td>
+      <td>0.6667</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cartagena</td>
+      <td>199</td>
+      <td>0.9196</td>
+      <td>0.9462</td>
+      <td>0.6000</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+Aunque las brechas de AUC-ROC permanecen dentro del criterio
+establecido, se observaron diferencias mayores en F1.
+
+Por ciudad, por ejemplo,
+<strong>Cartagena presenta F1 = 0.6000</strong>,
+mientras
+<strong>Bogotá alcanza F1 = 0.8254</strong>.
+
+Este comportamiento no activa la alerta definida por AUC-ROC,
+pero indica que la calidad de la clasificación positiva puede
+variar entre grupos.
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- 5. FAIRNESS -->
+<!-- ====================================================== -->
+
+<h2>
+5. Análisis de Fairness
+</h2>
+
+
+
+<!-- ---------------- DEMOGRAPHIC PARITY ---------------- -->
+
+<h3>
+Demographic Parity
+</h3>
+
+
+<p>
+La clase positiva corresponde a:
+
+<strong>Moroso = 1</strong>.
+
+Por tanto, la tasa de predicción positiva representa la proporción
+de distribuidores clasificados como morosos en cada grupo.
+</p>
+
+
+<p>
+Se estableció como criterio de alerta una diferencia superior a:
+
+<strong>0.10 (10 puntos porcentuales)</strong>.
+</p>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable_sensible</th>
+      <th>grupo_mayor_tasa</th>
+      <th>tasa_max</th>
+      <th>grupo_menor_tasa</th>
+      <th>tasa_min</th>
+      <th>brecha_dp</th>
+      <th>evaluacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>50-59</td>
+      <td>0.1224</td>
+      <td>70+</td>
+      <td>0.0757</td>
+      <td>0.0467</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Universitario</td>
+      <td>0.1098</td>
+      <td>Posgrado</td>
+      <td>0.0904</td>
+      <td>0.0194</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Manizales</td>
+      <td>0.1284</td>
+      <td>Santa Marta</td>
+      <td>0.0657</td>
+      <td>0.0627</td>
+      <td>OK</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="ok">
+
+<strong>Resultado:</strong>
+
+No se identificaron alertas de Demographic Parity.
+
+La mayor brecha fue por ciudad, con:
+
+<strong>0.0627</strong>,
+
+valor inferior al umbral de 0.10.
+
+</div>
+
+
+
+<h3>
+Tasas completas de Demographic Parity
+</h3>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable_sensible</th>
+      <th>subgrupo</th>
+      <th>n</th>
+      <th>tasa_prediccion_positiva</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>50-59</td>
+      <td>384</td>
+      <td>0.1224</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>≤29</td>
+      <td>454</td>
+      <td>0.0991</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>30-39</td>
+      <td>363</td>
+      <td>0.1212</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>40-49</td>
+      <td>334</td>
+      <td>0.1138</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>70+</td>
+      <td>370</td>
+      <td>0.0757</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>60-69</td>
+      <td>377</td>
+      <td>0.0796</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Tecnólogo</td>
+      <td>429</td>
+      <td>0.1026</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Secundaria</td>
+      <td>607</td>
+      <td>0.0939</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Técnico</td>
+      <td>499</td>
+      <td>0.1042</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Universitario</td>
+      <td>592</td>
+      <td>0.1098</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Primaria</td>
+      <td>145</td>
+      <td>0.0966</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Posgrado</td>
+      <td>188</td>
+      <td>0.0904</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cali</td>
+      <td>205</td>
+      <td>0.1171</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bucaramanga</td>
+      <td>194</td>
+      <td>0.0928</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Manizales</td>
+      <td>218</td>
+      <td>0.1284</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Ibagué</td>
+      <td>197</td>
+      <td>0.0812</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cúcuta</td>
+      <td>200</td>
+      <td>0.0950</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Pereira</td>
+      <td>214</td>
+      <td>0.1262</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Medellín</td>
+      <td>217</td>
+      <td>0.1152</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bogotá</td>
+      <td>225</td>
+      <td>0.1200</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Villavicencio</td>
+      <td>191</td>
+      <td>0.0942</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Barranquilla</td>
+      <td>202</td>
+      <td>0.0941</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Santa Marta</td>
+      <td>198</td>
+      <td>0.0657</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cartagena</td>
+      <td>199</td>
+      <td>0.0754</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- ---------------- EQUALIZED ODDS ---------------- -->
+
+<h3>
+Equalized Odds
+</h3>
+
+
+<p>
+Se compararon las tasas de verdaderos positivos
+<strong>(TPR)</strong>
+y falsos positivos
+<strong>(FPR)</strong>
+entre grupos.
+
+Las diferencias de FPR son reducidas,
+pero se detectaron brechas considerables en TPR.
+</p>
+
+
+<div class="limitacion">
+
+<strong>Consideración sobre el tamaño de los grupos:</strong>
+
+<p>
+Aunque todos los subgrupos incluidos superan las
+30 observaciones, el número de casos realmente morosos
+dentro de algunos grupos es relativamente reducido.
+</p>
+
+<p>
+Por ejemplo, Cartagena contiene
+<strong>25 clientes realmente morosos</strong>:
+
+12 verdaderos positivos + 13 falsos negativos.
+
+Medellín contiene
+<strong>30 clientes realmente morosos</strong>:
+
+22 verdaderos positivos + 8 falsos negativos.
+</p>
+
+<p>
+Por esta razón, las diferencias de TPR deben interpretarse como
+<strong>señales de riesgo que requieren seguimiento</strong>
+y no como evidencia definitiva de discriminación.
+
+Cambios de pocos casos pueden producir variaciones relevantes
+en la TPR cuando el número de positivos reales por subgrupo
+es reducido.
+</p>
+
+</div>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable_sensible</th>
+      <th>TPR_max</th>
+      <th>grupo_TPR_max</th>
+      <th>TPR_min</th>
+      <th>grupo_TPR_min</th>
+      <th>brecha_TPR</th>
+      <th>FPR_max</th>
+      <th>grupo_FPR_max</th>
+      <th>FPR_min</th>
+      <th>grupo_FPR_min</th>
+      <th>brecha_FPR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>0.7368</td>
+      <td>30-39</td>
+      <td>0.5490</td>
+      <td>60-69</td>
+      <td>0.1878</td>
+      <td>0.0157</td>
+      <td>50-59</td>
+      <td>0.0061</td>
+      <td>70+</td>
+      <td>0.0096</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>0.6765</td>
+      <td>Técnico</td>
+      <td>0.5517</td>
+      <td>Posgrado</td>
+      <td>0.1248</td>
+      <td>0.0139</td>
+      <td>Técnico</td>
+      <td>0.0063</td>
+      <td>Posgrado</td>
+      <td>0.0076</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>0.7333</td>
+      <td>Medellín</td>
+      <td>0.4800</td>
+      <td>Cartagena</td>
+      <td>0.2533</td>
+      <td>0.0176</td>
+      <td>Villavicencio</td>
+      <td>0.0000</td>
+      <td>Ibagué</td>
+      <td>0.0176</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="alerta">
+
+<strong>Principal riesgo identificado:</strong>
+
+<p>
+Por ciudad,
+<strong>Medellín presenta TPR = 0.7333</strong>,
+mientras
+<strong>Cartagena presenta TPR = 0.4800</strong>.
+</p>
+
+<p>
+La diferencia corresponde a una brecha de:
+</p>
+
+<strong>
+0.2533
+(25.33 puntos porcentuales)
+</strong>.
+
+</div>
+
+
+
+<h3>
+Resultados completos de Equalized Odds
+</h3>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable_sensible</th>
+      <th>subgrupo</th>
+      <th>n</th>
+      <th>tn</th>
+      <th>fp</th>
+      <th>fn</th>
+      <th>tp</th>
+      <th>TPR</th>
+      <th>FPR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rango_edad</td>
+      <td>50-59</td>
+      <td>384</td>
+      <td>314</td>
+      <td>5</td>
+      <td>23</td>
+      <td>42</td>
+      <td>0.6462</td>
+      <td>0.0157</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>≤29</td>
+      <td>454</td>
+      <td>380</td>
+      <td>6</td>
+      <td>29</td>
+      <td>39</td>
+      <td>0.5735</td>
+      <td>0.0155</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>30-39</td>
+      <td>363</td>
+      <td>304</td>
+      <td>2</td>
+      <td>15</td>
+      <td>42</td>
+      <td>0.7368</td>
+      <td>0.0065</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>40-49</td>
+      <td>334</td>
+      <td>279</td>
+      <td>2</td>
+      <td>17</td>
+      <td>36</td>
+      <td>0.6792</td>
+      <td>0.0071</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>70+</td>
+      <td>370</td>
+      <td>325</td>
+      <td>2</td>
+      <td>17</td>
+      <td>26</td>
+      <td>0.6047</td>
+      <td>0.0061</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>60-69</td>
+      <td>377</td>
+      <td>324</td>
+      <td>2</td>
+      <td>23</td>
+      <td>28</td>
+      <td>0.5490</td>
+      <td>0.0061</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Tecnólogo</td>
+      <td>429</td>
+      <td>365</td>
+      <td>4</td>
+      <td>20</td>
+      <td>40</td>
+      <td>0.6667</td>
+      <td>0.0108</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Secundaria</td>
+      <td>607</td>
+      <td>513</td>
+      <td>6</td>
+      <td>37</td>
+      <td>51</td>
+      <td>0.5795</td>
+      <td>0.0116</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Técnico</td>
+      <td>499</td>
+      <td>425</td>
+      <td>6</td>
+      <td>22</td>
+      <td>46</td>
+      <td>0.6765</td>
+      <td>0.0139</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Universitario</td>
+      <td>592</td>
+      <td>493</td>
+      <td>5</td>
+      <td>34</td>
+      <td>60</td>
+      <td>0.6383</td>
+      <td>0.0100</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Primaria</td>
+      <td>145</td>
+      <td>123</td>
+      <td>1</td>
+      <td>8</td>
+      <td>13</td>
+      <td>0.6190</td>
+      <td>0.0081</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Posgrado</td>
+      <td>188</td>
+      <td>158</td>
+      <td>1</td>
+      <td>13</td>
+      <td>16</td>
+      <td>0.5517</td>
+      <td>0.0063</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cali</td>
+      <td>205</td>
+      <td>173</td>
+      <td>3</td>
+      <td>8</td>
+      <td>21</td>
+      <td>0.7241</td>
+      <td>0.0170</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bucaramanga</td>
+      <td>194</td>
+      <td>160</td>
+      <td>1</td>
+      <td>16</td>
+      <td>17</td>
+      <td>0.5152</td>
+      <td>0.0062</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Manizales</td>
+      <td>218</td>
+      <td>178</td>
+      <td>3</td>
+      <td>12</td>
+      <td>25</td>
+      <td>0.6757</td>
+      <td>0.0166</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Ibagué</td>
+      <td>197</td>
+      <td>171</td>
+      <td>0</td>
+      <td>10</td>
+      <td>16</td>
+      <td>0.6154</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cúcuta</td>
+      <td>200</td>
+      <td>166</td>
+      <td>1</td>
+      <td>15</td>
+      <td>18</td>
+      <td>0.5455</td>
+      <td>0.0060</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Pereira</td>
+      <td>214</td>
+      <td>174</td>
+      <td>3</td>
+      <td>13</td>
+      <td>24</td>
+      <td>0.6486</td>
+      <td>0.0169</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Medellín</td>
+      <td>217</td>
+      <td>184</td>
+      <td>3</td>
+      <td>8</td>
+      <td>22</td>
+      <td>0.7333</td>
+      <td>0.0160</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Bogotá</td>
+      <td>225</td>
+      <td>188</td>
+      <td>1</td>
+      <td>10</td>
+      <td>26</td>
+      <td>0.7222</td>
+      <td>0.0053</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Villavicencio</td>
+      <td>191</td>
+      <td>167</td>
+      <td>3</td>
+      <td>6</td>
+      <td>15</td>
+      <td>0.7143</td>
+      <td>0.0176</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Barranquilla</td>
+      <td>202</td>
+      <td>171</td>
+      <td>1</td>
+      <td>12</td>
+      <td>18</td>
+      <td>0.6000</td>
+      <td>0.0058</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Santa Marta</td>
+      <td>198</td>
+      <td>174</td>
+      <td>1</td>
+      <td>11</td>
+      <td>12</td>
+      <td>0.5217</td>
+      <td>0.0057</td>
+    </tr>
+    <tr>
+      <td>ciudad_auditoria</td>
+      <td>Cartagena</td>
+      <td>199</td>
+      <td>171</td>
+      <td>3</td>
+      <td>13</td>
+      <td>12</td>
+      <td>0.4800</td>
+      <td>0.0172</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- ====================================================== -->
+<!-- 6. RIESGOS -->
+<!-- ====================================================== -->
+
+<h2>
+6. Tabla de riesgos
+</h2>
+
+
+<p>
+Para priorización interna de este reporte se utiliza el siguiente
+criterio:
+</p>
+
+
+<ul>
+
+<li>
+<strong>ALTO:</strong>
+brecha TPR superior a 0.20.
+</li>
+
+<li>
+<strong>MEDIO:</strong>
+brecha TPR entre 0.10 y 0.20.
+</li>
+
+</ul>
+
+
+<p class="nota">
+
+Este criterio se utiliza únicamente para priorizar acciones
+dentro del reporte y no representa un estándar universal
+de fairness.
+
+</p>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable_Dimension</th>
+      <th>Tipo_Riesgo</th>
+      <th>Nivel_Severidad</th>
+      <th>Evidencia_Cuantitativa</th>
+      <th>Impacto_Potencial</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ciudad</td>
+      <td>Equalized Odds - brecha TPR</td>
+      <td>ALTO</td>
+      <td>TPR Medellín=0.7333; TPR Cartagena=0.4800; brecha TPR=0.2533; brecha FPR=0.0176</td>
+      <td>El modelo detecta una proporción considerablemente menor de clientes realmente morosos en algunas ciudades, especialmente Cartagena.</td>
+    </tr>
+    <tr>
+      <td>rango_edad</td>
+      <td>Equalized Odds - brecha TPR</td>
+      <td>MEDIO</td>
+      <td>TPR 30-39=0.7368; TPR 60-69=0.5490; brecha TPR=0.1878; brecha FPR=0.0096</td>
+      <td>La capacidad para detectar correctamente la mora varía entre grupos de edad.</td>
+    </tr>
+    <tr>
+      <td>nivel_educativo</td>
+      <td>Equalized Odds - brecha TPR</td>
+      <td>MEDIO</td>
+      <td>TPR Técnico=0.6765; TPR Posgrado=0.5517; brecha TPR=0.1248; brecha FPR=0.0076</td>
+      <td>La sensibilidad del modelo para detectar mora es diferente entre niveles educativos.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- ====================================================== -->
+<!-- 7. MITIGACIONES -->
+<!-- ====================================================== -->
+
+<h2>
+7. Plan de mitigaciones
+</h2>
+
+
+<table class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Riesgo_identificado</th>
+      <th>Mitigacion_concreta</th>
+      <th>Responsable</th>
+      <th>Plazo</th>
+      <th>Criterio_seguimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ciudad - brecha TPR = 0.2533</td>
+      <td>Normalizar definitivamente las categorías duplicadas de ciudad, revisar la representación de cada ciudad en el conjunto de entrenamiento y probar técnicas de reweighting o resampling. Posteriormente, reentrenar una versión candidata del modelo y volver a calcular Equalized Odds antes del despliegue.</td>
+      <td>Científico de Datos del proyecto + revisión de Líder Técnica</td>
+      <td>2 semanas antes del despliegue</td>
+      <td>Reducir la brecha respecto al 0.2533 actual. Realizar monitoreo mensual y generar una alerta si la brecha TPR supera 0.10.</td>
+    </tr>
+    <tr>
+      <td>Rango de edad - brecha TPR = 0.1878</td>
+      <td>Analizar la representación y los patrones del grupo de 60-69 años, probar reponderación de muestras durante el entrenamiento y comparar el desempeño global y las métricas de fairness con el modelo actual antes de aceptar una nueva versión.</td>
+      <td>Científico de Datos</td>
+      <td>2 semanas</td>
+      <td>Recalcular TPR y FPR por rango de edad y escalar el riesgo si la brecha continúa por encima de 0.10.</td>
+    </tr>
+    <tr>
+      <td>Nivel educativo - brecha TPR = 0.1248</td>
+      <td>Revisar la distribución de observaciones por nivel educativo, probar técnicas de reweighting o resampling y discutir con el cliente si la variable debe mantenerse como predictor y qué definición de fairness debe priorizarse para SOLARIS.</td>
+      <td>Científico de Datos + Líder Técnica + representante del cliente</td>
+      <td>Antes de producción, máximo 2 semanas</td>
+      <td>Recalcular Equalized Odds después de la mitigación y verificar que la brecha TPR disminuya respecto al 0.1248 actual.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>
+Estrategia de seguimiento
+</h3>
+
+
+<p>
+Las acciones de mitigación seguirán el ciclo:
+</p>
+
+
+<p>
+
+<strong>
+medir → intervenir → reentrenar → volver a medir → aprobar
+</strong>
+
+</p>
+
+
+<p>
+Equalized Odds deberá incorporarse al monitoreo periódico
+del modelo.
+
+Se propone revisar mensualmente TPR y FPR por grupo y
+generar una alerta cuando alguna brecha supere
+<strong>0.10</strong>.
+</p>
+
+
+<p>
+Si las diferencias persisten después de aplicar técnicas de
+reweighting o resampling, podrá evaluarse una estrategia de
+postprocesamiento, como ajustes de umbral.
+
+Cualquier modificación deberá ser analizada junto con el cliente
+y documentada antes de implementar una nueva versión del modelo.
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- CONCLUSIÓN -->
+<!-- ====================================================== -->
+
+<h2>
+Conclusión general
+</h2>
+
+
+<p>
+Los análisis realizados no identifican señales estadísticamente
+significativas de cambio de distribución en las variables numéricas
+evaluadas ni diferencias de capacidad discriminativa superiores
+al umbral establecido de AUC-ROC entre los subgrupos analizados.
+</p>
+
+
+<p>
+Demographic Parity tampoco genera alertas según el criterio
+de 10 puntos porcentuales definido para la actividad.
+</p>
+
+
+<p>
+El principal punto de atención corresponde a Equalized Odds,
+donde se identifican diferencias en la sensibilidad del modelo
+entre ciudades, grupos de edad y niveles educativos.
+</p>
+
+
+<p>
+Estas diferencias
+<strong>
+no demuestran por sí solas discriminación
+</strong>,
+pero constituyen riesgos de fairness que deben ser
+mitigados, documentados y monitoreados antes de la puesta
+en producción.
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- LIMITACIONES -->
+<!-- ====================================================== -->
+
+<h3>
+Limitaciones del análisis
+</h3>
+
+
+<div class="limitacion">
+
+
+<p>
+La ventana reciente contiene únicamente
+<strong>136 observaciones</strong>.
+
+Por esta razón, las pruebas de cambio de distribución tienen
+menor capacidad para detectar diferencias pequeñas y deben
+interpretarse como evidencia de monitoreo y no como prueba
+definitiva de estabilidad.
+</p>
+
+
+<p>
+La variable temporal disponible es
+<code>fecha_vinculacion</code>.
+
+Esta variable representa la fecha de incorporación del distribuidor
+y no una fecha de scoring, transacción o actualización de comportamiento.
+
+Por esta razón, el análisis temporal permite comparar el perfil
+de los distribuidores vinculados recientemente frente al histórico,
+pero no medir directamente cambios en el comportamiento de
+clientes existentes.
+</p>
+
+
+<p>
+Adicionalmente, la partición original utilizada para entrenar y
+evaluar el modelo SOLARIS fue realizada mediante un
+<code>train_test_split</code>
+<strong>aleatorio y no temporal</strong>.
+</p>
+
+
+<p>
+En consecuencia, algunos registros pertenecientes a la ventana
+reciente pudieron haber formado parte del conjunto utilizado
+durante el desarrollo original del modelo.
+
+Por esta razón, el análisis de distributional shift debe
+interpretarse como una
+<strong>
+comparación temporal exploratoria del dataset
+</strong>
+y no como una validación
+<strong>out-of-time completamente independiente</strong>.
+</p>
+
+
+<p>
+Finalmente, el dataset disponible no contiene atributos protegidos
+explícitos como género o etnia.
+
+La evaluación de fairness se limita, por tanto, a las dimensiones
+disponibles de:
+
+<strong>
+rango de edad, nivel educativo y ciudad.
+</strong>
+</p>
+
+
+<p>
+Los resultados no permiten afirmar que el modelo sea justo
+respecto a características que no están presentes en los datos.
+</p>
+
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>

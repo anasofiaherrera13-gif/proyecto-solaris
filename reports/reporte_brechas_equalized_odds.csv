@@ -1,0 +1,4 @@
+variable_sensible,TPR_max,grupo_TPR_max,TPR_min,grupo_TPR_min,brecha_TPR,FPR_max,grupo_FPR_max,FPR_min,grupo_FPR_min,brecha_FPR
+rango_edad,0.7368,30-39,0.549,60-69,0.1878,0.0157,50-59,0.0061,70+,0.0096
+nivel_educativo,0.6765,Técnico,0.5517,Posgrado,0.1248,0.0139,Técnico,0.0063,Posgrado,0.0076
+ciudad_auditoria,0.7333,Medellín,0.48,Cartagena,0.2533,0.0176,Villavicencio,0.0,Ibagué,0.0176
