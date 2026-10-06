@@ -1,0 +1,2461 @@
+edad,ingreso_mensual,saldo_actual,cuotas_pagadas,cuotas_totales,score_externo,nivel_educativo,ciudad
+53.0,2267278,1378707,9,6,620.0,Tecnólogo,Santiago De Cali
+23.0,900000,3529337,4,12,604.0,Secundaria,Bucaramanga
+33.0,0,2631552,7,24,482.0,Tecnólogo,Manizales
+49.0,925050,8058936,4,18,,Secundaria,Ibagué
+43.0,1552679,6630458,26,48,477.0,Secundaria,Ibagué
+24.0,1446551,3481012,13,24,489.0,Secundaria,San José De Cúcuta
+77.0,0,2982163,11,24,791.0,Técnico,Cúcuta
+21.0,0,188704,4,6,601.0,Secundaria,Pei
+50.0,6146121,9343481,7,48,408.0,Universitario,Cúcuta
+18.0,1828909,518328,2,6,744.0,Primaria,Mdl
+60.0,0,607411,2,6,839.0,Universitario,Bogotá
+60.0,0,1906741,1,6,516.0,Técnico,Villavo
+59.0,996215,1785227,10,18,575.0,Técnico,Bta
+44.0,1908898,1316970,14,18,789.0,Técnico,Cali
+60.0,2637028,3096352,20,36,473.0,Secundaria,Bogotá
+66.0,8813061,6370032,3,18,675.0,Posgrado,Pereira
+53.0,0,1273160,39,48,331.0,Técnico,Villavicencio
+40.0,2929179,1709332,3,12,631.0,Técnico,Villavicencio
+30.0,0,1021009,12,18,618.0,Universitario,Manizales
+54.0,0,567993,4,6,558.0,Primaria,Ibagué
+,0,1337504,2,6,491.0,Universitario,Cali
+50.0,3202163,10659485,1,36,,Secundaria,Manizales
+67.0,900000,6666469,7,36,723.0,Secundaria,Bogotá
+,11884726,4623318,30,48,758.0,Posgrado,Medellín
+,0,1248678,9,12,756.0,Secundaria,Manizales
+33.0,900000,4688687,1,12,612.0,Secundaria,Bogotá
+72.0,3694778,1505381,4,12,518.0,Tecnólogo,Cúcuta
+66.0,1198664,2268422,38,48,621.0,Primaria,Medellín
+35.0,2836939,423616,2,6,709.0,Técnico,Villavicencio
+57.0,3352809,1001991,12,18,356.0,Universitario,Barranquilla
+36.0,0,356875,9,12,340.0,Universitario,Medellín
+18.0,3899733,7272252,13,36,743.0,Tecnólogo,Villavicencio
+31.0,0,2708426,16,24,418.0,Secundaria,Bucaramanga
+34.0,13344986,530664,3,6,596.0,Posgrado,Santa Marta
+36.0,5893217,639959,2,6,654.0,Universitario,Cali
+41.0,0,1289155,13,24,658.0,Universitario,Bta
+,0,2205254,3,18,461.0,Secundaria,Bga
+18.0,1805126,2303571,27,36,689.0,Primaria,Barranqilla
+30.0,0,2766787,9,36,674.0,Tecnólogo,Medellín
+56.0,2536923,1165024,35,48,355.0,Secundaria,Santa Marta
+45.0,3379045,9966854,8,48,695.0,Universitario,B/Manga
+43.0,0,4367482,16,36,481.0,Universitario,Pereira
+36.0,0,5734485,4,24,,Tecnólogo,Santa Marta
+,0,5853430,3,12,350.0,Universitario,San José De Cúcuta
+20.0,3403696,4514848,24,36,776.0,Técnico,Barranqilla
+74.0,1266901,326759,9,12,470.0,Técnico,Cartagena
+61.0,1581876,3794805,29,48,719.0,Secundaria,Manizales
+79.0,0,3698976,10,24,339.0,Secundaria,Cúcuta
+36.0,9808057,4693903,11,24,330.0,Posgrado,Smr
+23.0,2393328,10546370,7,36,628.0,Secundaria,Cartagena
+49.0,4087172,15082977,7,36,,Universitario,Bucaramanga
+59.0,1557071,2128511,9,18,541.0,Secundaria,Medellín
+71.0,1796794,10725325,3,36,682.0,Secundaria,Barranquilla
+76.0,0,4998140,12,36,,Secundaria,Barranquilla
+,0,2656347,0,6,708.0,Secundaria,Cartagena
+62.0,0,568512,12,6,301.0,Secundaria,Cartagena
+37.0,0,1323078,3,12,529.0,Primaria,Manizales
+45.0,4736332,6893622,19,36,767.0,Tecnólogo,Med.
+19.0,2278398,1667095,7,12,749.0,Secundaria,Bogotá
+37.0,0,5569436,17,36,520.0,Técnico,Mdl
+42.0,0,1955443,3,12,372.0,Tecnólogo,Manizales
+59.0,1690078,1443514,11,18,720.0,Secundaria,Ibagué
+39.0,2952184,955913,8,12,542.0,Tecnólogo,Medellín
+43.0,2964666,3038670,26,36,445.0,Tecnólogo,Villavicencio
+74.0,4434590,8423258,21,48,307.0,Universitario,Cúcuta
+40.0,5682262,5532134,5,18,438.0,Posgrado,Cúcuta
+40.0,0,2741955,27,36,693.0,Tecnólogo,San José De Cúcuta
+29.0,3950252,2094344,2,12,361.0,Universitario,B/Manga
+47.0,6226632,282248,9,12,550.0,Universitario,Cartagena
+79.0,1774712,1090923,3,6,340.0,Secundaria,Manizales
+75.0,6478506,566986,13,18,580.0,Universitario,Villavicencio
+66.0,5060452,6511667,2,18,532.0,Universitario,Bga
+67.0,2007189,735168,10,18,752.0,Técnico,Bog
+76.0,0,684491,3,6,508.0,Primaria,Villavicencio
+42.0,0,20388494,6,36,387.0,Primaria,Bogotá
+60.0,1688353,5625323,3,12,,Tecnólogo,Medellín
+50.0,1506071,1300438,37,48,611.0,Secundaria,Bucaramanga
+36.0,0,746011,3,6,679.0,Técnico,Bucaramanga
+74.0,3053669,5061651,3,18,624.0,Técnico,Medellín
+66.0,2115070,5233496,5,18,432.0,Secundaria,Medellín
+38.0,11148377,1024077,3,6,612.0,Posgrado,Villavicencio
+20.0,2663711,1517087,10,18,528.0,Técnico,Cartagena
+59.0,2966761,264014,4,6,634.0,Tecnólogo,Barranqilla
+,2266449,6064638,4,18,,Secundaria,Cali
+44.0,0,6459451,18,36,539.0,Secundaria,Cali
+66.0,0,2529184,8,18,618.0,Secundaria,Ibagué
+74.0,1564693,12238904,10,48,772.0,Secundaria,Santa Marta
+21.0,0,268321,10,12,364.0,Primaria,Cúcuta
+39.0,3296366,445453,4,6,326.0,Universitario,Bga
+47.0,0,730927,15,18,521.0,Secundaria,Cali
+45.0,2879371,931117,4,12,698.0,Tecnólogo,Santa Marta
+66.0,4018103,3129837,22,36,591.0,Técnico,Cali
+75.0,0,1478023,8,18,475.0,Secundaria,Villavicencio
+27.0,7062512,2266132,18,24,486.0,Universitario,Cali
+72.0,4629005,3612833,25,36,307.0,Tecnólogo,Manizales
+57.0,1249689,6593506,5,24,758.0,Primaria,Mdl
+78.0,6772142,5201644,1,24,349.0,Posgrado,Pereira
+,1517099,2375400,14,24,645.0,Secundaria,Santa Marta
+77.0,1856547,3781585,37,48,807.0,Técnico,Cal
+76.0,2371295,1675622,20,24,493.0,Secundaria,Ibagué
+51.0,0,13575433,26,24,589.0,Universitario,Cal
+33.0,0,267522,15,18,579.0,Tecnólogo,Medellín
+39.0,900000,16052969,10,36,,Secundaria,Cartagena
+44.0,8287370,2493111,4,18,498.0,Posgrado,B/Quilla
+35.0,0,2445728,1,12,464.0,Posgrado,Bucaramanga
+62.0,3080141,5768473,5,18,,Técnico,Bogotá
+38.0,3530565,2085336,12,24,505.0,Técnico,Villavicencio
+59.0,2354073,4049929,4,12,,Técnico,Pereira
+34.0,2785907,7973405,0,12,376.0,Secundaria,Cúcuta
+28.0,0,4271451,14,24,806.0,Primaria,Mzl
+46.0,5223750,4067901,5,24,619.0,Universitario,Cúcuta
+78.0,0,4079138,12,24,323.0,Técnico,Bucaramanga
+60.0,2561539,983490,27,36,719.0,Secundaria,Santa Marta
+71.0,3569179,1291422,0,6,383.0,Tecnólogo,Pereira
+63.0,3327288,2487587,3,18,622.0,Técnico,Cal
+28.0,1037950,3816720,23,36,364.0,Tecnólogo,Santa Marta
+59.0,0,4553084,11,24,400.0,Secundaria,Manizales
+63.0,2954939,1906118,6,18,795.0,Técnico,Villavicencio
+49.0,0,2956000,40,48,572.0,Universitario,Cartagena
+56.0,0,2165264,7,12,720.0,Secundaria,Ibagué
+36.0,0,1997518,11,24,816.0,Secundaria,Villavicencio
+59.0,1210989,433771,5,6,835.0,Técnico,Bga
+58.0,0,340619,5,6,811.0,Universitario,Bogotá
+73.0,0,3178230,7,18,488.0,Posgrado,Smr
+19.0,0,2421892,16,24,838.0,Secundaria,Villavicencio
+44.0,2729798,431061,3,6,507.0,Secundaria,Cali
+62.0,0,8438825,27,48,650.0,Tecnólogo,Manizales
+57.0,3312626,266357,5,6,787.0,Técnico,Mzl
+39.0,1864742,1582856,20,24,843.0,Tecnólogo,Cartagena
+58.0,1961407,3454383,4,18,822.0,Secundaria,Bga
+37.0,0,3968817,27,36,523.0,Universitario,Medellín
+66.0,1699034,627922,17,24,765.0,Secundaria,Villavicencio
+20.0,1338490,6725597,8,24,719.0,Técnico,Bog
+52.0,2508929,1910823,1,12,538.0,Técnico,Santa Marta
+37.0,0,13773566,12,48,721.0,Universitario,Pereira
+46.0,0,988045,12,18,636.0,Posgrado,Villavicencio
+73.0,2006129,20847966,10,48,352.0,Técnico,Cartagena
+67.0,0,3782614,2,12,425.0,Universitario,Bogotá
+,1487348,669970,1,6,371.0,Técnico,Santa Marta
+29.0,4341168,1541359,2,6,637.0,Tecnólogo,Medellín
+28.0,2281218,436853,4,6,440.0,Secundaria,Pereira
+52.0,0,5629143,6,24,657.0,Tecnólogo,Ibagué
+42.0,1042835,2287752,4,18,397.0,Secundaria,San José De Cúcuta
+,0,20799562,1,36,673.0,Posgrado,Bucaramanga
+78.0,1888206,350837,5,6,334.0,Tecnólogo,Villavicencio
+33.0,5298619,809978,21,24,361.0,Universitario,Bucaramanga
+28.0,4030846,2574791,13,36,564.0,Universitario,Bta
+75.0,9646022,1948371,19,24,390.0,Posgrado,Medellín
+62.0,0,731829,14,18,327.0,Tecnólogo,Cal
+50.0,3920615,5152144,35,48,606.0,Tecnólogo,Ibagué
+32.0,3857725,3893494,9,18,727.0,Universitario,Santa Marta
+68.0,0,1066654,40,36,763.0,Posgrado,Manizales
+48.0,0,3579415,11,24,767.0,Técnico,Villavicencio
+,3143777,1360281,14,24,757.0,Técnico,Medellín
+65.0,1422411,1368768,20,24,682.0,Técnico,Ibagué
+75.0,1483501,1924071,1,6,723.0,Secundaria,Cal
+56.0,0,8689121,23,48,841.0,Secundaria,Medellín
+36.0,6767274,7371534,8,36,376.0,Universitario,Cartagena
+61.0,5485025,2049461,2,12,,Universitario,Med.
+39.0,1802851,4985785,23,18,,Universitario,Bga
+38.0,2394187,1627873,1,6,319.0,Secundaria,Villavo
+,0,12439273,5,36,802.0,Universitario,Bucaramanga
+60.0,0,1612218,1,6,753.0,Tecnólogo,Bogotá
+61.0,3921139,12910976,7,48,546.0,Secundaria,Santa Marta
+42.0,0,2880942,2,12,558.0,Tecnólogo,Cartagena
+44.0,2425768,2884280,4,12,759.0,Técnico,Pereira
+70.0,0,199241,10,12,553.0,Tecnólogo,Ibagué
+39.0,3989796,5044084,7,48,508.0,Universitario,B/Quilla
+62.0,1556418,2878479,16,36,396.0,Secundaria,Villavo
+75.0,2716861,3575267,10,24,380.0,Técnico,Medellín
+40.0,4890460,6716114,24,48,334.0,Tecnólogo,Santiago De Cali
+52.0,1043263,623757,3,6,513.0,Secundaria,Santa Marta
+66.0,1453625,11674656,21,48,595.0,Técnico,Manizales
+59.0,3601024,12192210,13,48,541.0,Tecnólogo,Villavicencio
+24.0,0,1861563,16,24,512.0,Tecnólogo,Barranquilla
+73.0,5418466,1812876,31,48,541.0,Posgrado,Cali
+59.0,0,1264846,7,18,315.0,Secundaria,Cartagena
+66.0,0,27242053,6,48,479.0,Posgrado,Pei
+,0,853168,2,6,604.0,Universitario,Santa Marta
+58.0,2156352,11477835,4,24,,Secundaria,Villavicencio
+24.0,2165321,9581929,9,36,359.0,Tecnólogo,Santa Marta
+49.0,1564026,11920901,8,36,839.0,Secundaria,Villavicencio
+66.0,3161031,4717577,26,48,518.0,Tecnólogo,Medellín
+,0,2369847,41,48,564.0,Técnico,Cartagena
+43.0,0,3406627,3,12,781.0,Tecnólogo,Bogotá
+50.0,1187440,2027564,29,36,366.0,Técnico,Pereira
+28.0,2126365,24359143,9,48,,Secundaria,Barranquilla
+38.0,3741752,2091183,12,24,809.0,Técnico,Barranquilla
+44.0,1134088,3053144,14,48,497.0,Secundaria,Pereira
+19.0,900000,11871065,9,48,611.0,Técnico,Pereira
+45.0,0,806961,1,6,828.0,Secundaria,Bogotá
+45.0,0,3363151,5,18,768.0,Primaria,Ibagué
+31.0,1879873,1909012,0,6,701.0,Secundaria,Pereira
+71.0,1089763,814934,4,12,498.0,Primaria,Pereira
+26.0,2705307,3727299,3,12,459.0,Tecnólogo,Santiago De Cali
+77.0,994077,3923695,38,48,786.0,Primaria,Sta Marta
+,0,3212943,55,48,829.0,Técnico,Cali
+39.0,7043827,1341124,2,6,355.0,Universitario,Cartagena
+51.0,0,621366,1,6,542.0,Tecnólogo,Cali
+69.0,1344547,430166,10,12,578.0,Tecnólogo,Cartagena
+78.0,900000,5232249,11,24,,Primaria,Med.
+65.0,3395347,8649048,3,24,429.0,Tecnólogo,Ibagué
+72.0,0,1819754,9,24,643.0,Técnico,Smr
+68.0,0,7873773,14,48,582.0,Tecnólogo,Cartagena
+34.0,0,5292478,11,36,493.0,Universitario,Santa Marta
+,0,8435356,17,48,356.0,Secundaria,Santa Marta
+49.0,0,3789198,2,18,612.0,Universitario,Mzl
+33.0,0,949887,13,24,612.0,Universitario,Cúcuta
+54.0,1753512,3700333,3,12,456.0,Técnico,Mdl
+23.0,7511639,16412210,8,48,445.0,Posgrado,Cúcuta
+36.0,5729089,1472941,1,6,,Universitario,Smr
+31.0,0,5001243,2,18,503.0,Posgrado,Villavicencio
+68.0,2758951,1419143,41,48,766.0,Técnico,Pereira
+53.0,3109112,22339777,11,48,652.0,Universitario,Cúcuta
+62.0,2515013,1183464,1,6,601.0,Universitario,Ibagué
+59.0,0,418175,3,6,782.0,Primaria,Cartagena
+23.0,0,2791533,27,48,705.0,Secundaria,Santa Marta
+45.0,0,1820514,3,18,508.0,Universitario,Santa Marta
+43.0,0,13771580,0,24,,Universitario,B/Manga
+,7599953,325290,5,6,616.0,Universitario,Barranquilla
+71.0,0,7618630,1,12,776.0,Secundaria,Bogotá
+54.0,4550530,10865289,10,36,,Universitario,Bta
+,0,5042718,17,48,799.0,Universitario,Medellín
+,1437026,1834999,12,18,725.0,Secundaria,Barranqilla
+60.0,2313040,1034512,7,12,407.0,Secundaria,Cúcuta
+35.0,0,344231,4,6,789.0,Universitario,Cartagena
+62.0,0,2209526,4,12,542.0,Secundaria,Pereira
+68.0,7317852,3964256,4,12,627.0,Universitario,Cartagena
+66.0,3738564,2772403,3,12,778.0,Universitario,Bga
+58.0,3736190,2914979,20,48,333.0,Técnico,Santa Marta
+,14849039,8236843,17,36,311.0,Posgrado,Bogotá
+27.0,0,3467123,13,24,569.0,Universitario,Cartagena
+74.0,0,2153234,11,24,464.0,Secundaria,Bogotá
+59.0,2885722,2159132,4,12,836.0,Técnico,Villavo
+54.0,0,386656,4,6,604.0,Posgrado,Manizales
+77.0,4274482,1994286,31,36,567.0,Universitario,Villavo
+38.0,3227654,648448,3,6,450.0,Tecnólogo,Cali
+63.0,2603470,7669574,26,48,700.0,Universitario,Cali
+52.0,0,1939309,18,24,561.0,Técnico,Barranquilla
+76.0,6917186,3656225,14,24,488.0,Universitario,Bga
+35.0,3346500,2473233,29,36,690.0,Tecnólogo,Pereira
+56.0,0,7173224,8,24,376.0,Posgrado,Bga
+45.0,0,533771,32,36,775.0,Secundaria,Manizales
+52.0,1169702,256206,16,18,448.0,Primaria,Medellín
+18.0,3594215,15621732,9,48,412.0,Universitario,Bogotá
+59.0,5085559,4965042,11,48,676.0,Universitario,Medellín
+75.0,0,1985363,31,36,723.0,Secundaria,Smr
+19.0,2560393,6794905,27,48,465.0,Tecnólogo,Manizales
+20.0,2049354,4788042,3,18,491.0,Técnico,Cúcuta
+70.0,0,3110300,13,24,320.0,Secundaria,Medellín
+60.0,0,1776576,2,12,466.0,Tecnólogo,Pereira
+77.0,0,4674227,25,36,720.0,Secundaria,Villavicencio
+74.0,0,4221101,20,36,614.0,Primaria,Cartagena
+73.0,0,2489442,18,24,556.0,Secundaria,Bogotá
+71.0,0,4453537,7,24,352.0,Posgrado,Sta Marta
+35.0,931703,1932578,17,24,397.0,Secundaria,Bucaramanga
+28.0,4829621,2476894,31,48,716.0,Tecnólogo,San José De Cúcuta
+,0,6849174,25,48,647.0,Secundaria,B/Quilla
+31.0,1411046,5624383,29,48,646.0,Secundaria,Bucaramanga
+72.0,4735133,1986777,39,48,719.0,Universitario,B/Manga
+19.0,1863283,6039835,13,36,663.0,Secundaria,Bogotá
+22.0,5069875,718041,14,18,537.0,Universitario,Medellín
+23.0,2948046,525456,9,12,715.0,Universitario,Barranqilla
+66.0,5554948,403258,14,18,790.0,Universitario,Cartagena
+24.0,0,8533394,11,36,,Universitario,Bucaramanga
+40.0,0,1168575,5,12,379.0,Técnico,Bucaramanga
+63.0,0,1001363,9,12,697.0,Secundaria,Villavicencio
+79.0,2296742,4270238,23,36,489.0,Secundaria,Medellín
+50.0,2255751,5783727,8,24,386.0,Técnico,Pei
+28.0,0,7960572,13,36,420.0,Tecnólogo,Villavicencio
+31.0,0,2172915,31,48,768.0,Técnico,Pereira
+62.0,0,2760006,6,18,847.0,Secundaria,Medellín
+33.0,0,1808007,27,48,550.0,Universitario,Manizales
+55.0,0,3578748,16,24,383.0,Secundaria,Pei
+57.0,5716066,10408007,17,48,313.0,Universitario,Villavicencio
+59.0,0,601617,9,12,439.0,Tecnólogo,Manizales
+30.0,2139531,12588773,7,36,318.0,Secundaria,Cúcuta
+33.0,0,3330933,10,18,432.0,Posgrado,Cartagena
+,3227046,3261868,9,18,486.0,Tecnólogo,Cali
+39.0,0,1158411,20,24,713.0,Técnico,Bogotá
+,3380787,674533,13,18,801.0,Técnico,Villavicencio
+52.0,0,2155062,5,12,754.0,Secundaria,Cali
+58.0,0,1039355,15,18,519.0,Primaria,Mzl
+39.0,0,1894733,29,48,719.0,Técnico,Bga
+70.0,3171745,874409,4,6,655.0,Técnico,Cartagena
+55.0,2229328,2653980,2,12,558.0,Secundaria,Santa Marta
+35.0,4256020,5137451,28,48,637.0,Técnico,Bga
+29.0,1019352,5384118,8,24,818.0,Primaria,Ibagué
+31.0,5716397,871299,4,6,666.0,Universitario,Cartagena
+75.0,2699571,661165,4,6,756.0,Tecnólogo,Medellín
+25.0,0,7400270,28,48,815.0,Secundaria,Santiago De Cali
+52.0,0,11847279,19,18,780.0,Universitario,Bucaramanga
+48.0,0,5615332,18,36,837.0,Secundaria,Bucaramanga
+23.0,1569316,7179768,1,12,400.0,Técnico,Santiago De Cali
+72.0,0,3191051,1,12,601.0,Primaria,Villavo
+38.0,0,7982455,22,48,447.0,Secundaria,Villavicencio
+32.0,3398339,6131992,8,24,679.0,Universitario,Cartagena
+62.0,1737447,617992,6,12,713.0,Secundaria,Villavicencio
+69.0,0,11593648,4,24,,Posgrado,San José De Cúcuta
+31.0,0,9908399,2,18,369.0,Universitario,Medellín
+,0,1592840,8,24,684.0,Técnico,Ibagué
+53.0,1330010,4679073,2,12,838.0,Secundaria,San José De Cúcuta
+28.0,0,2039641,1,6,693.0,Secundaria,Sta Marta
+36.0,0,1115068,6,18,413.0,Secundaria,Cali
+62.0,5423985,1752621,30,36,794.0,Posgrado,Manizales
+33.0,2184649,11049782,17,48,511.0,Secundaria,Villavicencio
+78.0,3685373,8219614,10,36,705.0,Tecnólogo,Santiago De Cali
+35.0,2015876,1042823,3,6,328.0,Secundaria,Sta Marta
+31.0,1744532,4279790,21,48,520.0,Secundaria,Bga
+68.0,0,5601420,7,24,587.0,Tecnólogo,Pei
+55.0,2120075,1644221,14,24,661.0,Universitario,Villavo
+42.0,3427816,538856,6,12,729.0,Tecnólogo,Santiago De Cali
+56.0,0,1034632,12,24,800.0,Tecnólogo,Bogotá
+25.0,1683698,5445723,6,24,566.0,Secundaria,Manizales
+55.0,0,2605594,18,48,659.0,Posgrado,Manizales
+37.0,3116911,736156,8,12,790.0,Técnico,Santa Marta
+22.0,5917974,1388637,7,12,834.0,Posgrado,Cali
+59.0,0,5354106,4,24,637.0,Primaria,Bogotá
+49.0,2520329,658316,16,24,732.0,Técnico,Ibagué
+18.0,4618362,1481605,2,6,337.0,Universitario,Medellín
+49.0,1769795,1286467,1,6,357.0,Secundaria,Santa Marta
+73.0,2100034,7151512,32,48,596.0,Técnico,Medellín
+59.0,0,425268,2,6,434.0,Posgrado,Manizales
+37.0,5473615,3312984,2,12,328.0,Universitario,Cúcuta
+75.0,0,6319954,29,48,384.0,Posgrado,Santa Marta
+52.0,0,2263190,5,12,381.0,Universitario,Pereira
+61.0,1594221,5083624,32,48,602.0,Técnico,Ibagué
+56.0,2211774,4250015,6,18,408.0,Secundaria,Bucaramanga
+59.0,0,956639,14,24,355.0,Tecnólogo,Mzl
+65.0,0,4148393,7,24,655.0,Posgrado,Villavo
+55.0,8225473,3938406,11,24,716.0,Posgrado,Cúcuta
+56.0,2767585,24458497,0,36,556.0,Posgrado,Pereira
+20.0,5688896,4211931,8,18,305.0,Universitario,Manizales
+78.0,0,3938975,4,24,781.0,Universitario,Mzl
+40.0,3249175,4660242,30,48,591.0,Técnico,Santiago De Cali
+39.0,4387724,1582063,7,12,426.0,Universitario,Villavicencio
+19.0,3271009,1938234,3,12,622.0,Técnico,Ibagué
+,3829551,4629286,23,36,839.0,Técnico,Bogotá
+77.0,0,4540018,22,36,313.0,Técnico,Bucaramanga
+25.0,0,1416041,9,18,831.0,Secundaria,Bogotá
+29.0,3648834,2930249,6,24,494.0,Tecnólogo,Sta Marta
+67.0,3194369,2667530,1,6,461.0,Tecnólogo,San José De Cúcuta
+18.0,0,978382,1,6,759.0,Secundaria,Baq
+55.0,3908778,808770,4,6,400.0,Tecnólogo,Smr
+45.0,3206578,7186025,6,24,733.0,Tecnólogo,Cal
+54.0,2711103,9385562,13,48,750.0,Universitario,Mdl
+,0,1773297,43,36,708.0,Secundaria,Medellín
+65.0,0,2538394,32,48,,Universitario,Medellín
+,2005746,4471868,27,24,353.0,Técnico,Santiago De Cali
+53.0,0,849829,18,12,836.0,Secundaria,Medellín
+52.0,0,7054745,20,48,774.0,Técnico,Cúcuta
+51.0,2033588,1323711,6,18,610.0,Técnico,Cali
+,2404466,2826232,4,12,503.0,Tecnólogo,Medellín
+40.0,0,2364783,4,18,617.0,Primaria,Manizales
+18.0,1867504,1377292,6,12,666.0,Secundaria,Cartagena
+31.0,2320850,5038854,5,24,722.0,Tecnólogo,Manizales
+72.0,6398640,1855437,25,24,500.0,Universitario,Bogotá
+44.0,0,2435994,22,36,487.0,Posgrado,Bucaramanga
+,5577504,1398912,31,36,713.0,Universitario,San José De Cúcuta
+23.0,3232826,944902,9,12,595.0,Técnico,Bta
+63.0,1989812,26889673,6,48,754.0,Secundaria,Villavicencio
+66.0,0,4853651,6,18,560.0,Secundaria,Bogotá
+55.0,1866987,1051432,40,48,443.0,Secundaria,Bucaramanga
+63.0,3528978,4713975,20,36,691.0,Tecnólogo,Pereira
+71.0,3520821,1383869,18,24,303.0,Tecnólogo,Bogotá
+57.0,2161207,993034,2,6,804.0,Secundaria,Bogotá
+48.0,0,1770389,14,18,522.0,Tecnólogo,Bga
+51.0,4203202,3533783,28,36,719.0,Tecnólogo,Pereira
+70.0,1433082,2372265,17,24,520.0,Tecnólogo,Cartagena
+64.0,3133582,1123670,19,24,779.0,Tecnólogo,Manizales
+40.0,2820714,6589372,0,18,,Técnico,Cali
+72.0,8481488,5142124,6,18,334.0,Posgrado,Barranquilla
+72.0,7662833,1254675,3,12,781.0,Posgrado,San José De Cúcuta
+52.0,3509294,1077197,9,12,,Universitario,Cúcuta
+66.0,0,7782351,2,18,,Universitario,Cúcuta
+72.0,0,1602802,2,6,820.0,Universitario,Barranquilla
+79.0,0,5033704,14,48,372.0,Secundaria,Manizales
+50.0,0,1236317,19,24,572.0,Universitario,Cúcuta
+61.0,0,3252948,14,36,442.0,Tecnólogo,Cúcuta
+73.0,0,2183878,13,18,416.0,Secundaria,Villavo
+55.0,1791412,9209449,10,48,527.0,Secundaria,Sta Marta
+48.0,4272103,12339919,6,36,816.0,Universitario,Pei
+63.0,2828312,1282019,2,6,387.0,Tecnólogo,Cartagena
+67.0,4128095,4123866,6,24,585.0,Universitario,Pereira
+77.0,4746497,2660173,6,18,315.0,Tecnólogo,Cal
+19.0,2644218,8818119,8,36,611.0,Técnico,Cartagena
+,2267080,3614975,25,36,677.0,Técnico,Barranquilla
+23.0,5526566,3071044,12,24,,Universitario,Cali
+70.0,0,1554404,36,48,523.0,Tecnólogo,Mdl
+63.0,1020754,1966990,7,12,,Primaria,Bogotá
+38.0,0,6510537,4,24,815.0,Técnico,Manizales
+22.0,0,3923860,6,18,314.0,Tecnólogo,Baq
+49.0,2463781,469898,3,6,687.0,Secundaria,Ibagué
+74.0,3959406,883918,7,12,,Tecnólogo,Cúcuta
+49.0,5407909,457154,4,6,670.0,Universitario,Bucaramanga
+67.0,2523718,317480,15,18,328.0,Secundaria,Medellín
+41.0,0,4733102,5,36,643.0,Técnico,San José De Cúcuta
+55.0,0,5235778,17,36,554.0,Universitario,Santa Marta
+37.0,1275489,1179881,23,18,632.0,Primaria,Bogotá
+67.0,1692414,3281345,6,18,577.0,Primaria,Sta Marta
+63.0,6528590,3442974,4,12,389.0,Posgrado,Villavicencio
+43.0,5953143,2286526,0,6,743.0,Universitario,Bogotá
+70.0,5131226,1960350,16,24,495.0,Tecnólogo,Villavo
+21.0,0,4876769,5,18,739.0,Secundaria,Pereira
+24.0,2327727,5251313,9,24,608.0,Secundaria,Santa Marta
+66.0,5477078,1400661,8,12,757.0,Universitario,Pereira
+79.0,4762061,880478,9,12,383.0,Tecnólogo,San José De Cúcuta
+53.0,5334067,315651,9,12,449.0,Universitario,Bogotá
+20.0,0,6368453,9,24,836.0,Técnico,Villavicencio
+73.0,3090914,4697947,5,18,597.0,Universitario,Bucaramanga
+18.0,0,3535463,4,12,837.0,Primaria,Ibagué
+41.0,1393681,1530510,7,12,384.0,Secundaria,Bogotá
+44.0,2698268,4975282,22,36,678.0,Técnico,Pereira
+19.0,0,1008762,37,48,653.0,Tecnólogo,Bta
+61.0,0,2790138,21,36,354.0,Secundaria,Cali
+43.0,3942766,617923,20,24,383.0,Tecnólogo,Bog
+47.0,1141716,3075520,2,12,,Primaria,Smr
+55.0,6969723,197042,4,6,626.0,Universitario,Ibagué
+28.0,1241685,7276893,26,48,784.0,Técnico,Ibagué
+56.0,1012626,10487383,12,36,611.0,Secundaria,Medellín
+60.0,5145370,687708,31,36,729.0,Universitario,Pereira
+45.0,0,4409538,13,24,487.0,Técnico,Villavicencio
+27.0,2060753,7092789,30,48,530.0,Secundaria,B/Quilla
+,0,1287395,7,12,653.0,Tecnólogo,Sta Marta
+24.0,2731000,1933186,39,36,403.0,Técnico,Barranqilla
+21.0,0,5795988,8,24,757.0,Tecnólogo,Bta
+55.0,0,9516215,3,24,,Técnico,Bogotá
+45.0,8875004,1234041,7,12,674.0,Universitario,Pereira
+74.0,4408104,10273950,1,24,,Universitario,Cartagena
+39.0,1022239,4568862,28,48,376.0,Secundaria,Cúcuta
+59.0,0,8947525,4,24,577.0,Secundaria,Mzl
+64.0,1550219,6498793,1,24,,Secundaria,Mzl
+61.0,7245571,1792789,0,6,355.0,Universitario,Cali
+59.0,2316316,4163683,11,24,824.0,Técnico,Ibagué
+54.0,2843438,1564929,0,6,323.0,Técnico,Cali
+65.0,0,2225134,1,6,835.0,Tecnólogo,Cúcuta
+28.0,1649728,703530,4,6,811.0,Técnico,Pei
+34.0,1049494,3759460,29,48,830.0,Secundaria,Baq
+,4234450,12749357,7,36,563.0,Tecnólogo,Med.
+40.0,0,2405541,0,6,785.0,Posgrado,Cali
+40.0,2431831,2422324,37,48,778.0,Universitario,Villavicencio
+60.0,1083734,1261434,4,12,421.0,Tecnólogo,Villavo
+21.0,0,1723840,33,48,589.0,Secundaria,Baq
+67.0,0,3906588,7,18,500.0,Técnico,Pereira
+54.0,0,10952432,0,24,596.0,Secundaria,Manizales
+55.0,0,2265256,5,12,699.0,Universitario,Cartagena
+,2070800,1859693,1,12,471.0,Técnico,Bta
+39.0,949692,4779885,7,48,820.0,Secundaria,Cartagena
+78.0,0,12285649,1,48,308.0,Tecnólogo,Ibagué
+77.0,0,4803740,22,36,386.0,Universitario,Villavicencio
+61.0,2673714,5328728,21,36,752.0,Técnico,Cúcuta
+35.0,900000,3407343,9,18,692.0,Secundaria,Manizales
+68.0,2169176,4809724,2,24,,Técnico,Bogotá
+59.0,2086663,999369,13,18,831.0,Secundaria,Santa Marta
+43.0,2488525,3274613,25,48,805.0,Tecnólogo,Villavicencio
+22.0,2864173,642813,8,12,708.0,Tecnólogo,Villavicencio
+32.0,2820764,5226633,22,48,664.0,Tecnólogo,Villavicencio
+79.0,0,1544482,2,6,535.0,Secundaria,Pereira
+23.0,4407590,1404655,2,6,807.0,Tecnólogo,Pereira
+51.0,4600719,2735066,6,18,705.0,Universitario,Bogotá
+18.0,4045026,3757741,15,24,506.0,Universitario,Pereira
+59.0,2208365,11594954,17,48,,Tecnólogo,Med.
+37.0,4737708,382912,9,12,766.0,Universitario,Cali
+37.0,900000,1807626,18,36,752.0,Primaria,Smr
+79.0,0,5919095,0,12,,Tecnólogo,Manizales
+77.0,0,4906363,7,36,605.0,Universitario,Cali
+66.0,4592565,8385958,54,48,483.0,Universitario,Manizales
+55.0,0,2810835,2,12,561.0,Universitario,Cal
+19.0,5547070,569347,9,12,593.0,Tecnólogo,B/Quilla
+69.0,0,710270,8,12,715.0,Posgrado,Bogotá
+78.0,4781239,12069686,6,36,789.0,Universitario,Mzl
+43.0,1652820,1415325,4,12,364.0,Primaria,Cúcuta
+24.0,0,1779403,29,36,345.0,Secundaria,Mzl
+63.0,1501462,1047499,8,18,486.0,Secundaria,Bog
+70.0,6208918,3163656,26,24,743.0,Universitario,Cartagena
+65.0,2186825,3768148,37,48,622.0,Secundaria,Barranquilla
+39.0,0,546823,9,12,441.0,Posgrado,Manizales
+,0,5758975,17,36,571.0,Universitario,Barranqilla
+53.0,5236489,1368665,27,36,547.0,Universitario,Bogotá
+,900000,7691158,13,36,475.0,Secundaria,Cali
+54.0,0,2396619,10,18,,Universitario,Bucaramanga
+34.0,900000,1321640,9,24,417.0,Secundaria,Manizales
+45.0,0,420114,2,6,630.0,Secundaria,Pereira
+32.0,4293556,1546135,2,6,527.0,Universitario,Barranquilla
+19.0,0,7309411,7,24,691.0,Tecnólogo,Manizales
+24.0,3355823,538630,6,12,648.0,Técnico,Barranquilla
+22.0,0,4257255,12,24,351.0,Posgrado,Santiago De Cali
+45.0,1987246,15205178,1,24,588.0,Técnico,Med.
+41.0,1268736,1548955,15,12,422.0,Universitario,Ibagué
+,2744948,1826685,16,24,656.0,Técnico,Barranquilla
+,1614469,10846712,7,48,,Técnico,Pereira
+56.0,0,1537407,25,36,762.0,Secundaria,Cartagena
+74.0,0,12661296,8,36,680.0,Posgrado,Bucaramanga
+75.0,0,1862018,3,24,691.0,Secundaria,Cartagena
+28.0,1242900,4067607,5,18,384.0,Secundaria,Barranqilla
+43.0,0,1557615,7,12,329.0,Secundaria,Bogotá
+58.0,6763940,931727,18,24,843.0,Universitario,Pereira
+75.0,3555030,12051212,5,24,,Técnico,Manizales
+21.0,1200839,583809,31,36,778.0,Tecnólogo,Barranquilla
+66.0,2543015,1919185,6,12,715.0,Tecnólogo,Sta Marta
+74.0,0,1610159,4,12,726.0,Secundaria,Bog
+27.0,0,2930780,10,24,564.0,Universitario,Villavicencio
+25.0,0,2128577,13,24,307.0,Tecnólogo,Cal
+27.0,5719071,1959641,8,18,609.0,Posgrado,Pereira
+46.0,3584092,2597823,12,18,566.0,Técnico,Cali
+24.0,0,3565266,26,36,730.0,Secundaria,Pereira
+25.0,1861871,2028696,2,18,567.0,Secundaria,Bogotá
+74.0,1868432,3041116,6,24,500.0,Secundaria,Santa Marta
+41.0,1605402,26763176,5,48,,Tecnólogo,Bogotá
+57.0,2560877,234005,5,6,535.0,Secundaria,Cartagena
+78.0,3209315,8505456,14,48,553.0,Universitario,Villavicencio
+51.0,7506669,1148332,3,6,797.0,Universitario,Smr
+55.0,1710566,6457332,3,24,452.0,Tecnólogo,Cartagena
+35.0,1244222,1758291,4,24,436.0,Secundaria,Cúcuta
+40.0,2811204,484420,15,18,367.0,Tecnólogo,Pereira
+35.0,5206792,464803,20,24,552.0,Tecnólogo,Bog
+18.0,0,1229468,12,18,550.0,Universitario,Villavicencio
+63.0,0,1173032,4,12,,Universitario,Bucaramanga
+77.0,0,7024041,5,24,584.0,Secundaria,Bogotá
+62.0,0,2786499,3,12,503.0,Secundaria,Pereira
+32.0,3067141,6901881,4,24,,Secundaria,Villavicencio
+72.0,3181315,7097180,23,48,330.0,Tecnólogo,B/Manga
+48.0,3337850,1260142,15,18,480.0,Técnico,Cali
+68.0,2867993,2704624,11,18,607.0,Secundaria,Bogotá
+37.0,0,986877,6,12,515.0,Tecnólogo,Smr
+45.0,1564713,1523018,30,48,393.0,Técnico,Cali
+53.0,4631274,6210746,4,24,495.0,Tecnólogo,Villavicencio
+21.0,4089807,1473770,30,36,724.0,Tecnólogo,Villavo
+,3642521,2776940,1,6,726.0,Técnico,Cúcuta
+22.0,900000,1750323,5,12,701.0,Secundaria,Pereira
+57.0,5413911,7430695,15,36,621.0,Universitario,Santa Marta
+37.0,0,723564,10,12,363.0,Posgrado,Medellín
+70.0,4398871,2341198,32,48,602.0,Universitario,Medellín
+49.0,1736817,8256103,8,36,349.0,Primaria,Ibagué
+22.0,5678323,1285512,4,12,418.0,Tecnólogo,Cartagena
+73.0,0,4701351,18,36,623.0,Secundaria,Smr
+77.0,1894883,3292871,4,18,612.0,Secundaria,Cartagena
+23.0,1606769,4384829,16,36,603.0,Secundaria,Cartagena
+63.0,0,5158187,6,18,839.0,Universitario,Ibagué
+28.0,2058938,1293488,23,36,740.0,Universitario,Bogotá
+,5028258,845153,4,6,747.0,Universitario,Santa Marta
+21.0,1110670,2844350,13,24,307.0,Secundaria,Cúcuta
+51.0,5089602,870848,2,6,326.0,Tecnólogo,Cali
+68.0,0,1862104,6,24,607.0,Tecnólogo,Cartagena
+57.0,5072886,467044,2,6,654.0,Universitario,Bucaramanga
+33.0,5678877,4612838,32,48,656.0,Universitario,Sta Marta
+53.0,3487033,1228536,3,6,344.0,Técnico,Manizales
+31.0,0,4957209,4,18,304.0,Tecnólogo,Bogotá
+38.0,6846243,2181814,2,12,707.0,Universitario,Cali
+31.0,900000,9492202,13,36,353.0,Primaria,Villavicencio
+,2270081,8111521,0,18,347.0,Secundaria,Med.
+44.0,2011953,1646089,4,24,546.0,Tecnólogo,Cúcuta
+49.0,3304980,14716201,8,36,429.0,Técnico,Bucaramanga
+,0,3292814,10,24,592.0,Técnico,Barranquilla
+72.0,0,1663896,10,18,494.0,Secundaria,Sta Marta
+25.0,0,2505697,18,24,566.0,Técnico,Pereira
+79.0,2515116,19659952,0,48,600.0,Secundaria,Villavo
+65.0,0,3592844,3,18,481.0,Tecnólogo,Medellín
+54.0,0,5066046,22,36,525.0,Primaria,Ibagué
+52.0,900000,9320125,0,18,560.0,Universitario,Villavo
+51.0,6978771,851144,4,12,,Universitario,Bogotá
+30.0,4825064,609605,1,6,611.0,Universitario,Medellín
+,6296553,6023605,0,12,,Universitario,Ibagué
+73.0,0,6590321,5,24,358.0,Primaria,Santa Marta
+34.0,0,2466748,6,12,680.0,Técnico,Mzl
+53.0,4024719,2329134,24,18,375.0,Técnico,Cúcuta
+63.0,6593022,988893,11,18,832.0,Universitario,Bga
+64.0,0,699029,10,12,648.0,Universitario,Cartagena
+30.0,2558853,2202925,0,6,,Secundaria,San José De Cúcuta
+24.0,0,1793927,38,48,668.0,Secundaria,Mzl
+76.0,900000,712980,4,6,675.0,Primaria,Pereira
+38.0,0,345450,10,12,682.0,Secundaria,Bogotá
+37.0,2732603,4212719,10,48,427.0,Tecnólogo,Bogotá
+66.0,9735263,7491831,8,48,440.0,Posgrado,Barranquilla
+26.0,2570344,3920833,23,36,369.0,Universitario,Villavicencio
+60.0,0,756319,10,12,377.0,Técnico,Bucaramanga
+38.0,0,1844955,10,18,,Técnico,Cúcuta
+45.0,3071743,793404,2,6,543.0,Universitario,Baq
+23.0,2768450,1998798,12,24,539.0,Tecnólogo,Ibagué
+78.0,1329165,2950503,26,48,353.0,Primaria,Pereira
+25.0,0,476422,32,36,747.0,Tecnólogo,Santa Marta
+30.0,0,4596773,3,18,794.0,Tecnólogo,Villavicencio
+50.0,1859030,4464501,11,36,484.0,Secundaria,Medellín
+77.0,3398681,3214927,28,48,,Universitario,Med.
+36.0,2258481,3030591,17,24,515.0,Tecnólogo,Bogotá
+29.0,2111962,22606553,5,48,,Secundaria,Bucaramanga
+72.0,1308263,6655839,7,24,670.0,Secundaria,Pei
+55.0,0,626967,8,12,694.0,Técnico,Bga
+21.0,2824563,1015003,9,18,743.0,Tecnólogo,Medellín
+39.0,2461234,5015597,8,24,804.0,Universitario,San José De Cúcuta
+76.0,0,1855226,15,24,711.0,Técnico,Ibagué
+45.0,0,2087975,17,24,734.0,Universitario,Bucaramanga
+42.0,4940205,3091074,4,12,785.0,Universitario,Medellín
+33.0,2734632,3178412,9,18,,Técnico,B/Manga
+54.0,1567591,1322850,3,12,714.0,Tecnólogo,Pereira
+55.0,0,590321,10,12,730.0,Secundaria,San José De Cúcuta
+45.0,6193840,670035,4,6,355.0,Universitario,Ibagué
+66.0,5508683,11420762,7,36,345.0,Universitario,Medellín
+55.0,3042058,4763477,32,48,640.0,Técnico,Cúcuta
+51.0,0,3320846,0,6,,Primaria,Cali
+28.0,1335498,3052840,30,48,657.0,Técnico,Cartagena
+57.0,5033772,16224916,10,48,754.0,Universitario,Santa Marta
+52.0,3639645,1835918,2,6,778.0,Universitario,Ibagué
+52.0,2956496,2683518,6,24,840.0,Tecnólogo,Ibagué
+28.0,0,4600639,0,12,844.0,Secundaria,Santiago De Cali
+46.0,0,3849623,24,36,835.0,Técnico,Bog
+18.0,0,13224180,4,48,,Posgrado,Pereira
+67.0,11738979,11670513,8,48,434.0,Posgrado,Santa Marta
+59.0,1288565,6731771,0,12,605.0,Técnico,Mzl
+28.0,1881772,3918835,30,24,400.0,Universitario,Cúcuta
+37.0,984440,2235464,11,18,677.0,Secundaria,Manizales
+53.0,0,14163292,8,48,687.0,Tecnólogo,Ibagué
+78.0,2212854,1715939,7,12,515.0,Técnico,Medellín
+58.0,1214002,2237575,13,6,442.0,Primaria,Medellín
+53.0,0,3695134,16,36,655.0,Tecnólogo,Ibagué
+28.0,3938625,2319440,4,12,610.0,Tecnólogo,Bga
+79.0,0,1586059,14,18,762.0,Técnico,Cali
+27.0,2880927,706111,1,6,611.0,Técnico,Cali
+47.0,0,424973,15,18,337.0,Técnico,Mdl
+65.0,1735548,773227,4,6,722.0,Secundaria,Pereira
+59.0,5123910,5118056,5,18,338.0,Universitario,Cali
+18.0,1906935,1306641,12,24,827.0,Técnico,Ibagué
+34.0,3193711,7123083,1,12,,Técnico,Santiago De Cali
+,3628383,930751,14,18,687.0,Tecnólogo,Villavo
+64.0,2634318,269263,5,6,388.0,Técnico,Ibagué
+67.0,0,946011,9,12,589.0,Posgrado,Medellín
+33.0,4267846,4039843,0,18,489.0,Posgrado,Cartagena
+19.0,0,768859,3,6,575.0,Secundaria,Barranqilla
+70.0,3929603,5520834,14,48,609.0,Universitario,Medellín
+66.0,4104665,1140289,3,6,721.0,Tecnólogo,Bog
+23.0,1412640,6311810,9,24,,Secundaria,Pereira
+45.0,1897639,1420963,8,12,829.0,Técnico,Pereira
+41.0,2690023,2494954,4,24,694.0,Tecnólogo,Santa Marta
+58.0,2811014,1810289,13,24,341.0,Tecnólogo,Bog
+62.0,900000,3051274,11,24,599.0,Primaria,Cartagena
+19.0,1856693,5259766,3,18,325.0,Secundaria,Cali
+59.0,9734254,6049535,4,18,708.0,Posgrado,Bogotá
+68.0,0,2532430,16,24,725.0,Secundaria,Manizales
+53.0,4681043,8296745,9,36,614.0,Universitario,Villavo
+22.0,0,1227634,6,18,501.0,Universitario,Bogotá
+79.0,3287942,5519276,10,24,642.0,Tecnólogo,Bucaramanga
+58.0,1689159,2759438,7,24,,Secundaria,Cartagena
+33.0,0,2269320,4,24,676.0,Secundaria,Villavicencio
+61.0,0,697585,4,6,381.0,Secundaria,Cartagena
+22.0,0,4181344,24,36,412.0,Universitario,Mzl
+37.0,2899228,1031602,1,6,,Técnico,B/Manga
+56.0,0,2078502,0,6,689.0,Tecnólogo,Villavicencio
+37.0,2402036,15972038,13,36,,Secundaria,Villavicencio
+56.0,1295703,4183856,13,24,384.0,Secundaria,Bga
+36.0,0,14494817,15,48,419.0,Técnico,Santa Marta
+65.0,0,13451254,4,24,608.0,Tecnólogo,Villavicencio
+42.0,5125516,11980700,14,48,369.0,Universitario,Bogotá
+19.0,2830274,10897946,11,36,816.0,Técnico,Barranquilla
+33.0,2930755,906788,4,12,686.0,Técnico,Smr
+42.0,0,14037311,8,36,,Universitario,Bogotá
+26.0,0,1298344,14,18,400.0,Técnico,Santa Marta
+73.0,0,15237578,7,48,689.0,Tecnólogo,Cartagena
+52.0,3494872,3831131,11,24,353.0,Técnico,Barranquilla
+66.0,0,4355376,13,24,668.0,Posgrado,Barranquilla
+72.0,900000,619860,30,36,602.0,Primaria,Ibagué
+30.0,3473849,2153664,6,12,319.0,Universitario,Cartagena
+19.0,0,6032581,6,36,569.0,Técnico,Ibagué
+72.0,0,3883282,9,18,705.0,Técnico,Pereira
+34.0,0,6963094,8,24,437.0,Secundaria,Manizales
+60.0,6795565,4062155,14,24,690.0,Universitario,San José De Cúcuta
+26.0,0,1392007,1,6,818.0,Secundaria,Cúcuta
+42.0,0,2032170,6,12,346.0,Técnico,Smr
+59.0,3095003,1275098,9,12,561.0,Universitario,Barranquilla
+66.0,2632986,2006759,28,48,693.0,Secundaria,Ibagué
+22.0,0,1818292,41,48,543.0,Técnico,Medellín
+,2872613,19011027,2,36,,Técnico,Cúcuta
+74.0,0,2430452,28,36,537.0,Universitario,B/Quilla
+26.0,5051304,1243776,31,36,357.0,Universitario,Bog
+26.0,4084503,4019629,9,18,572.0,Técnico,Pereira
+46.0,2683135,332631,15,18,501.0,Secundaria,Bucaramanga
+49.0,0,1408819,1,6,,Universitario,Cúcuta
+67.0,3026750,2588117,22,36,704.0,Técnico,Villavicencio
+47.0,0,7393959,6,36,491.0,Universitario,Mzl
+53.0,0,4333565,5,18,,Tecnólogo,Santa Marta
+79.0,1743862,691857,7,12,755.0,Secundaria,Smr
+71.0,4823902,3329107,15,36,465.0,Tecnólogo,Bucaramanga
+,0,5573668,10,24,721.0,Tecnólogo,Cúcuta
+26.0,6324330,550582,3,6,414.0,Posgrado,Villavicencio
+33.0,900000,2035688,3,12,638.0,Primaria,Pereira
+,0,727089,4,6,754.0,Tecnólogo,Cúcuta
+70.0,5659375,603280,14,18,603.0,Universitario,Pereira
+62.0,0,3481019,16,24,319.0,Tecnólogo,Smr
+37.0,1830502,6725522,11,36,556.0,Técnico,Manizales
+45.0,3133497,1182454,14,18,392.0,Tecnólogo,Pei
+38.0,5746682,6048393,33,48,529.0,Universitario,Cali
+23.0,2066398,865018,1,6,440.0,Técnico,Cartagena
+23.0,0,3178269,8,24,460.0,Tecnólogo,Cúcuta
+73.0,3373968,1660299,4,18,841.0,Tecnólogo,Bta
+58.0,0,1737283,13,24,552.0,Secundaria,Ibagué
+28.0,5249555,492999,2,6,551.0,Tecnólogo,Barranqilla
+44.0,2154714,15234930,7,48,744.0,Secundaria,Cali
+,0,2204188,2,6,,Secundaria,Baq
+59.0,0,6761239,7,36,509.0,Técnico,Bga
+28.0,2098092,635708,1,6,427.0,Secundaria,Cartagena
+76.0,1549230,1199462,15,18,706.0,Secundaria,Ibagué
+65.0,2171342,1359974,4,18,574.0,Tecnólogo,Pereira
+76.0,0,562760,7,12,328.0,Secundaria,Barranquilla
+42.0,900000,1760364,33,48,379.0,Universitario,Mzl
+76.0,0,1036759,8,12,445.0,Técnico,San José De Cúcuta
+58.0,3285049,4721479,1,12,601.0,Técnico,Barranquilla
+,0,4906938,35,48,688.0,Técnico,Pereira
+69.0,1750042,22448089,0,36,559.0,Técnico,Santiago De Cali
+38.0,0,865968,2,6,460.0,Universitario,Ibagué
+47.0,0,1870951,2,12,346.0,Universitario,Bogotá
+66.0,2195145,9286376,12,36,668.0,Secundaria,Bucaramanga
+50.0,0,656842,29,36,454.0,Universitario,Manizales
+79.0,3533583,880216,2,12,459.0,Técnico,Pei
+45.0,0,641401,5,12,655.0,Técnico,Ibagué
+38.0,3144905,576710,1,6,582.0,Técnico,Medellín
+73.0,0,706082,10,18,432.0,Tecnólogo,Cartagena
+47.0,6426018,814947,19,24,771.0,Universitario,Medellín
+62.0,1228266,2785283,17,24,333.0,Secundaria,Ibagué
+24.0,2112924,2064899,9,18,709.0,Secundaria,Manizales
+61.0,1960486,13879642,14,36,771.0,Técnico,Pereira
+22.0,1727538,2747071,28,36,332.0,Tecnólogo,Pereira
+,0,1065785,8,12,547.0,Universitario,Manizales
+61.0,0,15016922,0,24,661.0,Universitario,Manizales
+77.0,2309251,1179797,1,6,383.0,Secundaria,Ibagué
+46.0,2607979,2526492,5,24,316.0,Técnico,Villavicencio
+18.0,0,2731515,14,24,501.0,Universitario,Manizales
+32.0,0,11236121,14,36,456.0,Posgrado,Baq
+52.0,1766987,4693464,6,36,833.0,Técnico,Bogotá
+,900000,1730085,42,48,593.0,Primaria,Pei
+,4017915,1389563,2,6,500.0,Técnico,Ibagué
+72.0,4063312,499411,1,6,377.0,Posgrado,Barranqilla
+41.0,0,224758,4,6,572.0,Técnico,Sta Marta
+57.0,0,2981709,5,12,822.0,Universitario,Manizales
+30.0,0,2776451,29,36,415.0,Secundaria,Pei
+73.0,2414317,1261676,4,12,533.0,Secundaria,Ibagué
+49.0,1680607,14269380,12,48,756.0,Secundaria,Barranquilla
+20.0,0,877283,3,6,585.0,Tecnólogo,Medellín
+57.0,0,10084735,17,48,,Tecnólogo,Villavo
+23.0,0,2106544,41,48,465.0,Universitario,Medellín
+70.0,0,9887793,0,18,,Tecnólogo,Bta
+64.0,0,513507,4,6,806.0,Tecnólogo,Santa Marta
+23.0,3299235,1638140,12,24,306.0,Tecnólogo,Ibagué
+33.0,0,14272159,14,36,409.0,Posgrado,Barranquilla
+75.0,1794233,1608191,3,12,633.0,Universitario,Sta Marta
+48.0,0,1027391,3,12,401.0,Primaria,Mzl
+25.0,2899276,530882,21,24,556.0,Universitario,Pereira
+18.0,5968025,1470455,13,18,323.0,Universitario,Pei
+23.0,0,4407247,2,12,388.0,Secundaria,Santa Marta
+60.0,5018249,1473554,14,18,795.0,Tecnólogo,Santa Marta
+26.0,1338564,2964054,29,36,307.0,Secundaria,Cartagena
+65.0,3576472,3838910,20,18,689.0,Universitario,Ibagué
+23.0,997854,2476254,3,18,424.0,Primaria,Villavicencio
+75.0,7839954,2708176,20,36,384.0,Posgrado,Cartagena
+74.0,3400901,3609879,22,36,375.0,Tecnólogo,Cartagena
+72.0,0,1417119,6,12,531.0,Técnico,Cartagena
+29.0,0,3117954,38,48,829.0,Primaria,Ibagué
+65.0,3416782,6926819,24,48,505.0,Técnico,Villavicencio
+51.0,3182616,6092640,32,48,322.0,Técnico,Cali
+78.0,5495845,2561240,35,48,509.0,Universitario,Santa Marta
+,2252539,5513937,35,48,738.0,Técnico,Barranquilla
+69.0,0,1651254,5,12,576.0,Universitario,Villavo
+50.0,0,1624622,2,6,829.0,Universitario,San José De Cúcuta
+37.0,2044196,552757,14,18,359.0,Secundaria,Cartagena
+50.0,2582464,639249,3,6,769.0,Técnico,San José De Cúcuta
+51.0,1269905,1036322,8,12,651.0,Primaria,Bucaramanga
+78.0,6685126,1472222,22,36,591.0,Universitario,Pei
+21.0,0,259857,3,6,396.0,Técnico,Cúcuta
+51.0,1832377,9438771,15,36,760.0,Secundaria,Cúcuta
+22.0,7796996,8526460,9,36,531.0,Posgrado,Manizales
+66.0,900000,5882805,7,24,334.0,Secundaria,Bucaramanga
+27.0,0,6051412,17,36,732.0,Posgrado,Manizales
+57.0,0,5567395,10,24,335.0,Secundaria,Medellín
+40.0,0,1356862,4,12,799.0,Tecnólogo,Santa Marta
+18.0,3069013,2918886,13,24,422.0,Tecnólogo,Cartagena
+54.0,1861291,1764213,4,18,799.0,Secundaria,Villavicencio
+28.0,0,2420047,8,18,796.0,Técnico,Cartagena
+49.0,0,228755,8,6,668.0,Primaria,Barranquilla
+70.0,7390401,1137821,29,36,769.0,Universitario,Smr
+18.0,2225347,4439866,9,24,626.0,Primaria,Bog
+18.0,0,1418828,31,36,671.0,Posgrado,Ibagué
+57.0,4718914,1537131,1,6,618.0,Tecnólogo,Pereira
+79.0,10520554,1697010,4,12,605.0,Posgrado,Bog
+70.0,0,2573784,12,18,444.0,Técnico,Manizales
+27.0,3272459,2029727,26,48,381.0,Universitario,Cúcuta
+43.0,0,1039449,13,18,433.0,Universitario,Villavicencio
+67.0,2191227,7782524,40,36,501.0,Secundaria,San José De Cúcuta
+42.0,2103756,580727,4,6,720.0,Secundaria,Pereira
+20.0,900000,2428044,6,18,715.0,Técnico,Mdl
+66.0,1720336,303878,5,6,391.0,Técnico,Smr
+71.0,0,1942927,4,18,778.0,Técnico,Barranquilla
+48.0,3422702,992334,13,18,673.0,Técnico,Barranqilla
+72.0,0,4598195,24,48,,Posgrado,Bogotá
+35.0,0,1364711,13,6,816.0,Tecnólogo,Santiago De Cali
+68.0,2783721,8961080,4,24,642.0,Tecnólogo,Manizales
+29.0,4576592,4037438,11,24,456.0,Universitario,Medellín
+58.0,0,2432565,17,12,745.0,Técnico,Bogotá
+,3453957,1623339,7,18,582.0,Tecnólogo,Bogotá
+23.0,0,9478736,18,48,,Secundaria,Bucaramanga
+65.0,0,1626153,29,48,311.0,Tecnólogo,Pei
+56.0,900000,9199313,4,18,466.0,Primaria,Pei
+56.0,0,5285479,6,18,510.0,Universitario,Manizales
+78.0,3993081,1041006,3,6,583.0,Tecnólogo,Cartagena
+45.0,3880833,1973923,24,36,848.0,Tecnólogo,Cartagena
+58.0,0,642225,4,6,819.0,Tecnólogo,B/Quilla
+40.0,1426740,980278,3,6,431.0,Secundaria,Barranquilla
+20.0,1123046,1886328,38,48,612.0,Técnico,Cartagena
+70.0,0,7089753,7,24,349.0,Universitario,Cúcuta
+53.0,1783236,2903612,4,12,723.0,Tecnólogo,Bogotá
+,0,615637,9,12,483.0,Secundaria,Cali
+37.0,0,5293739,23,36,767.0,Posgrado,Barranquilla
+34.0,0,7094991,1,18,,Secundaria,Bogotá
+49.0,1836602,635785,11,18,386.0,Secundaria,Cali
+28.0,3001600,10227982,11,36,429.0,Secundaria,Barranquilla
+46.0,1755420,912829,9,12,437.0,Secundaria,Ibagué
+55.0,0,6967626,29,48,782.0,Técnico,Pereira
+57.0,0,269325,5,6,361.0,Técnico,Bucaramanga
+53.0,0,1409529,2,6,306.0,Secundaria,Cartagena
+66.0,0,14730439,8,48,437.0,Universitario,Santiago De Cali
+47.0,7311210,139579,5,6,486.0,Posgrado,Manizales
+63.0,0,7806691,17,36,450.0,Universitario,Cúcuta
+25.0,0,1262637,5,12,684.0,Técnico,Cúcuta
+30.0,3908836,2972768,7,36,507.0,Tecnólogo,Villavicencio
+37.0,0,2948771,5,12,439.0,Universitario,Barranquilla
+23.0,5155106,6482727,9,24,730.0,Tecnólogo,Villavo
+64.0,2619584,684851,4,6,489.0,Técnico,Manizales
+37.0,0,2804391,31,48,427.0,Secundaria,Manizales
+68.0,1024389,1867624,27,36,303.0,Secundaria,Manizales
+67.0,2553682,581783,17,12,768.0,Secundaria,Cúcuta
+,5327147,4157401,5,18,780.0,Universitario,Cal
+72.0,0,195145,5,6,,Técnico,Pereira
+43.0,0,903479,7,12,521.0,Tecnólogo,Cúcuta
+24.0,0,1695005,4,12,415.0,Tecnólogo,Cartagena
+19.0,0,7350489,25,48,431.0,Técnico,Cúcuta
+54.0,0,2240676,13,24,624.0,Tecnólogo,Manizales
+66.0,3553717,1334632,3,6,702.0,Técnico,Smr
+73.0,1943585,4368503,3,24,573.0,Secundaria,Mdl
+68.0,1972614,1628207,28,36,332.0,Técnico,Cúcuta
+70.0,0,4313531,11,36,410.0,Tecnólogo,Villavicencio
+59.0,0,7950322,0,18,,Técnico,B/Manga
+,0,9625063,12,36,419.0,Tecnólogo,Mzl
+63.0,0,1900818,1,6,682.0,Técnico,Bogotá
+38.0,1994557,8998481,20,48,585.0,Técnico,Manizales
+31.0,6832325,1697920,6,12,727.0,Universitario,Cúcuta
+62.0,1800410,395905,3,6,346.0,Tecnólogo,Cartagena
+62.0,0,4124145,24,48,357.0,Universitario,Cal
+62.0,3866518,5730713,18,48,357.0,Universitario,Manizales
+,3605142,5715073,12,36,467.0,Universitario,Smr
+55.0,4232040,1951816,1,6,585.0,Universitario,Mzl
+65.0,1848698,2149259,12,18,455.0,Técnico,Ibagué
+44.0,6835176,6148263,20,36,745.0,Universitario,Cartagena
+45.0,6085711,925793,13,24,665.0,Posgrado,Santa Marta
+62.0,1966155,6098717,16,36,342.0,Técnico,Sta Marta
+36.0,3799428,2390603,25,36,467.0,Universitario,Medellín
+57.0,1690407,10749947,7,24,631.0,Secundaria,Cali
+32.0,0,4538335,5,24,,Técnico,B/Manga
+71.0,6972480,2704448,33,48,318.0,Universitario,Medellín
+31.0,1830239,249828,3,6,752.0,Técnico,Bucaramanga
+70.0,0,4069464,0,6,,Técnico,Ibagué
+27.0,0,887875,2,6,600.0,Técnico,Santiago De Cali
+30.0,3633510,2429335,1,6,,Universitario,Villavicencio
+,1196410,2151178,7,24,776.0,Tecnólogo,Medellín
+79.0,1677294,6355004,2,12,,Técnico,Pei
+52.0,2091131,13740016,10,48,662.0,Tecnólogo,Barranquilla
+70.0,0,1279456,3,6,539.0,Técnico,Medellín
+33.0,0,710225,14,18,661.0,Primaria,Cartagena
+46.0,0,8525046,21,48,432.0,Universitario,Bogotá
+47.0,0,1230026,3,6,322.0,Tecnólogo,B/Quilla
+38.0,2018564,1603360,5,18,734.0,Secundaria,Cal
+77.0,2473313,2035223,35,48,567.0,Secundaria,Cartagena
+37.0,0,7417654,0,12,,Universitario,Medellín
+49.0,0,1250489,8,12,355.0,Tecnólogo,Cali
+28.0,0,3322063,3,12,704.0,Primaria,Bog
+25.0,2463785,1802621,14,24,367.0,Técnico,Bucaramanga
+18.0,0,1419852,19,24,521.0,Universitario,Mzl
+68.0,1348692,3897033,23,48,472.0,Tecnólogo,Cartagena
+68.0,7897962,224045,4,6,610.0,Posgrado,Bucaramanga
+34.0,1609297,3345372,4,12,792.0,Secundaria,Cúcuta
+26.0,3645514,7586456,16,36,699.0,Tecnólogo,Villavicencio
+66.0,0,12548653,2,36,365.0,Secundaria,Manizales
+61.0,3329298,5044017,10,24,717.0,Universitario,Santa Marta
+77.0,0,5465782,18,36,491.0,Secundaria,Barranquilla
+28.0,0,600766,3,6,455.0,Tecnólogo,Ibagué
+74.0,7112293,6666948,17,48,343.0,Universitario,Bogotá
+18.0,5651938,2043415,21,36,377.0,Tecnólogo,Bta
+34.0,0,8650744,25,48,788.0,Posgrado,Sta Marta
+72.0,1590196,5059577,6,24,,Técnico,Cartagena
+63.0,4466867,1773826,17,24,444.0,Posgrado,Medellín
+49.0,2291010,4976039,11,36,706.0,Técnico,Bucaramanga
+59.0,5958558,2739284,9,18,538.0,Universitario,Medellín
+70.0,4236919,1484804,30,36,492.0,Universitario,Bogotá
+,0,789496,3,6,721.0,Posgrado,Medellín
+51.0,900000,1116227,15,24,364.0,Tecnólogo,Mzl
+18.0,2511381,4135714,17,36,542.0,Técnico,Ibagué
+38.0,4396277,1861576,37,48,745.0,Universitario,Ibagué
+20.0,0,817010,2,6,820.0,Tecnólogo,Cali
+50.0,0,1578990,14,18,779.0,Tecnólogo,Cartagena
+77.0,2516649,918601,42,48,572.0,Secundaria,Pei
+26.0,1502037,4175075,38,48,605.0,Secundaria,Barranquilla
+45.0,1872294,396888,2,6,566.0,Técnico,Ibagué
+61.0,2672990,5456738,32,48,693.0,Tecnólogo,Cúcuta
+74.0,0,1551820,36,48,650.0,Secundaria,Ibagué
+44.0,0,1094182,3,6,310.0,Universitario,Santiago De Cali
+28.0,5298673,726077,3,6,404.0,Universitario,Ibagué
+38.0,3409029,4704234,21,36,755.0,Universitario,Manizales
+79.0,2804758,1696218,6,12,485.0,Técnico,Ibagué
+29.0,0,3780747,27,36,306.0,Secundaria,Bogotá
+,8514049,2455537,3,12,466.0,Universitario,Ibagué
+67.0,2180638,5722381,22,36,797.0,Técnico,Barranquilla
+,3008992,392456,2,6,472.0,Tecnólogo,Cartagena
+51.0,0,570054,15,18,617.0,Universitario,San José De Cúcuta
+41.0,8332151,684659,13,18,713.0,Universitario,Ibagué
+33.0,0,7488546,14,36,410.0,Primaria,Manizales
+19.0,0,3624387,9,18,501.0,Universitario,Cúcuta
+38.0,2604082,1176287,12,24,392.0,Secundaria,Barranquilla
+36.0,0,708303,17,24,515.0,Técnico,B/Quilla
+,0,3960789,10,24,,Tecnólogo,Cartagena
+33.0,0,2477730,17,24,495.0,Técnico,Cartagena
+50.0,0,8783101,5,36,531.0,Técnico,B/Quilla
+20.0,2115559,4260913,18,36,313.0,Técnico,Manizales
+55.0,0,4386683,0,12,,Tecnólogo,Cartagena
+35.0,0,1070899,21,24,678.0,Posgrado,Manizales
+18.0,0,3247930,0,6,,Técnico,Santa Marta
+51.0,5987284,660291,3,6,752.0,Tecnólogo,Bogotá
+31.0,0,450096,2,6,389.0,Universitario,Bogotá
+22.0,0,5883885,2,12,807.0,Tecnólogo,Manizales
+42.0,0,1207032,9,12,418.0,Primaria,Cartagena
+75.0,3890166,939495,13,18,312.0,Tecnólogo,Villavicencio
+50.0,0,12666560,9,36,591.0,Universitario,Santa Marta
+,3221878,638387,5,12,353.0,Universitario,Cúcuta
+29.0,5686890,3178864,35,48,670.0,Tecnólogo,Sta Marta
+21.0,0,2345792,16,24,732.0,Técnico,Cartagena
+59.0,2025010,4093091,20,36,397.0,Universitario,Ibagué
+38.0,0,762748,8,12,661.0,Universitario,Manizales
+21.0,0,1174321,9,12,789.0,Tecnólogo,Ibagué
+41.0,5104033,3065637,5,36,514.0,Universitario,Cali
+58.0,0,5777539,42,36,713.0,Posgrado,Bog
+74.0,4123905,2230548,18,24,492.0,Tecnólogo,Mdl
+22.0,3578209,3185060,4,12,700.0,Tecnólogo,Smr
+32.0,0,4037092,26,36,449.0,Universitario,Pereira
+46.0,2821526,2692849,4,12,,Tecnólogo,Bucaramanga
+66.0,1495061,3676483,21,48,624.0,Secundaria,Cúcuta
+32.0,1464527,844257,14,24,725.0,Secundaria,Cali
+28.0,3322169,1924253,0,6,728.0,Tecnólogo,Pereira
+64.0,5735471,7585956,25,48,459.0,Tecnólogo,Bogotá
+48.0,1808029,1662309,25,36,627.0,Secundaria,Villavicencio
+57.0,0,1195875,14,18,672.0,Universitario,Cúcuta
+28.0,3335564,10623995,23,48,421.0,Técnico,Barranqilla
+29.0,1101650,2120098,13,18,479.0,Técnico,Cal
+23.0,2523980,1088464,11,18,484.0,Técnico,Villavicencio
+51.0,0,10454865,10,36,350.0,Primaria,Villavo
+55.0,2704539,4221113,8,24,439.0,Secundaria,Cartagena
+,0,9063391,6,24,,Secundaria,Pereira
+40.0,0,7929722,0,36,748.0,Universitario,Santa Marta
+50.0,3002725,6998691,16,48,773.0,Tecnólogo,Bogotá
+53.0,0,7262741,12,36,479.0,Universitario,Ibagué
+77.0,3557451,3937741,0,6,663.0,Tecnólogo,Pereira
+26.0,3974053,2427667,1,12,348.0,Técnico,Cartagena
+43.0,0,3919371,14,36,764.0,Secundaria,San José De Cúcuta
+78.0,0,7273305,10,48,840.0,Universitario,Medellín
+76.0,0,8961171,12,36,697.0,Universitario,Manizales
+59.0,4354053,2640833,5,12,572.0,Tecnólogo,Barranquilla
+62.0,1778767,2136675,17,24,705.0,Secundaria,Med.
+63.0,0,2671169,16,48,348.0,Tecnólogo,Bogotá
+44.0,6157525,3205597,23,48,809.0,Universitario,Bogotá
+78.0,2581806,6629202,17,48,776.0,Universitario,Ibagué
+68.0,2101201,1426764,2,6,807.0,Universitario,Cartagena
+68.0,3588552,2543530,30,36,744.0,Técnico,Sta Marta
+63.0,0,5174067,10,24,356.0,Secundaria,Cúcuta
+79.0,0,4147828,6,18,615.0,Secundaria,Cartagena
+18.0,10004250,1670910,30,36,739.0,Posgrado,Pei
+36.0,7789097,22874968,9,48,,Universitario,Cali
+23.0,0,9701061,12,48,473.0,Técnico,Cali
+78.0,2354372,354377,5,6,419.0,Técnico,Bucaramanga
+52.0,3300952,919896,3,6,651.0,Técnico,Cúcuta
+32.0,2435271,5878763,0,24,551.0,Secundaria,Manizales
+66.0,9836256,13408447,12,36,382.0,Posgrado,Bucaramanga
+25.0,1768519,685290,9,12,633.0,Secundaria,Villavicencio
+56.0,0,729317,1,6,430.0,Universitario,Cartagena
+58.0,1546152,2109115,13,24,831.0,Primaria,Ibagué
+42.0,0,3981034,23,36,449.0,Posgrado,Ibagué
+62.0,5785810,3213083,7,24,829.0,Posgrado,Medellín
+56.0,0,183564,5,6,349.0,Secundaria,Manizales
+52.0,2191756,3983892,37,48,398.0,Secundaria,Bogotá
+41.0,0,1663844,14,18,761.0,Universitario,Ibagué
+52.0,0,9849968,20,48,677.0,Técnico,Cúcuta
+24.0,8563347,4638785,1,18,,Posgrado,Bogotá
+58.0,2801310,7263831,19,48,800.0,Tecnólogo,Ibagué
+32.0,4154742,9303361,10,48,417.0,Tecnólogo,Pereira
+61.0,6299988,1321621,8,12,571.0,Universitario,Villavo
+75.0,0,2106446,6,18,724.0,Posgrado,B/Manga
+29.0,0,640994,10,12,,Tecnólogo,Cartagena
+56.0,1836671,8117855,16,36,303.0,Técnico,Mdl
+48.0,2373708,2931069,0,6,,Tecnólogo,Cali
+56.0,3574306,2748078,2,18,763.0,Universitario,Cartagena
+78.0,4404774,941224,16,24,343.0,Tecnólogo,Bogotá
+51.0,0,2549837,13,24,374.0,Secundaria,Bogotá
+27.0,3222333,4515269,18,48,598.0,Tecnólogo,Cúcuta
+36.0,3248603,9907318,0,18,,Técnico,Medellín
+56.0,2368910,2064064,6,12,588.0,Secundaria,B/Manga
+67.0,0,749153,15,18,661.0,Tecnólogo,Barranquilla
+44.0,5338667,5398221,4,24,446.0,Universitario,Manizales
+22.0,2949385,2694106,15,24,,Universitario,Cartagena
+22.0,0,20946843,14,48,702.0,Tecnólogo,Pereira
+43.0,2945190,4184920,11,24,682.0,Secundaria,Ibagué
+42.0,3385589,6689044,27,48,703.0,Universitario,Villavo
+32.0,5016378,922939,2,6,355.0,Universitario,Cartagena
+27.0,1719093,17720927,2,36,652.0,Secundaria,Cali
+66.0,3354636,1958575,1,6,358.0,Técnico,Pereira
+27.0,0,11049535,6,36,457.0,Secundaria,Villavicencio
+77.0,0,12329587,0,18,738.0,Técnico,Cali
+65.0,2218162,6190228,10,24,686.0,Tecnólogo,Santa Marta
+24.0,7465454,669155,3,6,678.0,Universitario,Bogotá
+62.0,0,1070504,13,18,518.0,Tecnólogo,Cartagena
+70.0,1355969,1432224,12,18,566.0,Secundaria,Bga
+34.0,0,8225822,5,36,,Universitario,Sta Marta
+28.0,1393387,8925978,8,24,659.0,Secundaria,Medellín
+35.0,1690205,3055863,41,48,795.0,Secundaria,Cúcuta
+52.0,2838934,14984327,16,48,428.0,Técnico,Cartagena
+23.0,4302234,2627085,17,12,745.0,Tecnólogo,Bogotá
+59.0,0,5250171,10,36,,Posgrado,Cali
+61.0,3226686,386944,15,18,411.0,Tecnólogo,Pereira
+60.0,0,7266116,29,48,540.0,Secundaria,Barranquilla
+54.0,4882715,2623157,10,18,364.0,Universitario,Medellín
+31.0,9905876,18996446,6,36,,Posgrado,Pei
+,2356070,6987792,5,36,538.0,Técnico,Sta Marta
+34.0,0,3901211,11,24,586.0,Secundaria,Bogotá
+36.0,0,14369431,11,48,735.0,Secundaria,Pereira
+31.0,3194306,965862,1,6,430.0,Técnico,Medellín
+30.0,2900215,3967729,28,48,,Tecnólogo,Ibagué
+18.0,0,10152683,5,36,518.0,Tecnólogo,Manizales
+46.0,3883279,329685,21,24,720.0,Técnico,Pereira
+22.0,5045646,1122221,2,6,360.0,Tecnólogo,Manizales
+57.0,1962060,5803499,32,48,421.0,Técnico,Santa Marta
+28.0,2916200,12248017,14,36,396.0,Técnico,Bucaramanga
+19.0,0,2783939,5,12,443.0,Universitario,Pereira
+64.0,1964575,9240373,15,36,571.0,Secundaria,Cúcuta
+53.0,3557040,3356806,11,24,,Tecnólogo,Santa Marta
+76.0,0,2585538,2,12,519.0,Secundaria,Cartagena
+45.0,0,8870010,19,48,685.0,Universitario,Cartagena
+39.0,1493619,3275920,6,24,449.0,Primaria,Barranquilla
+61.0,8183731,4360647,32,24,747.0,Posgrado,B/Quilla
+44.0,900000,1838436,0,6,,Universitario,Barranquilla
+66.0,0,875204,2,6,465.0,Universitario,Santa Marta
+57.0,0,3201483,8,24,651.0,Posgrado,Manizales
+,0,596236,15,18,469.0,Posgrado,Bogotá
+26.0,0,2169476,15,24,359.0,Universitario,Villavicencio
+50.0,1716763,2055690,38,48,777.0,Técnico,Pereira
+66.0,0,3507449,7,18,374.0,Tecnólogo,Cúcuta
+18.0,0,8250632,10,48,316.0,Universitario,Ibagué
+32.0,3756327,3700869,2,18,768.0,Tecnólogo,Villavo
+44.0,1540065,249758,15,18,682.0,Técnico,Santiago De Cali
+57.0,11653935,2248402,0,6,476.0,Posgrado,Manizales
+20.0,1281050,822649,31,36,409.0,Secundaria,Cúcuta
+25.0,2721493,1337645,5,12,364.0,Tecnólogo,Santa Marta
+40.0,5087095,8596619,5,24,,Universitario,Ibagué
+69.0,0,5368884,11,24,447.0,Primaria,Bucaramanga
+52.0,3902203,1801870,6,24,627.0,Universitario,Pei
+27.0,2994761,4638096,12,24,716.0,Técnico,Santa Marta
+38.0,4541673,12148117,2,48,644.0,Técnico,Cali
+26.0,900000,7061571,15,36,784.0,Universitario,Medellín
+56.0,7807794,329069,4,6,521.0,Universitario,San José De Cúcuta
+65.0,3086557,4268689,16,36,523.0,Técnico,Cali
+68.0,7122022,2825703,0,6,430.0,Universitario,Sta Marta
+29.0,0,18709035,9,36,432.0,Secundaria,Cali
+22.0,4505118,5287795,4,24,345.0,Tecnólogo,Cúcuta
+28.0,0,237745,5,6,361.0,Primaria,Cartagena
+74.0,2223145,2661885,18,48,746.0,Tecnólogo,Baq
+45.0,2557844,461076,8,12,356.0,Técnico,Bogotá
+76.0,0,2505362,12,18,539.0,Tecnólogo,Bucaramanga
+18.0,0,11500222,13,48,696.0,Secundaria,Bogotá
+50.0,900000,3904591,1,18,617.0,Secundaria,Pei
+25.0,3962556,1586316,2,6,392.0,Técnico,Ibagué
+74.0,900000,6699478,2,18,794.0,Secundaria,Ibagué
+75.0,2864452,1087364,14,18,651.0,Técnico,Villavicencio
+44.0,0,2642909,5,12,551.0,Universitario,Cúcuta
+75.0,2177403,9749370,9,36,,Tecnólogo,Cúcuta
+18.0,2235948,4206794,2,12,316.0,Secundaria,Bogotá
+23.0,3905647,1468148,3,12,752.0,Técnico,Cali
+75.0,6685651,676589,1,6,585.0,Universitario,B/Manga
+72.0,4401560,11689792,7,36,,Tecnólogo,Villavicencio
+33.0,1434454,3869675,10,36,665.0,Primaria,Barranquilla
+28.0,6097896,2835661,13,24,833.0,Posgrado,Ibagué
+52.0,1170981,1924304,0,6,,Secundaria,Cal
+22.0,0,9041588,3,18,463.0,Técnico,Barranquilla
+67.0,0,443700,2,6,556.0,Posgrado,Cúcuta
+65.0,0,1803959,25,36,611.0,Tecnólogo,Medellín
+32.0,0,2611377,16,24,798.0,Universitario,Cúcuta
+20.0,8185642,400133,5,6,616.0,Posgrado,Baq
+61.0,1252952,713971,2,6,644.0,Secundaria,Pereira
+65.0,900000,9459309,5,36,475.0,Primaria,Bogotá
+60.0,3522070,6549091,21,36,513.0,Universitario,Barranquilla
+79.0,1482477,4005278,4,24,457.0,Técnico,Cali
+,0,3203228,17,36,467.0,Universitario,B/Manga
+,0,812981,4,6,312.0,Técnico,Manizales
+51.0,0,631719,1,6,589.0,Primaria,Medellín
+34.0,2536044,1101884,15,18,397.0,Universitario,Cartagena
+53.0,2859602,2596951,15,24,318.0,Universitario,Bog
+68.0,2377205,1214515,8,18,594.0,Tecnólogo,Cartagena
+71.0,0,11372951,5,36,448.0,Secundaria,Santiago De Cali
+74.0,1672861,859734,4,6,,Secundaria,Sta Marta
+,12028285,10963947,11,36,719.0,Posgrado,Mzl
+45.0,3906804,771275,4,6,319.0,Tecnólogo,Santa Marta
+48.0,2224968,27856913,0,48,,Universitario,Barranquilla
+,5108825,6616673,19,36,766.0,Universitario,Bucaramanga
+52.0,4697438,742215,1,6,700.0,Tecnólogo,Bogotá
+23.0,0,2073736,4,12,583.0,Secundaria,B/Quilla
+33.0,3743624,9000617,10,36,790.0,Universitario,Manizales
+39.0,0,420250,20,24,317.0,Posgrado,Pei
+,5680570,9762190,13,48,788.0,Universitario,Bta
+73.0,11537305,407042,5,6,492.0,Posgrado,Ibagué
+62.0,4223356,1638648,27,36,512.0,Tecnólogo,Villavicencio
+75.0,2238376,830958,5,12,814.0,Tecnólogo,Cúcuta
+78.0,0,1513757,14,18,480.0,Universitario,B/Quilla
+58.0,3328779,85174,5,6,492.0,Tecnólogo,Ibagué
+48.0,900000,780847,8,12,605.0,Primaria,Bga
+28.0,7913793,1684896,10,18,839.0,Universitario,Ibagué
+51.0,5139910,890347,15,18,593.0,Tecnólogo,Santa Marta
+58.0,2726762,629169,30,36,307.0,Tecnólogo,Villavicencio
+35.0,0,7463198,7,24,720.0,Universitario,Barranquilla
+78.0,0,3591249,4,12,617.0,Tecnólogo,Med.
+48.0,0,3013927,4,12,774.0,Universitario,Mdl
+31.0,900000,306612,4,6,558.0,Secundaria,Mzl
+52.0,1947857,458703,13,18,452.0,Técnico,Bogotá
+24.0,0,2565354,10,18,354.0,Técnico,Bogotá
+52.0,6465287,16027471,4,36,785.0,Universitario,B/Quilla
+35.0,0,4616602,6,18,612.0,Posgrado,Bucaramanga
+73.0,0,2397705,40,48,753.0,Universitario,Mzl
+21.0,2270273,3272284,10,18,831.0,Secundaria,Pei
+48.0,1581527,7565913,8,48,474.0,Secundaria,Bucaramanga
+63.0,1198284,5853544,7,18,,Secundaria,Cúcuta
+38.0,2568151,1134374,9,12,487.0,Tecnólogo,Bogotá
+41.0,4911060,4205490,8,18,457.0,Universitario,Cali
+18.0,3178697,8598363,6,36,628.0,Tecnólogo,Ibagué
+44.0,3214202,4938402,12,48,,Tecnólogo,Manizales
+52.0,7424819,706454,1,6,521.0,Universitario,Bucaramanga
+78.0,1698251,1876061,13,24,637.0,Secundaria,Ibagué
+72.0,2785397,833648,2,6,544.0,Técnico,Pereira
+40.0,5399393,3142157,16,48,475.0,Universitario,Cali
+,1865081,2657941,0,6,466.0,Secundaria,Bogotá
+47.0,0,1853603,12,18,355.0,Primaria,Med.
+51.0,2321093,1899392,33,48,427.0,Universitario,Pei
+35.0,3521229,25722394,1,48,,Universitario,Barranquilla
+59.0,6011317,9803973,21,48,838.0,Universitario,Cúcuta
+21.0,0,1155551,7,12,426.0,Técnico,Ibagué
+67.0,0,399798,4,6,784.0,Tecnólogo,Manizales
+18.0,0,7124679,1,12,,Universitario,Medellín
+67.0,4991670,1283641,8,12,405.0,Universitario,B/Quilla
+66.0,1388657,2166255,15,24,569.0,Secundaria,Ibagué
+19.0,0,2129394,13,18,410.0,Universitario,Bogotá
+66.0,1165944,478146,15,18,541.0,Secundaria,Bucaramanga
+67.0,0,984596,21,24,474.0,Técnico,Mzl
+73.0,0,3009353,34,48,646.0,Tecnólogo,Mdl
+,1197898,737905,28,36,470.0,Secundaria,Villavo
+44.0,6054778,506496,4,6,470.0,Posgrado,Bucaramanga
+28.0,0,16963554,8,48,597.0,Universitario,Manizales
+70.0,0,2442780,30,36,490.0,Tecnólogo,Bta
+20.0,5723779,566267,9,12,655.0,Universitario,Ibagué
+26.0,3055539,4998462,9,24,,Técnico,Bogotá
+42.0,0,757702,8,12,308.0,Tecnólogo,Mdl
+60.0,0,18244891,3,36,447.0,Secundaria,Ibagué
+30.0,3049139,2977519,41,48,665.0,Universitario,Bga
+78.0,0,3234208,20,36,440.0,Universitario,Santa Marta
+61.0,0,3130981,30,48,734.0,Tecnólogo,Cartagena
+31.0,2052340,804555,21,24,483.0,Técnico,Ibagué
+31.0,0,5169154,7,24,417.0,Universitario,Cartagena
+73.0,3837830,4852745,16,36,744.0,Técnico,Cali
+49.0,4893154,1196241,30,36,775.0,Tecnólogo,Pereira
+65.0,0,3527434,3,12,761.0,Secundaria,Medellín
+42.0,2730417,1723501,30,36,467.0,Técnico,Cartagena
+34.0,0,495705,4,6,608.0,Secundaria,Cartagena
+34.0,4037405,2052573,13,18,579.0,Técnico,B/Quilla
+18.0,0,4575709,5,18,,Técnico,Ibagué
+65.0,2154847,405585,2,6,712.0,Técnico,Barranquilla
+58.0,0,1359198,26,36,319.0,Tecnólogo,Villavicencio
+54.0,0,9803130,13,36,580.0,Secundaria,Pei
+,1719744,3412882,6,18,308.0,Tecnólogo,Cúcuta
+34.0,900000,1899069,17,36,825.0,Secundaria,Bucaramanga
+58.0,3146625,5512274,6,24,570.0,Tecnólogo,Cal
+38.0,4272761,3091938,6,18,608.0,Universitario,Bog
+68.0,0,5690064,8,24,384.0,Posgrado,Cúcuta
+67.0,0,8902237,11,48,508.0,Técnico,Cúcuta
+,0,1874961,4,12,,Secundaria,Bogotá
+54.0,7277391,15492489,15,48,410.0,Universitario,Barranquilla
+27.0,0,8114179,2,36,839.0,Universitario,Medellín
+29.0,0,3130121,5,12,341.0,Técnico,Villavicencio
+24.0,2311013,481979,3,6,826.0,Técnico,Bucaramanga
+20.0,5502728,222960,4,6,306.0,Universitario,B/Manga
+,0,1928234,13,18,344.0,Técnico,B/Manga
+43.0,2131773,871301,8,12,686.0,Secundaria,Medellín
+61.0,8878875,12759897,10,48,669.0,Posgrado,Ibagué
+25.0,0,697308,2,6,342.0,Universitario,Ibagué
+50.0,3407653,7921119,4,24,613.0,Tecnólogo,B/Quilla
+48.0,1665380,4689880,10,36,801.0,Secundaria,Cali
+49.0,0,4492025,3,12,,Secundaria,Ibagué
+55.0,0,1694914,12,18,725.0,Tecnólogo,Medellín
+42.0,5945761,1265187,8,12,648.0,Universitario,Cartagena
+43.0,0,5313966,14,36,784.0,Secundaria,Medellín
+54.0,0,5059942,15,36,454.0,Técnico,Pereira
+25.0,2895310,1584330,9,24,406.0,Universitario,Cali
+55.0,2752973,1540903,7,12,401.0,Técnico,Medellín
+57.0,1699137,1526931,14,18,746.0,Secundaria,Cal
+30.0,0,6648194,18,36,804.0,Universitario,Bucaramanga
+56.0,2736790,4043422,25,36,314.0,Secundaria,Cartagena
+61.0,2557940,4173666,4,18,437.0,Secundaria,Manizales
+73.0,4503550,1336107,30,36,396.0,Universitario,Cartagena
+35.0,0,3970366,1,12,553.0,Secundaria,Mdl
+63.0,9140501,3332059,2,12,616.0,Posgrado,Manizales
+38.0,0,944439,3,6,755.0,Técnico,Bogotá
+70.0,3557417,5177233,24,36,325.0,Técnico,Santa Marta
+,3152163,475072,4,6,656.0,Secundaria,Mzl
+,8902896,5865405,3,12,,Posgrado,Cali
+66.0,0,8861221,26,48,584.0,Primaria,Santa Marta
+65.0,3989129,1929563,5,12,682.0,Técnico,Manizales
+76.0,2150518,435029,4,6,472.0,Tecnólogo,Cartagena
+46.0,4840418,5532870,27,48,675.0,Técnico,Mzl
+57.0,2322073,3491594,4,24,681.0,Secundaria,Manizales
+18.0,0,4483991,23,36,722.0,Tecnólogo,Bucaramanga
+63.0,900000,6218234,4,18,833.0,Primaria,Cúcuta
+53.0,0,2094616,8,24,546.0,Secundaria,Medellín
+41.0,0,1100914,14,24,553.0,Posgrado,Bucaramanga
+56.0,0,4913181,13,24,528.0,Posgrado,Pereira
+50.0,3644003,3833878,6,24,626.0,Técnico,Barranquilla
+19.0,1279008,6571871,7,24,436.0,Secundaria,Barranquilla
+31.0,0,1027316,42,48,399.0,Secundaria,Cartagena
+53.0,8172630,2306691,12,24,649.0,Universitario,Bucaramanga
+72.0,2554346,403554,4,6,359.0,Secundaria,Santa Marta
+26.0,4220377,5088716,25,48,457.0,Universitario,Bogotá
+22.0,0,3393152,37,48,,Técnico,Barranquilla
+56.0,2467000,394838,5,6,627.0,Técnico,Villavicencio
+31.0,0,2000560,1,6,,Técnico,Bogotá
+,3126486,249973,21,24,735.0,Universitario,Mzl
+22.0,5785054,6292000,22,36,344.0,Posgrado,Cali
+52.0,0,13009717,15,48,433.0,Universitario,Cúcuta
+79.0,1719720,1677272,11,18,441.0,Tecnólogo,Medellín
+71.0,1231709,5598409,17,36,848.0,Secundaria,Pereira
+45.0,4034659,2072553,34,48,597.0,Universitario,Pei
+45.0,0,14185937,0,24,,Posgrado,Villavicencio
+20.0,985507,7196168,6,24,318.0,Secundaria,Cal
+26.0,0,5361394,36,48,720.0,Técnico,Medellín
+47.0,0,574535,2,6,709.0,Técnico,Medellín
+37.0,4367233,2181118,33,48,300.0,Universitario,Pereira
+28.0,2924838,1013604,2,6,313.0,Técnico,Manizales
+21.0,2001340,8194471,1,18,786.0,Tecnólogo,Bucaramanga
+21.0,1940089,874321,10,18,827.0,Técnico,Cal
+39.0,1480636,328555,4,6,545.0,Técnico,Pereira
+74.0,4055680,509045,3,6,674.0,Universitario,Cal
+34.0,4954582,5917945,3,24,472.0,Tecnólogo,Cartagena
+32.0,12077376,6819370,5,18,,Posgrado,Villavicencio
+78.0,0,1877876,23,36,463.0,Tecnólogo,Manizales
+34.0,3561433,3865667,9,18,343.0,Secundaria,Bucaramanga
+21.0,8185635,2206697,16,12,317.0,Universitario,Manizales
+73.0,5721977,477829,31,36,601.0,Universitario,Bucaramanga
+51.0,0,822323,2,12,512.0,Secundaria,Mzl
+30.0,0,10771760,23,48,649.0,Primaria,Cúcuta
+,0,918981,5,12,552.0,Tecnólogo,Baq
+48.0,0,1722435,2,12,537.0,Posgrado,Manizales
+52.0,4694850,878719,2,6,785.0,Universitario,Sta Marta
+63.0,0,886478,4,6,388.0,Secundaria,Bogotá
+51.0,1591905,4935423,36,48,471.0,Secundaria,Medellín
+76.0,1596276,2307579,18,24,657.0,Secundaria,Santiago De Cali
+51.0,6433443,1007326,2,6,728.0,Posgrado,Bog
+57.0,4209424,2854088,14,6,313.0,Universitario,Bucaramanga
+59.0,3671302,1131900,11,18,740.0,Técnico,Ibagué
+26.0,0,13490335,5,36,717.0,Universitario,Pereira
+24.0,1837873,1462152,29,36,669.0,Primaria,Bogotá
+19.0,0,2289146,16,24,531.0,Técnico,Barranqilla
+71.0,1903409,5007530,35,48,470.0,Secundaria,Santa Marta
+44.0,0,2485877,11,18,484.0,Secundaria,Pei
+,1956721,773987,8,6,810.0,Secundaria,Pereira
+33.0,4555854,8429478,5,18,612.0,Universitario,Santa Marta
+65.0,0,3403021,8,18,326.0,Universitario,Medellín
+46.0,1916053,1161770,9,12,755.0,Secundaria,Ibagué
+39.0,0,7228286,1,12,302.0,Tecnólogo,Pereira
+48.0,5093635,773031,16,24,639.0,Tecnólogo,Cartagena
+35.0,900000,2500624,4,12,723.0,Primaria,Bucaramanga
+39.0,0,5963250,29,48,478.0,Tecnólogo,Pereira
+,1711867,3508352,3,12,617.0,Primaria,Ibagué
+61.0,2879916,680587,15,18,846.0,Secundaria,Villavo
+59.0,4517449,14542397,10,36,,Universitario,Manizales
+24.0,2319331,5229192,11,36,,Tecnólogo,Ibagué
+28.0,0,2051578,13,18,713.0,Secundaria,Cal
+40.0,2124512,1047049,16,24,738.0,Tecnólogo,Cúcuta
+56.0,2510182,2074874,30,48,580.0,Técnico,Bucaramanga
+26.0,8998192,1294229,17,24,303.0,Posgrado,Medellín
+61.0,5232282,1046211,5,18,757.0,Universitario,Cal
+18.0,0,3102806,5,12,364.0,Universitario,Bta
+27.0,7672650,1099124,12,18,,Universitario,Cartagena
+20.0,4815564,6431556,9,48,423.0,Tecnólogo,Cali
+24.0,0,5195787,31,48,445.0,Universitario,Mzl
+53.0,1114206,5475258,18,48,533.0,Secundaria,Ibagué
+54.0,5435650,269789,4,6,711.0,Universitario,Bucaramanga
+60.0,900000,2317525,2,12,554.0,Primaria,Cali
+20.0,1618990,10042287,2,24,731.0,Secundaria,Bogotá
+47.0,901722,525918,10,12,461.0,Secundaria,Manizales
+55.0,9742702,10664754,15,48,340.0,Posgrado,Manizales
+41.0,7039441,287475,10,12,377.0,Posgrado,Santiago De Cali
+44.0,2442376,10336329,12,36,394.0,Secundaria,Cartagena
+28.0,1601380,10886977,0,18,615.0,Primaria,Medellín
+68.0,5874060,961131,29,36,682.0,Universitario,Ibagué
+,0,2629587,28,36,344.0,Secundaria,Villavicencio
+33.0,0,208316,5,6,,Tecnólogo,Cali
+18.0,0,7021460,26,48,493.0,Secundaria,Barranquilla
+52.0,0,1328369,12,24,590.0,Técnico,Mzl
+31.0,0,1609829,4,12,558.0,Secundaria,Santa Marta
+65.0,0,12404377,19,48,706.0,Secundaria,Pereira
+,0,1603582,12,18,388.0,Secundaria,Cartagena
+43.0,1595873,3382231,24,48,825.0,Técnico,Villavicencio
+27.0,0,525503,14,18,521.0,Secundaria,B/Manga
+41.0,2151520,1419897,19,24,592.0,Secundaria,Bogotá
+74.0,2132261,1597296,14,18,675.0,Secundaria,Pereira
+60.0,0,269787,5,6,669.0,Universitario,Cali
+41.0,0,16734231,9,36,,Universitario,Bucaramanga
+43.0,1930810,477129,7,12,325.0,Tecnólogo,Bogotá
+69.0,1616647,2764174,13,24,717.0,Universitario,Cartagena
+51.0,4743336,5693779,3,18,681.0,Universitario,Medellín
+79.0,2057142,3012337,4,24,571.0,Secundaria,Santiago De Cali
+40.0,0,1875807,22,36,583.0,Técnico,Ibagué
+66.0,0,2059099,42,48,493.0,Universitario,Villavo
+27.0,0,838442,7,12,422.0,Universitario,Cartagena
+41.0,0,2176842,17,24,745.0,Universitario,Cúcuta
+60.0,1053301,2308667,16,24,332.0,Primaria,Mzl
+23.0,0,6202056,15,36,727.0,Secundaria,Pereira
+31.0,0,15716967,3,36,317.0,Universitario,Cali
+28.0,0,2985661,8,18,609.0,Tecnólogo,Cal
+61.0,0,1009723,2,6,546.0,Secundaria,Bucaramanga
+,0,1938983,26,36,320.0,Universitario,Bog
+64.0,1619026,895291,6,12,785.0,Secundaria,Ibagué
+55.0,0,1110381,19,24,766.0,Secundaria,Manizales
+33.0,2277146,389586,20,24,747.0,Técnico,Cali
+72.0,1836669,881954,15,18,731.0,Técnico,B/Manga
+22.0,0,2320964,1,6,,Secundaria,Bga
+38.0,0,1221029,17,24,594.0,Secundaria,Pei
+40.0,1367462,5093518,4,24,654.0,Secundaria,Bucaramanga
+25.0,0,7934183,4,24,631.0,Técnico,Santa Marta
+38.0,0,516633,4,6,469.0,Secundaria,Bogotá
+,7281541,1910514,2,12,676.0,Universitario,Barranquilla
+22.0,6632806,4073650,8,18,605.0,Universitario,Cartagena
+40.0,0,883053,12,18,378.0,Técnico,Villavicencio
+24.0,5494453,368221,3,6,461.0,Universitario,Cartagena
+36.0,3494199,3474669,12,24,458.0,Universitario,Cartagena
+40.0,3877737,3014569,1,12,575.0,Técnico,Medellín
+46.0,2305196,3114324,10,18,,Secundaria,Medellín
+,1793439,9798486,9,36,806.0,Técnico,Manizales
+24.0,3314509,1722950,4,18,312.0,Universitario,Santa Marta
+51.0,0,7311988,30,48,422.0,Técnico,Villavicencio
+50.0,0,888669,7,12,400.0,Tecnólogo,Ibagué
+36.0,1524676,966905,2,6,453.0,Secundaria,Cartagena
+19.0,12064049,4740090,7,24,792.0,Posgrado,Bogotá
+73.0,2132141,1404962,13,18,665.0,Secundaria,Mzl
+61.0,0,2633570,0,6,638.0,Universitario,Cali
+31.0,0,4744378,12,24,836.0,Técnico,Cali
+25.0,0,1130868,2,6,812.0,Universitario,Villavicencio
+26.0,2671855,8857169,4,24,791.0,Técnico,Medellín
+44.0,0,760311,8,12,317.0,Tecnólogo,Ibagué
+77.0,6823163,11158561,10,36,609.0,Universitario,Pei
+51.0,3089963,3159117,38,48,621.0,Técnico,Santa Marta
+37.0,2230183,562540,20,24,,Secundaria,Santiago De Cali
+77.0,1743099,1252283,23,36,833.0,Secundaria,Pereira
+72.0,5265585,3052961,15,24,765.0,Posgrado,Cúcuta
+75.0,0,808081,9,12,778.0,Primaria,Medellín
+57.0,0,2449689,4,18,311.0,Secundaria,Barranquilla
+30.0,0,3449518,2,12,,Universitario,Cartagena
+68.0,0,2693775,7,24,509.0,Universitario,Bogotá
+23.0,0,1979980,0,6,350.0,Técnico,Pereira
+20.0,1987980,15681943,11,48,771.0,Secundaria,Villavicencio
+30.0,2021986,196054,5,6,506.0,Técnico,B/Quilla
+67.0,1838995,1742748,0,6,700.0,Secundaria,Santa Marta
+65.0,5344767,13873831,2,24,842.0,Universitario,Mdl
+27.0,0,8595543,12,36,,Universitario,B/Quilla
+75.0,5901959,6618776,13,36,722.0,Universitario,Cúcuta
+40.0,2262702,2712189,10,18,366.0,Técnico,Villavicencio
+29.0,1446970,1257059,0,6,820.0,Primaria,Santa Marta
+,2999179,1603919,20,12,827.0,Secundaria,Villavicencio
+26.0,0,3736832,32,48,814.0,Secundaria,Bga
+31.0,0,2535223,30,36,675.0,Secundaria,Villavo
+19.0,4496664,5209810,9,36,828.0,Universitario,Medellín
+30.0,3480443,4131816,0,6,809.0,Universitario,Bta
+25.0,3825426,1815925,18,36,706.0,Universitario,Medellín
+21.0,0,14110529,16,48,520.0,Posgrado,Ibagué
+50.0,0,840599,1,6,517.0,Universitario,Cali
+62.0,2697680,2009708,7,12,312.0,Técnico,Santa Marta
+76.0,0,2446682,6,12,816.0,Tecnólogo,Cali
+49.0,2609691,8685170,10,36,346.0,Secundaria,Cúcuta
+37.0,0,4948646,17,36,621.0,Primaria,Santa Marta
+18.0,0,10250229,14,48,467.0,Primaria,Bga
+30.0,0,21462531,13,48,,Técnico,Medellín
+40.0,2807355,9981232,15,48,833.0,Tecnólogo,Cali
+39.0,1458796,5737299,8,24,390.0,Secundaria,Manizales
+28.0,2247504,1461857,18,36,350.0,Técnico,Bogotá
+69.0,0,2047336,18,24,304.0,Primaria,Villavo
+19.0,4882316,2167208,15,24,492.0,Tecnólogo,Santa Marta
+49.0,0,6496835,18,48,831.0,Universitario,Cartagena
+70.0,0,1408696,13,18,302.0,Técnico,Pereira
+,0,2032257,18,24,517.0,Tecnólogo,Medellín
+38.0,0,2843782,9,24,431.0,Universitario,Villavicencio
+73.0,4810866,14673129,9,36,,Tecnólogo,Barranquilla
+40.0,1195424,485574,4,6,,Primaria,Bogotá
+35.0,0,17776325,2,48,804.0,Técnico,San José De Cúcuta
+,1924614,2033434,7,12,324.0,Tecnólogo,Bog
+38.0,8988267,789354,1,6,360.0,Posgrado,Cartagena
+61.0,2170060,423129,5,6,720.0,Secundaria,Smr
+66.0,9799935,1161406,2,12,754.0,Posgrado,Sta Marta
+63.0,2169584,5987068,19,36,517.0,Tecnólogo,Ibagué
+53.0,0,1306816,2,6,385.0,Técnico,Pereira
+39.0,2648839,4030017,26,36,625.0,Universitario,Ibagué
+62.0,0,359851,15,18,688.0,Universitario,Bucaramanga
+36.0,0,777976,10,12,544.0,Tecnólogo,Bogotá
+47.0,0,2588149,12,24,616.0,Tecnólogo,Cartagena
+,0,2223456,10,18,377.0,Tecnólogo,Cartagena
+41.0,5008412,7571926,28,48,374.0,Universitario,Cali
+52.0,3352739,2953953,11,24,319.0,Tecnólogo,Ibagué
+69.0,0,4141848,21,36,839.0,Universitario,Cúcuta
+53.0,900000,984220,1,6,757.0,Técnico,Villavicencio
+62.0,0,5420764,5,24,572.0,Secundaria,Manizales
+20.0,7168022,615046,2,6,404.0,Posgrado,Barranquilla
+34.0,0,1006762,2,6,,Universitario,Villavicencio
+71.0,5096465,223135,4,6,462.0,Universitario,San José De Cúcuta
+36.0,930455,1680652,38,48,542.0,Primaria,Smr
+30.0,1959562,2692829,31,48,380.0,Primaria,Manizales
+66.0,1882477,4281066,35,48,678.0,Técnico,Manizales
+26.0,6729520,2591319,3,18,657.0,Posgrado,Santa Marta
+44.0,1226317,4166806,8,18,821.0,Secundaria,Pereira
+75.0,0,3606233,6,24,,Técnico,Med.
+33.0,4536155,3296521,27,36,418.0,Universitario,Medellín
+79.0,0,616694,9,12,317.0,Técnico,Bga
+60.0,3603120,3964516,19,36,776.0,Técnico,Baq
+38.0,4097365,2306383,6,12,,Universitario,Pei
+49.0,4029979,7119390,7,24,380.0,Tecnólogo,Barranquilla
+32.0,2082341,2816283,1,6,432.0,Universitario,Bga
+55.0,0,4930247,51,48,588.0,Primaria,Cúcuta
+30.0,931071,3099127,29,36,806.0,Técnico,Cúcuta
+27.0,5340482,22568012,8,48,,Universitario,Manizales
+43.0,2275028,1125866,12,18,402.0,Técnico,Manizales
+74.0,8748322,986547,1,6,352.0,Universitario,Manizales
+75.0,2933368,2133256,26,18,664.0,Posgrado,B/Quilla
+78.0,1393555,1257600,3,6,,Primaria,Manizales
+64.0,0,1587602,32,48,777.0,Posgrado,Bogotá
+66.0,1461351,3849401,15,24,720.0,Secundaria,Medellín
+56.0,3189457,2710684,4,12,,Universitario,Baq
+19.0,4471102,1656863,7,18,340.0,Tecnólogo,Ibagué
+69.0,900000,1793154,1,6,628.0,Secundaria,Villavicencio
+47.0,0,1623459,8,18,502.0,Universitario,Medellín
+27.0,0,4181447,10,24,670.0,Posgrado,Ibagué
+33.0,2278985,2904846,4,12,803.0,Secundaria,Ibagué
+,0,1716826,20,24,,Primaria,Bucaramanga
+33.0,1259486,8079248,7,36,667.0,Primaria,Pereira
+49.0,0,907257,10,18,745.0,Secundaria,Villavicencio
+31.0,0,3665651,2,12,,Secundaria,Sta Marta
+64.0,3595273,768434,4,6,772.0,Universitario,Santa Marta
+50.0,2384385,987763,9,12,530.0,Secundaria,San José De Cúcuta
+58.0,0,14338258,4,36,,Técnico,Cartagena
+30.0,0,2122436,42,48,795.0,Técnico,Ibagué
+31.0,2156430,661450,3,6,675.0,Secundaria,B/Quilla
+20.0,0,6936113,8,24,580.0,Secundaria,Medellín
+72.0,0,3112822,36,48,458.0,Tecnólogo,Cúcuta
+,0,733809,20,24,410.0,Tecnólogo,Santa Marta
+47.0,0,7887612,9,24,306.0,Universitario,Cúcuta
+79.0,1386620,8931557,4,24,,Primaria,Bga
+,0,715200,4,6,779.0,Técnico,Medellín
+29.0,3284317,2268188,5,12,509.0,Técnico,B/Manga
+51.0,0,1229466,6,12,612.0,Técnico,Santa Marta
+32.0,1360663,3192173,25,36,315.0,Secundaria,Cúcuta
+43.0,0,9407080,2,24,,Tecnólogo,Medellín
+47.0,1905169,2499079,13,24,829.0,Técnico,Cúcuta
+50.0,1241838,8457916,15,48,464.0,Secundaria,Cúcuta
+57.0,1282854,17056289,51,48,390.0,Secundaria,San José De Cúcuta
+73.0,0,4025462,0,6,344.0,Tecnólogo,Smr
+62.0,1775298,1314606,9,12,691.0,Primaria,Barranquilla
+51.0,0,1782067,4,12,,Universitario,Ibagué
+39.0,0,2394126,9,18,491.0,Universitario,Villavicencio
+60.0,0,1017436,12,18,350.0,Tecnólogo,Medellín
+67.0,0,21438986,1,36,,Técnico,Ibagué
+64.0,0,5162831,5,18,782.0,Técnico,B/Manga
+24.0,2464313,1189003,4,12,503.0,Secundaria,Pereira
+33.0,1817056,8916010,5,36,,Secundaria,Cúcuta
+,0,3944153,9,24,546.0,Técnico,Mdl
+77.0,0,5234863,35,48,776.0,Secundaria,Manizales
+58.0,2944453,10840202,2,18,809.0,Técnico,Villavicencio
+21.0,0,12802970,1,24,546.0,Universitario,Villavo
+59.0,2148010,5047062,7,48,601.0,Técnico,Villavicencio
+46.0,4903142,648498,3,6,596.0,Técnico,Santa Marta
+69.0,1127593,11595433,19,48,754.0,Secundaria,Cúcuta
+,6309992,2766993,11,18,760.0,Universitario,Bogotá
+70.0,0,2226240,7,24,755.0,Técnico,Smr
+51.0,2100372,2464375,14,36,443.0,Técnico,Manizales
+78.0,2126395,414933,1,6,848.0,Secundaria,Medellín
+30.0,0,461941,21,24,330.0,Tecnólogo,Villavicencio
+35.0,0,5023580,3,24,602.0,Secundaria,Pereira
+45.0,2655647,804695,4,6,579.0,Secundaria,Villavicencio
+63.0,1017227,10260773,18,48,,Primaria,Med.
+62.0,3505971,1445877,3,12,631.0,Técnico,Santa Marta
+50.0,0,2518588,25,48,463.0,Tecnólogo,Santa Marta
+45.0,2090233,13699333,14,48,592.0,Secundaria,Bta
+62.0,2185979,1903514,40,48,818.0,Técnico,Cartagena
+,4082061,2059847,1,6,600.0,Técnico,Cúcuta
+72.0,2803699,4977498,22,36,399.0,Universitario,Bogotá
+70.0,0,244944,16,18,744.0,Secundaria,Mdl
+49.0,900000,1008781,1,6,587.0,Secundaria,Barranquilla
+,5239687,11968869,14,48,674.0,Universitario,Manizales
+21.0,1249382,17332960,10,36,,Primaria,Baq
+73.0,2110098,4729223,13,24,729.0,Técnico,Santiago De Cali
+71.0,0,2802912,5,12,516.0,Universitario,Medellín
+77.0,0,4054216,3,18,392.0,Universitario,Manizales
+21.0,0,11412937,7,24,383.0,Técnico,Manizales
+53.0,0,19448731,13,48,,Universitario,Santa Marta
+24.0,0,11661918,8,36,535.0,Secundaria,Bucaramanga
+35.0,4525572,2871625,7,18,623.0,Universitario,Villavicencio
+33.0,4125578,2585454,6,18,445.0,Tecnólogo,Villavicencio
+73.0,0,1549117,18,24,801.0,Universitario,Bta
+,4721007,1737945,2,6,713.0,Universitario,Santa Marta
+29.0,2935790,687814,4,6,354.0,Secundaria,Bogotá
+,0,272106,3,6,814.0,Posgrado,Medellín
+53.0,1092919,16262273,2,48,,Secundaria,Manizales
+67.0,1555800,696041,11,18,562.0,Técnico,Pereira
+50.0,2192063,2994259,41,48,391.0,Técnico,Cartagena
+53.0,2825332,251297,9,12,394.0,Técnico,San José De Cúcuta
+55.0,0,1071582,4,12,467.0,Universitario,Medellín
+,5620237,2620944,10,18,368.0,Universitario,Mzl
+41.0,0,779143,10,12,,Universitario,Cali
+72.0,2038686,1306414,6,12,381.0,Secundaria,Barranquilla
+42.0,1644608,2567793,13,36,530.0,Tecnólogo,Barranquilla
+60.0,2506216,3520593,5,18,850.0,Universitario,San José De Cúcuta
+71.0,0,3523315,8,24,366.0,Posgrado,Bogotá
+42.0,3523885,1086416,2,6,495.0,Técnico,Bogotá
+60.0,0,606267,19,24,547.0,Tecnólogo,Barranquilla
+,6322089,2274737,18,36,525.0,Posgrado,Cali
+27.0,0,3107609,3,12,313.0,Técnico,Bga
+61.0,0,1188657,3,6,427.0,Posgrado,Cali
+,0,13964090,12,48,705.0,Universitario,Pereira
+30.0,2798228,552730,4,6,389.0,Secundaria,Cali
+38.0,7284102,2048935,12,24,610.0,Universitario,Sta Marta
+43.0,0,6842233,17,36,715.0,Tecnólogo,Bucaramanga
+60.0,0,1682438,1,6,792.0,Secundaria,Manizales
+73.0,900000,4857116,7,24,668.0,Técnico,Bogotá
+71.0,0,375692,4,6,340.0,Tecnólogo,Sta Marta
+79.0,0,2171121,6,12,583.0,Técnico,Manizales
+30.0,0,11074840,6,24,787.0,Universitario,Bogotá
+63.0,2681579,4529549,12,24,753.0,Técnico,San José De Cúcuta
+,1274232,4286927,22,36,850.0,Primaria,Manizales
+18.0,6884538,2571306,36,48,826.0,Universitario,Cartagena
+76.0,3743215,760107,2,6,568.0,Universitario,Bogotá
+78.0,0,1162316,3,6,788.0,Tecnólogo,Bucaramanga
+19.0,2452308,2755236,14,48,764.0,Tecnólogo,Cartagena
+53.0,1857895,14436661,0,24,830.0,Técnico,Pereira
+54.0,0,7134705,29,48,619.0,Universitario,Smr
+79.0,0,1346286,18,24,482.0,Posgrado,Pereira
+27.0,0,6467935,2,18,,Tecnólogo,Smr
+38.0,1440276,8767693,5,36,,Primaria,Pereira
+53.0,1185999,4643554,12,36,349.0,Secundaria,Barranquilla
+,3005513,1971141,5,18,836.0,Secundaria,Medellín
+,4817973,16118273,7,48,659.0,Tecnólogo,Cúcuta
+74.0,3297428,1681942,22,18,579.0,Universitario,Ibagué
+43.0,0,3292954,28,48,450.0,Tecnólogo,Santa Marta
+50.0,0,3386080,37,48,,Tecnólogo,Santa Marta
+72.0,4415212,2947500,5,12,827.0,Tecnólogo,Barranquilla
+41.0,0,9332300,27,48,615.0,Secundaria,Smr
+69.0,5120730,12676878,7,36,462.0,Universitario,Ibagué
+,0,855578,4,6,452.0,Técnico,Bogotá
+44.0,900000,1769386,5,12,509.0,Primaria,Pereira
+51.0,902284,868811,2,6,,Secundaria,Manizales
+48.0,0,2314276,30,36,545.0,Técnico,Ibagué
+79.0,0,4683504,6,18,501.0,Posgrado,Bogotá
+56.0,1788660,1460815,2,6,526.0,Secundaria,Villavicencio
+43.0,6449971,5029085,8,24,719.0,Posgrado,Medellín
+58.0,1667049,3934386,0,6,367.0,Tecnólogo,Medellín
+43.0,0,1020507,31,36,850.0,Universitario,Bucaramanga
+55.0,2066358,15288417,6,48,,Técnico,Cúcuta
+41.0,1314752,1046142,2,6,314.0,Secundaria,Cali
+38.0,3461041,2726642,5,12,429.0,Universitario,Bogotá
+79.0,0,3872283,6,36,552.0,Secundaria,Santa Marta
+33.0,1487191,1995240,30,48,308.0,Secundaria,Villavicencio
+,3032152,474379,4,6,505.0,Tecnólogo,Manizales
+77.0,0,4777112,29,48,531.0,Secundaria,B/Manga
+43.0,3331295,3867382,13,24,,Técnico,Cali
+42.0,1560381,1579335,10,24,777.0,Primaria,Cali
+20.0,0,509297,3,6,706.0,Universitario,Cúcuta
+74.0,3816937,880550,8,18,637.0,Tecnólogo,Baq
+21.0,3644880,160820,4,6,850.0,Técnico,Cartagena
+38.0,1713717,6644864,33,48,707.0,Secundaria,Bogotá
+24.0,0,2406689,27,36,448.0,Secundaria,Ibagué
+64.0,0,1782164,20,24,333.0,Secundaria,Bog
+76.0,1545081,6939251,6,36,684.0,Técnico,Ibagué
+74.0,2683130,10193136,10,36,828.0,Secundaria,Santa Marta
+40.0,0,3518279,8,18,676.0,Secundaria,Bga
+35.0,0,850565,15,18,504.0,Secundaria,Ibagué
+27.0,2784307,1191753,8,12,618.0,Secundaria,Santa Marta
+65.0,0,4917800,9,24,,Secundaria,Villavicencio
+79.0,0,2922685,5,12,,Universitario,Bogotá
+77.0,1877488,204992,5,6,718.0,Secundaria,Medellín
+65.0,0,1792520,2,6,827.0,Universitario,Manizales
+62.0,2285619,3444582,12,24,645.0,Técnico,Bogotá
+58.0,2681884,2199412,17,24,481.0,Tecnólogo,Pei
+,2270601,4413403,8,24,353.0,Tecnólogo,Cúcuta
+65.0,1771232,3245610,10,18,406.0,Primaria,Cartagena
+31.0,2335914,761500,3,6,376.0,Secundaria,Santa Marta
+27.0,4501228,1556145,12,24,620.0,Universitario,Medellín
+19.0,6176731,517469,4,6,642.0,Universitario,Cali
+43.0,0,1237932,3,6,591.0,Secundaria,Cartagena
+25.0,0,2964923,7,18,732.0,Posgrado,Cartagena
+64.0,2317404,5702881,6,18,475.0,Técnico,Bogotá
+50.0,3592293,5601425,5,24,441.0,Universitario,Bucaramanga
+70.0,2584393,2833624,23,36,797.0,Técnico,Bog
+25.0,0,413133,13,18,606.0,Técnico,Barranquilla
+55.0,2951399,6919329,27,48,508.0,Tecnólogo,Baq
+23.0,2490056,2080679,5,12,476.0,Técnico,Pereira
+60.0,0,3253216,5,18,534.0,Técnico,Villavo
+32.0,1690217,2542752,10,24,501.0,Secundaria,Villavo
+,0,2753540,6,18,677.0,Universitario,Bogotá
+27.0,2150240,1815308,4,12,503.0,Técnico,Cúcuta
+63.0,3798313,2263887,22,36,316.0,Tecnólogo,Villavicencio
+,943183,7017606,16,36,816.0,Secundaria,Sta Marta
+35.0,0,13003853,12,48,613.0,Secundaria,Cal
+,3049523,479397,4,6,407.0,Técnico,Manizales
+62.0,0,4876258,19,48,327.0,Universitario,Pereira
+54.0,0,6545987,29,48,340.0,Técnico,Smr
+36.0,4110509,1813513,27,36,768.0,Universitario,Pereira
+,2204519,4895507,3,18,764.0,Secundaria,Pei
+57.0,2310489,3541260,0,6,,Secundaria,Bogotá
+32.0,0,14965020,7,48,608.0,Tecnólogo,B/Manga
+29.0,900000,943282,3,6,445.0,Técnico,Santiago De Cali
+71.0,900000,488905,6,12,617.0,Primaria,Medellín
+74.0,0,2308311,8,18,683.0,Universitario,Bucaramanga
+33.0,0,7513655,5,24,,Secundaria,Medellín
+37.0,7470741,4320605,12,24,580.0,Universitario,Manizales
+54.0,0,1748172,0,6,467.0,Secundaria,Santa Marta
+36.0,2810933,599067,4,6,728.0,Técnico,B/Quilla
+36.0,2132236,813622,10,12,490.0,Universitario,Cúcuta
+60.0,0,2105157,0,6,,Tecnólogo,Barranquilla
+30.0,0,2634700,6,12,709.0,Secundaria,Cali
+31.0,2066343,513314,13,18,757.0,Tecnólogo,Medellín
+27.0,2864259,5208754,3,18,841.0,Secundaria,Medellín
+72.0,0,1941090,1,6,437.0,Posgrado,Villavicencio
+44.0,2007986,5152148,22,36,603.0,Técnico,Cúcuta
+64.0,0,6855408,18,48,821.0,Universitario,Cali
+18.0,0,617530,18,24,802.0,Universitario,Smr
+79.0,0,4907462,10,24,651.0,Técnico,Bogotá
+27.0,2629369,5679452,7,24,611.0,Tecnólogo,Medellín
+67.0,1320996,494973,2,6,,Secundaria,Barranquilla
+60.0,977445,2494358,3,12,529.0,Secundaria,Cartagena
+33.0,5159181,4558832,7,18,440.0,Tecnólogo,Cartagena
+28.0,6333058,1010488,12,24,828.0,Posgrado,Pei
+,0,531458,3,6,818.0,Tecnólogo,Medellín
+65.0,0,4606783,13,24,847.0,Universitario,Smr
+46.0,6521026,2887424,4,18,,Universitario,Bucaramanga
+48.0,1645426,10329434,20,48,658.0,Secundaria,Villavicencio
+,0,8490338,6,36,338.0,Secundaria,Santa Marta
+75.0,1980164,2759752,41,48,498.0,Secundaria,Santa Marta
+78.0,4874151,2990132,18,48,813.0,Universitario,Smr
+33.0,1397376,1034649,13,18,571.0,Secundaria,Pereira
+35.0,5295532,990841,1,6,775.0,Universitario,Bta
+75.0,4728380,3284903,14,36,607.0,Universitario,B/Quilla
+79.0,2390888,1136606,3,6,784.0,Técnico,B/Manga
+56.0,2457655,954307,16,24,513.0,Tecnólogo,Bucaramanga
+51.0,3941964,1159720,5,18,506.0,Universitario,Barranquilla
+32.0,2307924,10184636,6,48,,Secundaria,Mdl
+69.0,0,14162758,7,48,385.0,Técnico,Villavicencio
+58.0,3050399,3508336,4,18,799.0,Universitario,Barranquilla
+31.0,0,1670802,33,48,580.0,Técnico,Bucaramanga
+,5927042,396124,4,6,546.0,Universitario,Cali
+78.0,8073214,813941,1,6,412.0,Universitario,Villavicencio
+41.0,0,539860,8,12,309.0,Técnico,Medellín
+61.0,0,492161,15,18,465.0,Técnico,Medellín
+50.0,3915625,361742,2,6,513.0,Posgrado,Barranqilla
+64.0,1142263,1162834,11,18,521.0,Secundaria,Santa Marta
+31.0,900000,1628823,7,12,,Primaria,Barranquilla
+31.0,0,9234869,6,36,741.0,Tecnólogo,Cúcuta
+27.0,2349861,948856,14,24,797.0,Secundaria,Cúcuta
+73.0,5545352,4047846,3,12,601.0,Universitario,Medellín
+22.0,0,1328778,9,18,432.0,Tecnólogo,Medellín
+22.0,5013193,9581523,14,48,669.0,Universitario,Mzl
+77.0,0,9928022,11,36,389.0,Universitario,Cartagena
+,0,2191260,31,36,369.0,Tecnólogo,Ibagué
+26.0,900000,690641,9,12,457.0,Primaria,Cartagena
+60.0,1885581,2171554,4,18,439.0,Técnico,Medellín
+66.0,0,878380,13,18,356.0,Secundaria,Santiago De Cali
+23.0,1433067,12403291,13,36,,Secundaria,Med.
+68.0,0,715174,7,12,740.0,Primaria,Ibagué
+67.0,8032283,6353884,21,48,586.0,Posgrado,Pereira
+25.0,2189728,973681,11,18,636.0,Técnico,Pereira
+53.0,0,1465870,20,24,634.0,Universitario,Cali
+35.0,12987413,429497,4,6,692.0,Posgrado,Ibagué
+26.0,4687892,446575,10,12,509.0,Universitario,Cúcuta
+66.0,7409870,771003,7,12,802.0,Posgrado,Medellín
+49.0,0,2074077,39,48,349.0,Tecnólogo,Bga
+62.0,0,14695401,1,24,,Tecnólogo,B/Quilla
+25.0,6127694,5301598,30,48,775.0,Posgrado,Cartagena
+42.0,0,4295657,14,24,500.0,Técnico,Manizales
+64.0,2343633,1806317,0,6,683.0,Técnico,Villavo
+35.0,0,5393406,31,48,362.0,Secundaria,Manizales
+28.0,1241149,4712368,2,18,712.0,Secundaria,Villavicencio
+,1431799,3900193,2,12,850.0,Secundaria,Mzl
+32.0,0,374213,8,12,705.0,Universitario,Manizales
+30.0,5155002,8850914,6,36,624.0,Universitario,Villavicencio
+45.0,3462118,2771670,2,12,350.0,Universitario,Cartagena
+68.0,0,2407733,38,48,475.0,Universitario,Barranqilla
+76.0,2766147,751048,15,18,816.0,Secundaria,Cartagena
+55.0,1750891,316673,5,6,657.0,Tecnólogo,Medellín
+38.0,9993765,571554,5,12,464.0,Posgrado,Ibagué
+47.0,1324335,8525139,12,36,508.0,Técnico,Barranquilla
+45.0,2422621,2756165,10,18,786.0,Técnico,Barranquilla
+28.0,1197150,15710543,7,48,485.0,Secundaria,Barranquilla
+41.0,2907717,9321860,3,18,527.0,Técnico,Manizales
+34.0,0,394950,20,24,569.0,Técnico,Barranquilla
+58.0,2050623,488204,1,6,539.0,Secundaria,Manizales
+,1427012,3477232,40,48,599.0,Secundaria,Baq
+68.0,2072361,1296251,1,6,834.0,Secundaria,Bga
+47.0,900000,760343,9,12,450.0,Secundaria,Bta
+57.0,900000,7618406,6,24,410.0,Secundaria,Cartagena
+23.0,2560257,9778524,20,48,691.0,Tecnólogo,Bta
+21.0,3590873,3179249,5,24,388.0,Universitario,Ibagué
+55.0,0,404095,20,24,464.0,Universitario,Cali
+71.0,1116248,1236622,28,36,316.0,Técnico,Pereira
+,6123072,8410263,18,48,515.0,Universitario,Bga
+41.0,900000,993779,8,6,426.0,Secundaria,Cúcuta
+76.0,6503309,5340556,17,48,741.0,Posgrado,Villavicencio
+63.0,0,568273,3,6,402.0,Técnico,Villavicencio
+62.0,0,4764903,19,36,607.0,Posgrado,Ibagué
+48.0,8725029,1561404,7,18,590.0,Posgrado,Cartagena
+55.0,2818435,1510010,8,24,330.0,Técnico,Pereira
+52.0,0,13252017,13,36,489.0,Primaria,Santa Marta
+27.0,2514939,2279991,21,36,800.0,Secundaria,Medellín
+54.0,1429350,2091788,28,48,559.0,Secundaria,Cartagena
+45.0,2479706,546140,10,12,526.0,Técnico,Cúcuta
+42.0,0,1644287,6,24,454.0,Técnico,Pereira
+38.0,2470306,931685,5,12,837.0,Técnico,Barranqilla
+65.0,3333050,1194689,2,6,346.0,Universitario,Barranquilla
+22.0,0,1878798,7,24,614.0,Secundaria,Bogotá
+68.0,0,5458864,27,48,691.0,Técnico,Pereira
+40.0,0,1073846,7,12,509.0,Universitario,B/Quilla
+30.0,0,10080460,20,48,580.0,Técnico,Villavicencio
+76.0,0,6915957,6,24,580.0,Posgrado,Ibagué
+35.0,0,3349131,19,48,651.0,Secundaria,Ibagué
+41.0,2574792,2007565,14,24,552.0,Universitario,Manizales
+20.0,5257550,3122367,8,18,727.0,Posgrado,Villavicencio
+69.0,2142573,753923,18,24,572.0,Tecnólogo,Cali
+47.0,2312812,2108716,1,6,706.0,Técnico,Bucaramanga
+72.0,1409062,7422073,28,24,369.0,Secundaria,Barranquilla
+61.0,0,5991810,8,24,301.0,Primaria,Manizales
+20.0,900000,852252,4,6,661.0,Secundaria,Bucaramanga
+42.0,1608314,3567362,39,48,679.0,Secundaria,Manizales
+77.0,4813598,891722,14,24,,Universitario,Medellín
+35.0,0,3754784,7,18,767.0,Posgrado,Baq
+40.0,0,4263794,8,18,483.0,Posgrado,Cali
+,1660351,503534,1,6,417.0,Técnico,Baq
+37.0,10608159,741790,2,6,517.0,Posgrado,Bogotá
+24.0,9553322,1775932,7,12,332.0,Posgrado,Manizales
+36.0,2183147,750407,2,6,306.0,Secundaria,Barranquilla
+65.0,2294992,743338,4,6,566.0,Técnico,Santa Marta
+,1754502,7215387,8,36,709.0,Técnico,Bogotá
+74.0,2161801,5960061,4,18,551.0,Tecnólogo,Bogotá
+45.0,0,2938726,3,18,445.0,Técnico,Medellín
+77.0,3586509,328561,9,12,813.0,Universitario,Cali
+44.0,1855352,930057,26,36,634.0,Secundaria,Villavicencio
+43.0,0,15763181,12,36,,Técnico,Manizales
+75.0,2020626,2406999,7,36,398.0,Secundaria,Barranquilla
+70.0,8611097,320297,8,12,331.0,Posgrado,Cal
+71.0,6876901,1298227,42,48,604.0,Posgrado,Bogotá
+25.0,0,1379680,18,24,300.0,Universitario,Bucaramanga
+71.0,1018760,10320353,18,48,772.0,Secundaria,Cartagena
+43.0,3380140,11001178,9,36,828.0,Universitario,Santa Marta
+36.0,0,1279569,9,12,684.0,Secundaria,Bogotá
+,0,381491,5,6,661.0,Técnico,Cartagena
+70.0,4405505,1465509,4,18,850.0,Universitario,Mzl
+72.0,0,5588506,24,48,403.0,Universitario,Bogotá
+59.0,1518318,2294543,3,18,824.0,Secundaria,Cali
+54.0,7583055,1394460,14,18,681.0,Universitario,Pereira
+,1580647,2412859,27,48,579.0,Secundaria,Bucaramanga
+59.0,2067929,2182926,21,36,468.0,Secundaria,Bog
+60.0,3219330,1316003,0,6,761.0,Técnico,Cartagena
+49.0,0,1943097,0,6,432.0,Primaria,Bogotá
+53.0,0,22591205,9,48,,Universitario,Cúcuta
+43.0,3625963,10436626,8,48,462.0,Técnico,Medellín
+22.0,900000,8745228,21,48,813.0,Secundaria,Mzl
+78.0,0,1070605,2,6,464.0,Secundaria,Villavo
+64.0,2609265,1182244,42,48,622.0,Técnico,Cartagena
+21.0,3599121,2788550,9,24,439.0,Tecnólogo,Ibagué
+24.0,3121773,793158,8,12,587.0,Técnico,B/Manga
+,0,1689456,3,18,830.0,Técnico,Ibagué
+19.0,2584833,5092576,26,48,301.0,Técnico,Cúcuta
+29.0,6249210,12972794,11,48,,Universitario,Ibagué
+32.0,1563266,6563715,3,18,566.0,Técnico,B/Manga
+78.0,2266463,546514,31,36,371.0,Técnico,Pereira
+39.0,0,10568476,3,36,552.0,Universitario,Mzl
+78.0,0,1459690,3,18,,Secundaria,Ibagué
+70.0,11213462,5770569,5,18,476.0,Posgrado,Cúcuta
+53.0,2234353,2537775,21,18,704.0,Universitario,Pereira
+21.0,0,403383,14,18,,Secundaria,Ibagué
+56.0,3129170,8679154,12,48,774.0,Técnico,Bog
+,1896172,2461438,5,12,697.0,Secundaria,Medellín
+48.0,5590505,625728,10,12,577.0,Universitario,Medellín
+42.0,5926411,8232908,4,18,340.0,Posgrado,Ibagué
+35.0,7889097,5539438,34,48,,Posgrado,Medellín
+72.0,1842514,2260605,40,48,479.0,Técnico,Pereira
+,3495237,7992934,29,48,845.0,Tecnólogo,Barranquilla
+70.0,1630743,4632215,4,24,304.0,Secundaria,Cali
+28.0,0,2898153,11,18,330.0,Secundaria,Ibagué
+31.0,0,6019708,32,24,,Técnico,Medellín
+23.0,0,941983,2,6,,Técnico,Barranquilla
+75.0,0,5601558,11,36,357.0,Tecnólogo,Santiago De Cali
+75.0,0,9180387,8,36,733.0,Secundaria,Pereira
+61.0,0,5704928,17,36,714.0,Primaria,Pereira
+18.0,2432129,556499,7,12,797.0,Técnico,Bogotá
+26.0,3253233,2383534,8,18,768.0,Secundaria,Bga
+73.0,1204936,6333705,6,24,712.0,Secundaria,Villavicencio
+68.0,0,1959625,5,24,,Universitario,Bogotá
+23.0,2308499,1701281,4,24,848.0,Técnico,Cartagena
+23.0,0,1551034,2,6,684.0,Secundaria,Cúcuta
+21.0,0,8878148,6,36,632.0,Universitario,Bogotá
+36.0,4685124,7200484,16,36,511.0,Técnico,Bogotá
+69.0,900000,3372136,3,18,746.0,Primaria,Barranquilla
+69.0,2855618,914674,41,48,346.0,Técnico,Bucaramanga
+20.0,6352336,4951750,27,48,590.0,Posgrado,Cali
+29.0,0,2882006,1,6,,Tecnólogo,Manizales
+27.0,2315515,8051432,22,48,722.0,Secundaria,Cali
+66.0,0,727889,2,6,666.0,Tecnólogo,Cal
+73.0,1851128,6396265,20,48,795.0,Tecnólogo,Medellín
+56.0,0,7432235,14,48,827.0,Universitario,Santa Marta
+32.0,0,933797,1,6,725.0,Técnico,Pei
+55.0,0,1091085,3,6,464.0,Universitario,Bucaramanga
+50.0,1509909,1218989,12,18,,Secundaria,Medellín
+59.0,3581671,1140949,1,6,850.0,Tecnólogo,Bga
+56.0,0,1496820,2,6,382.0,Secundaria,San José De Cúcuta
+63.0,6405873,512065,12,18,320.0,Universitario,Manizales
+61.0,0,1546692,4,18,347.0,Secundaria,Cúcuta
+20.0,3474018,417627,10,12,627.0,Universitario,Barranquilla
+54.0,0,1142030,11,18,379.0,Universitario,Santa Marta
+56.0,0,3471677,9,18,729.0,Universitario,Barranquilla
+22.0,0,2997321,29,48,385.0,Universitario,Cali
+36.0,900000,3054062,5,12,804.0,Primaria,Pereira
+29.0,3437053,6249442,8,24,,Tecnólogo,Cali
+62.0,2692895,13491031,2,24,652.0,Secundaria,Manizales
+48.0,1173389,2349473,42,48,326.0,Primaria,Santa Marta
+64.0,0,2671191,4,12,,Técnico,Mzl
+26.0,0,4690480,2,12,381.0,Universitario,Cartagena
+73.0,6146069,1104229,20,18,813.0,Universitario,Cartagena
+41.0,3724200,2701235,2,12,361.0,Universitario,Mzl
+76.0,0,1754772,2,6,674.0,Universitario,Pereira
+60.0,0,3313706,24,36,701.0,Secundaria,Cartagena
+45.0,0,2216497,27,36,337.0,Secundaria,Baq
+53.0,0,3985423,6,18,650.0,Primaria,Pereira
+59.0,1726039,616969,15,18,800.0,Técnico,Cartagena
+75.0,2171063,2820663,10,18,515.0,Secundaria,Santa Marta
+,5046407,4498502,25,36,368.0,Universitario,Mzl
+44.0,3885706,12810139,17,48,771.0,Tecnólogo,Mzl
+67.0,5738381,15698209,6,48,,Universitario,Cartagena
+30.0,3316940,1995346,7,12,367.0,Universitario,Medellín
+55.0,1473513,5616021,26,24,561.0,Técnico,Barranquilla
+20.0,0,2730451,2,12,331.0,Secundaria,Cartagena
+52.0,1759598,1445281,1,6,,Técnico,Smr
+53.0,0,1073070,3,6,619.0,Tecnólogo,Santiago De Cali
+42.0,1910142,4137648,8,18,683.0,Tecnólogo,Medellín
+,0,717454,19,24,447.0,Secundaria,Baq
+67.0,0,6879800,16,48,,Posgrado,Cúcuta
+41.0,0,904035,15,18,671.0,Universitario,Baq
+38.0,1914945,6967936,14,36,486.0,Secundaria,Medellín
+79.0,0,881026,19,24,811.0,Secundaria,Ibagué
+18.0,0,850461,3,6,783.0,Posgrado,Ibagué
+25.0,5055575,2562874,22,36,661.0,Universitario,Cartagena
+,900000,3013719,12,24,562.0,Secundaria,Cartagena
+49.0,0,10142348,9,24,,Técnico,Bucaramanga
+38.0,0,2535562,19,36,525.0,Secundaria,Medellín
+70.0,3116499,4149472,0,6,596.0,Técnico,Santa Marta
+78.0,0,3504250,13,24,541.0,Posgrado,San José De Cúcuta
+78.0,0,1310902,29,36,495.0,Primaria,Pei
+19.0,0,1809294,11,18,484.0,Universitario,San José De Cúcuta
+22.0,3080596,2368027,5,12,619.0,Tecnólogo,San José De Cúcuta
+,14897338,2800952,11,24,306.0,Posgrado,Santa Marta
+28.0,0,1390319,4,12,546.0,Secundaria,Barranquilla
+,0,1215686,18,24,849.0,Universitario,Medellín
+70.0,0,828437,3,6,533.0,Secundaria,Medellín
+58.0,3812836,12027568,6,24,492.0,Universitario,Manizales
+70.0,961456,1771245,1,6,714.0,Primaria,Medellín
+61.0,0,13454987,0,24,764.0,Universitario,Medellín
+19.0,4094945,6360278,7,24,556.0,Tecnólogo,Villavicencio
+63.0,6052975,9510964,17,48,421.0,Universitario,Bucaramanga
+,1588110,413928,5,6,489.0,Tecnólogo,Cartagena
+43.0,1349802,7098955,1,12,541.0,Primaria,Bogotá
+18.0,9718280,4177369,23,48,377.0,Posgrado,Cali
+74.0,0,339885,2,6,839.0,Posgrado,Bogotá
+63.0,1312180,6548447,26,48,670.0,Técnico,Pereira
+56.0,0,7353382,7,36,727.0,Tecnólogo,Medellín
+29.0,5906933,13076257,4,24,572.0,Universitario,Pei
+34.0,0,651228,8,12,737.0,Secundaria,Cartagena
+18.0,3181015,14511482,12,48,,Técnico,Cartagena
+67.0,1440789,2078155,19,36,305.0,Secundaria,Manizales
+36.0,0,1159578,13,18,647.0,Tecnólogo,Ibagué
+26.0,1374938,5083044,18,36,386.0,Secundaria,Pereira
+39.0,0,7756561,10,36,515.0,Tecnólogo,Pereira
+58.0,3127756,1005205,16,24,808.0,Técnico,Bga
+59.0,2612670,330847,15,18,744.0,Secundaria,Bucaramanga
+60.0,6190637,1845446,13,24,765.0,Universitario,Cúcuta
+39.0,2519886,113843,14,6,438.0,Secundaria,Manizales
+34.0,0,1047061,4,12,582.0,Universitario,Santa Marta
+64.0,0,916874,15,18,667.0,Universitario,B/Manga
+69.0,2604492,2152650,1,6,559.0,Tecnólogo,Santa Marta
+45.0,4885476,10121938,1,24,,Tecnólogo,Bucaramanga
+20.0,1708623,2355596,1,6,348.0,Secundaria,Ibagué
+22.0,0,2551959,24,36,653.0,Posgrado,Pereira
+75.0,3192124,935550,15,18,822.0,Universitario,Cali
+56.0,4315946,2131734,4,12,730.0,Universitario,Bog
+25.0,3134135,12189501,16,48,739.0,Técnico,Villavicencio
+,3602492,3839195,3,12,422.0,Tecnólogo,Mzl
+20.0,0,1376134,5,12,320.0,Tecnólogo,Ibagué
+29.0,2196497,9973653,12,36,554.0,Técnico,Villavicencio
+74.0,11638668,2710697,5,12,393.0,Posgrado,Barranquilla
+53.0,0,1560532,8,18,584.0,Secundaria,Mzl
+28.0,2901139,1604841,18,36,317.0,Técnico,Cartagena
+72.0,0,1915401,18,24,664.0,Secundaria,Cartagena
+77.0,3926964,788363,3,6,679.0,Universitario,Bucaramanga
+19.0,0,10939288,39,36,594.0,Primaria,Bogotá
+79.0,0,5074657,26,48,775.0,Técnico,Santa Marta
+29.0,0,4997954,2,18,,Universitario,Pei
+55.0,1546091,5271881,8,48,377.0,Técnico,Pereira
+62.0,1047059,548902,15,12,541.0,Secundaria,Bucaramanga
+38.0,1461722,4235541,2,12,458.0,Secundaria,Cali
+60.0,6216032,678256,8,12,814.0,Universitario,Bog
+,3067116,1495343,17,24,790.0,Técnico,Bta
+,2533206,1086117,14,24,605.0,Tecnólogo,B/Quilla
+42.0,3877127,442194,10,12,699.0,Posgrado,Villavicencio
+25.0,0,8843526,4,36,,Universitario,Barranquilla
+67.0,1909891,888685,9,12,777.0,Secundaria,San José De Cúcuta
+77.0,1019869,4479742,7,24,353.0,Secundaria,Ibagué
+52.0,2341351,4720889,24,48,530.0,Secundaria,B/Manga
+30.0,0,4418523,35,48,340.0,Universitario,Ibagué
+30.0,3292617,1743180,30,36,526.0,Secundaria,Pereira
+18.0,1761615,2038966,26,36,424.0,Primaria,Manizales
+54.0,2388056,8430696,3,24,697.0,Técnico,Villavicencio
+26.0,2486035,14825809,11,48,,Técnico,Cúcuta
+23.0,900000,893097,4,6,508.0,Secundaria,Pereira
+47.0,0,3514299,13,24,489.0,Universitario,Bogotá
+78.0,0,488306,9,12,361.0,Tecnólogo,Mzl
+52.0,0,5662128,8,24,835.0,Universitario,Cal
+67.0,6147266,732174,4,6,771.0,Posgrado,Bucaramanga
+50.0,2126194,5285324,7,24,708.0,Secundaria,Ibagué
+52.0,2879131,13084825,15,48,315.0,Técnico,Villavo
+39.0,1785923,2227835,26,36,560.0,Técnico,Mzl
+59.0,0,2522558,5,18,599.0,Secundaria,Villavo
+61.0,8616498,8230939,26,48,483.0,Universitario,Medellín
+64.0,0,692967,4,6,632.0,Secundaria,Smr
+36.0,2162342,527296,3,6,736.0,Secundaria,Barranqilla
+43.0,2022973,1051376,15,24,691.0,Secundaria,Barranquilla
+,4733733,898635,2,6,341.0,Universitario,Ibagué
+49.0,901063,1746184,6,18,548.0,Secundaria,Villavicencio
+61.0,0,2180894,22,36,539.0,Posgrado,Ibagué
+63.0,0,1801320,32,48,351.0,Tecnólogo,Santa Marta
+46.0,5902904,918367,2,6,376.0,Universitario,Cúcuta
+65.0,1368119,1930576,4,18,848.0,Secundaria,Pereira
+54.0,3897905,7059528,8,24,,Técnico,Bogotá
+32.0,0,783233,10,12,605.0,Técnico,Pereira
+28.0,3120002,1324403,4,12,797.0,Técnico,Cúcuta
+64.0,2838070,992533,2,6,748.0,Técnico,Bogotá
+49.0,1613847,1696160,1,6,306.0,Secundaria,Baq
+,0,1957355,2,12,,Tecnólogo,Cúcuta
+71.0,3121541,1012842,7,12,491.0,Secundaria,Santa Marta
+63.0,1868784,1430309,2,12,645.0,Técnico,Sta Marta
+33.0,0,318566,3,6,723.0,Primaria,Cartagena
+23.0,0,2048936,28,36,498.0,Secundaria,Manizales
+20.0,0,2524396,42,48,567.0,Tecnólogo,Cal
+51.0,3167755,812985,3,12,327.0,Tecnólogo,Pei
+79.0,0,3198343,2,12,834.0,Técnico,Barranquilla
+51.0,2050344,16982329,13,48,422.0,Secundaria,Santa Marta
+76.0,3968988,1556226,2,6,641.0,Tecnólogo,Smr
+73.0,8190486,1142174,15,24,796.0,Universitario,Medellín
+,0,346065,24,18,,Universitario,Cali
+20.0,3008885,11690342,5,36,463.0,Secundaria,Cali
+28.0,900000,1093114,2,6,660.0,Primaria,Manizales
+62.0,0,1292129,9,12,801.0,Universitario,Manizales
+54.0,3290339,12567508,5,36,,Tecnólogo,Medellín
+,2289132,224336,10,12,684.0,Técnico,Villavo
+39.0,0,7744670,27,48,550.0,Técnico,Cúcuta
+48.0,7117835,1503195,44,36,419.0,Universitario,Ibagué
+30.0,4163254,1671615,8,12,755.0,Tecnólogo,Villavicencio
+44.0,4351805,9872070,2,18,431.0,Tecnólogo,B/Quilla
+78.0,4745726,593066,10,12,546.0,Universitario,Manizales
+20.0,900000,1776581,10,18,,Secundaria,Ibagué
+34.0,1916100,4112904,12,24,530.0,Técnico,Cúcuta
+22.0,5085418,2836641,3,18,464.0,Universitario,Pereira
+,7016764,2029692,30,36,653.0,Universitario,Santa Marta
+70.0,0,10359453,3,18,,Universitario,Villavicencio
+52.0,1601596,20120975,0,36,,Técnico,Medellín
+39.0,1528016,1531376,21,36,699.0,Secundaria,Pereira
+,2510120,3552777,25,48,343.0,Universitario,Cali
+74.0,1387303,1653075,4,12,414.0,Primaria,Bucaramanga
+69.0,3556394,1968452,13,18,317.0,Tecnólogo,Villavo
+43.0,2214254,1027845,9,12,,Técnico,Santiago De Cali
+32.0,1902232,3671830,12,24,757.0,Técnico,Smr
+58.0,0,188561,5,6,557.0,Técnico,Manizales
+57.0,0,2149644,7,12,528.0,Tecnólogo,Cali
+50.0,5092305,2157628,11,18,433.0,Universitario,Pei
+67.0,1056110,2587546,11,24,306.0,Primaria,Bogotá
+30.0,1518129,416090,3,6,407.0,Secundaria,Medellín
+71.0,2669999,4463489,18,48,792.0,Secundaria,Ibagué
+,7236051,7398056,0,12,,Posgrado,Bta
+,0,5099893,20,36,723.0,Técnico,San José De Cúcuta
+76.0,2479703,780757,40,48,518.0,Técnico,Bucaramanga
+74.0,6166633,3081557,41,48,474.0,Universitario,Bogotá
+72.0,0,14612081,7,48,701.0,Tecnólogo,Cali
+61.0,0,8104705,24,48,369.0,Técnico,Cúcuta
+66.0,4081951,253111,9,12,680.0,Universitario,Bucaramanga
+20.0,0,2872278,4,12,580.0,Posgrado,Pereira
+41.0,2200917,1633543,30,36,771.0,Técnico,Bogotá
+38.0,7753214,1515727,18,24,387.0,Posgrado,Villavicencio
+33.0,0,1537349,35,48,481.0,Universitario,Santiago De Cali
+21.0,2582824,1668425,27,36,663.0,Tecnólogo,Bogotá
+76.0,1012081,621267,1,6,739.0,Primaria,Ibagué
+47.0,0,1106607,2,6,674.0,Universitario,Cartagena
+40.0,1835759,4061879,11,24,344.0,Secundaria,Cúcuta
+60.0,0,2122180,6,12,842.0,Primaria,Barranquilla
+67.0,1194621,224555,5,6,401.0,Primaria,Barranquilla
+60.0,0,1242771,14,18,380.0,Secundaria,Cali
+44.0,2634938,1247664,9,12,491.0,Universitario,Ibagué
+54.0,0,12670946,12,48,338.0,Universitario,Barranquilla
+61.0,3515836,431647,5,6,431.0,Universitario,Bucaramanga
+32.0,3060697,4644652,17,48,349.0,Universitario,San José De Cúcuta
+76.0,1796821,1114902,17,24,575.0,Técnico,Cúcuta
+30.0,0,17348247,16,48,,Tecnólogo,Pei
+22.0,3021676,483102,9,12,338.0,Universitario,Barranquilla
+47.0,0,2823131,26,36,573.0,Universitario,Manizales
+,4125733,1987794,30,48,540.0,Técnico,Manizales
+71.0,8734941,1472192,17,24,408.0,Posgrado,Bta
+56.0,0,2840691,4,12,522.0,Universitario,Cartagena
+61.0,975709,900135,2,6,682.0,Secundaria,Pei
+23.0,0,4666616,8,36,559.0,Secundaria,Bog
+40.0,1004098,8801683,7,48,767.0,Primaria,Barranquilla
+21.0,1732931,219367,5,6,622.0,Tecnólogo,Cúcuta
+63.0,0,1866619,1,6,,Secundaria,Medellín
+37.0,5826428,7871661,10,36,477.0,Tecnólogo,Pereira
+22.0,2920201,953010,4,12,692.0,Universitario,Cartagena
+44.0,0,1680995,9,24,511.0,Universitario,Santa Marta
+,2702416,2012365,5,18,370.0,Secundaria,Manizales
+56.0,0,3007725,26,36,677.0,Técnico,Barranquilla
+24.0,0,20017244,0,36,563.0,Universitario,Pereira
+34.0,1966933,1002709,4,12,736.0,Secundaria,Medellín
+58.0,0,3997167,3,12,551.0,Posgrado,Bogotá
+77.0,0,474068,3,6,464.0,Secundaria,Bucaramanga
+62.0,2356753,2907524,0,6,,Técnico,Bogotá
+18.0,0,1592208,2,6,540.0,Universitario,Villavicencio
+79.0,13999077,7482061,13,36,562.0,Posgrado,Ibagué
+18.0,2437095,422014,9,12,468.0,Secundaria,Manizales
+,3680566,969356,20,24,666.0,Universitario,Sta Marta
+42.0,4728726,20265770,0,36,,Tecnólogo,Ibagué
+42.0,2328376,5075699,20,36,475.0,Secundaria,Ibagué
+60.0,3563525,3226279,4,12,739.0,Técnico,Medellín
+78.0,4739004,5474915,30,48,696.0,Tecnólogo,Cali
+58.0,4207001,5779065,7,24,829.0,Tecnólogo,Sta Marta
+79.0,0,1274903,19,24,415.0,Secundaria,B/Quilla
+74.0,0,1710358,1,6,682.0,Secundaria,Villavicencio
+49.0,2758791,194321,5,6,645.0,Secundaria,Pei
+77.0,2363054,4724953,11,36,380.0,Universitario,Bog
+72.0,2835850,968935,8,12,749.0,Universitario,Cartagena
+35.0,6475196,997502,13,18,842.0,Universitario,Santa Marta
+67.0,1142125,3820556,12,24,713.0,Técnico,Cúcuta
+55.0,4231912,4293087,18,48,662.0,Tecnólogo,Cartagena
+41.0,1828475,2008577,25,24,343.0,Universitario,Cúcuta
+30.0,2984884,2737590,12,24,,Técnico,Cartagena
+74.0,4049285,785323,32,36,348.0,Técnico,Mzl
+,9463063,1270658,13,18,509.0,Posgrado,Ibagué
+62.0,4951051,5522092,2,24,701.0,Tecnólogo,Ibagué
+33.0,1392045,1392558,2,6,418.0,Técnico,Mdl
+60.0,0,12898374,14,48,617.0,Secundaria,Pereira
+51.0,0,2046376,34,48,361.0,Secundaria,Pereira
+51.0,0,16606294,8,48,485.0,Secundaria,Pereira
+66.0,0,8891441,39,36,487.0,Técnico,Cali
+53.0,0,9631110,16,48,702.0,Tecnólogo,Manizales
+31.0,4693751,3045293,33,48,465.0,Posgrado,Cartagena
+46.0,0,3308160,1,6,451.0,Técnico,Ibagué
+45.0,4249389,454959,4,6,393.0,Universitario,B/Quilla
+64.0,4180347,5781388,4,24,360.0,Tecnólogo,Sta Marta
+23.0,974575,6577590,6,36,705.0,Primaria,San José De Cúcuta
+69.0,0,8101395,8,36,638.0,Tecnólogo,Cartagena
+33.0,0,5226161,24,36,586.0,Secundaria,Ibagué
+36.0,0,9508254,14,36,776.0,Secundaria,Santiago De Cali
+26.0,900000,1609689,5,12,363.0,Secundaria,Barranquilla
+38.0,0,3088436,3,12,335.0,Tecnólogo,Pereira
+59.0,0,10925755,22,48,749.0,Secundaria,Manizales
+78.0,1949781,2144575,9,18,733.0,Secundaria,Ibagué
+65.0,0,1209316,15,24,720.0,Tecnólogo,Bucaramanga
+51.0,5581969,1603789,38,48,360.0,Universitario,Cali
+52.0,0,2304351,19,36,785.0,Tecnólogo,Manizales
+63.0,0,1938620,7,12,718.0,Primaria,Medellín
+25.0,900000,12675720,17,48,787.0,Secundaria,Bucaramanga
+22.0,2442823,3872871,8,18,659.0,Secundaria,Bucaramanga
+23.0,0,6025388,10,24,342.0,Primaria,Cúcuta
+22.0,1571288,6229598,8,24,612.0,Tecnólogo,Barranquilla
+19.0,8828227,1609795,4,24,641.0,Universitario,Med.
+22.0,3500196,4906623,7,18,603.0,Universitario,Cúcuta
+20.0,4932175,11372308,7,36,310.0,Universitario,Manizales
+53.0,0,1901318,7,12,330.0,Tecnólogo,Cali
+18.0,0,267671,4,6,,Universitario,Cartagena
+27.0,1621393,1181922,1,6,531.0,Primaria,Cal
+63.0,4743583,319371,10,12,701.0,Universitario,Bogotá
+79.0,4956890,8106801,16,36,314.0,Tecnólogo,Manizales
+69.0,3881414,2201170,13,36,636.0,Tecnólogo,Cartagena
+24.0,0,1260213,38,48,728.0,Secundaria,Villavicencio
+26.0,4182122,11771103,9,48,665.0,Universitario,Cartagena
+50.0,1696414,1839973,1,6,837.0,Técnico,Villavicencio
+24.0,3828190,680991,3,6,325.0,Tecnólogo,Santiago De Cali
+52.0,2397937,769126,3,6,668.0,Técnico,Barranquilla
+55.0,0,3532954,39,48,808.0,Universitario,Barranquilla
+34.0,4035925,1296022,41,48,803.0,Universitario,Santiago De Cali
+76.0,3823636,268335,16,18,653.0,Universitario,Santa Marta
+53.0,7185216,696150,10,18,718.0,Universitario,Cal
+20.0,0,6785395,16,48,582.0,Tecnólogo,Pei
+61.0,2072578,2006599,18,24,810.0,Secundaria,Villavicencio
+21.0,0,1304435,3,6,649.0,Técnico,Cal
+57.0,3667387,1010905,2,6,647.0,Técnico,Medellín
+62.0,0,759218,21,24,818.0,Técnico,Mzl
+78.0,1842416,4429709,16,48,684.0,Secundaria,Cúcuta
+32.0,0,9557592,8,48,670.0,Universitario,Bucaramanga
+45.0,2130765,7735789,17,48,646.0,Primaria,Pereira
+35.0,11856864,2504047,9,24,386.0,Posgrado,Santiago De Cali
+34.0,1623789,3574586,10,18,571.0,Secundaria,Cali
+32.0,2253080,2226917,10,36,601.0,Técnico,Ibagué
+38.0,1805297,5817846,5,18,312.0,Secundaria,San José De Cúcuta
+39.0,3480415,2969539,4,12,621.0,Tecnólogo,Bucaramanga
+72.0,6912168,4096353,21,36,705.0,Posgrado,Bog
+50.0,0,5587580,4,12,,Secundaria,Cúcuta
+68.0,0,1666355,1,12,799.0,Técnico,Cúcuta
+67.0,4123229,1907207,1,6,803.0,Tecnólogo,Ibagué
+75.0,0,2026028,2,12,448.0,Posgrado,Cartagena
+30.0,2638662,293716,5,6,572.0,Secundaria,Manizales
+44.0,3350906,6112821,2,12,664.0,Universitario,Medellín
+,1157055,3255173,1,6,,Secundaria,Pei
+67.0,1171870,5081909,31,48,347.0,Primaria,Bucaramanga
+55.0,3940778,1311056,3,6,741.0,Universitario,Santa Marta
+43.0,4934148,2633313,12,18,616.0,Universitario,Cartagena
+45.0,2878175,2148458,9,24,680.0,Secundaria,Sta Marta
+72.0,2761116,2548012,12,18,842.0,Secundaria,Cali
+,3185003,1218959,2,6,350.0,Tecnólogo,Pereira
+36.0,2688927,5193137,5,18,423.0,Secundaria,Pereira
+42.0,2461414,1410509,1,6,352.0,Técnico,Cal
+68.0,3280423,2306232,22,36,805.0,Tecnólogo,Manizales
+64.0,1926365,1903580,3,18,804.0,Tecnólogo,Bogotá
+71.0,0,1313241,10,24,454.0,Tecnólogo,Barranqilla
+60.0,3505863,3407540,35,48,584.0,Técnico,Cúcuta
+45.0,0,631038,1,6,580.0,Tecnólogo,Ibagué
+27.0,5129822,1398045,7,18,,Técnico,Bogotá
+18.0,2468496,2370773,25,36,408.0,Secundaria,Bta
+57.0,1794287,1516032,2,12,480.0,Secundaria,Manizales
+63.0,0,414747,21,24,403.0,Universitario,Santa Marta
+29.0,0,3455528,24,36,311.0,Posgrado,Bucaramanga
+30.0,2421700,7710133,6,36,628.0,Secundaria,Smr
+77.0,3649286,3874699,37,48,802.0,Universitario,Cali
+35.0,0,715802,4,6,497.0,Primaria,Villavo
+37.0,4136756,5425746,20,48,397.0,Universitario,Med.
+41.0,0,954669,2,6,349.0,Técnico,Ibagué
+,2358920,409250,1,6,671.0,Secundaria,Villavo
+32.0,1191581,9136155,11,36,461.0,Secundaria,Medellín
+77.0,0,1435041,25,36,679.0,Primaria,Barranquilla
+43.0,6928982,8628847,8,36,360.0,Universitario,Ibagué
+59.0,0,2363679,3,18,460.0,Secundaria,Pereira
+29.0,1958868,6664578,2,24,,Universitario,Bta
+73.0,5693367,6801704,19,36,717.0,Universitario,Cartagena
+,0,3296937,12,24,477.0,Universitario,Cúcuta
+76.0,5556318,568157,4,6,661.0,Posgrado,Villavo
+,1505428,5801444,24,48,435.0,Tecnólogo,Cúcuta
+44.0,1921538,17948437,2,36,674.0,Primaria,Pereira
+19.0,0,844393,3,6,,Técnico,Pereira
+33.0,0,1930751,31,36,812.0,Universitario,Villavo
+,2055340,3633736,7,24,382.0,Técnico,Bga
+57.0,900000,10852555,2,48,518.0,Primaria,Manizales
+22.0,2535014,5778041,6,36,630.0,Secundaria,Villavicencio
+58.0,6714202,2419294,11,18,,Posgrado,Cartagena
+,4776171,7121730,13,36,706.0,Universitario,Cartagena
+30.0,2677474,1650116,14,24,478.0,Tecnólogo,Cali
+26.0,0,3007070,9,18,604.0,Secundaria,Bog
+25.0,0,2318163,1,6,789.0,Técnico,B/Manga
+34.0,4052517,2216182,31,36,639.0,Posgrado,Manizales
+,0,670315,3,6,370.0,Secundaria,Barranquilla
+78.0,2003133,2878478,8,36,805.0,Secundaria,Cúcuta
+22.0,1878423,2102409,30,36,817.0,Técnico,Ibagué
+48.0,2402668,3460463,0,6,735.0,Técnico,Pereira
+46.0,0,603840,30,36,490.0,Técnico,Pei
+49.0,7497089,3373590,4,12,320.0,Universitario,Cúcuta
+65.0,5056659,434328,4,6,674.0,Universitario,Ibagué
+38.0,0,4411723,38,48,582.0,Universitario,Bogotá
+77.0,3152549,1553381,0,6,843.0,Tecnólogo,Bucaramanga
+18.0,1507812,1215553,20,24,367.0,Primaria,B/Quilla
+75.0,0,4269118,13,24,747.0,Universitario,Bucaramanga
+38.0,1295922,3996601,9,18,674.0,Técnico,Med.
+70.0,0,4948472,2,12,500.0,Posgrado,Cartagena
+62.0,0,1377892,1,6,542.0,Universitario,San José De Cúcuta
+18.0,3633511,1419028,8,12,332.0,Técnico,Santiago De Cali
+18.0,4540350,1063124,3,12,627.0,Tecnólogo,Medellín
+23.0,6140017,1683452,31,36,376.0,Universitario,Villavicencio
+71.0,10053915,6370839,9,24,569.0,Posgrado,Cartagena
+22.0,0,2386263,18,24,341.0,Posgrado,Bogotá
+71.0,4921382,7195171,6,36,550.0,Tecnólogo,Bucaramanga
+38.0,1059248,5568878,4,12,381.0,Primaria,Pereira
+63.0,2887297,2570231,2,6,,Tecnólogo,Medellín
+40.0,2293231,5676949,16,36,502.0,Secundaria,Bogotá
+20.0,0,2916326,2,12,741.0,Técnico,Bucaramanga
+65.0,1040190,371596,5,6,,Secundaria,Santa Marta
+18.0,1571691,906315,2,6,565.0,Secundaria,Cartagena
+67.0,3036708,3314450,3,18,840.0,Técnico,Villavicencio
+45.0,9508590,5306808,12,36,426.0,Universitario,B/Quilla
+78.0,4978049,2644528,12,36,388.0,Tecnólogo,Manizales
+42.0,2342784,13826656,2,24,439.0,Universitario,Bta
+74.0,3478189,4795953,1,24,792.0,Universitario,Cúcuta
+72.0,3673621,1151916,13,24,420.0,Universitario,Santa Marta
+47.0,0,1281523,9,12,502.0,Tecnólogo,Cartagena
+78.0,1876902,3394492,6,18,597.0,Secundaria,Ibagué
+45.0,1818201,9436902,12,36,451.0,Secundaria,Ibagué
+20.0,0,3518247,10,36,696.0,Posgrado,Cali
+,1684586,2704651,31,48,809.0,Secundaria,Manizales
+75.0,0,25092568,8,48,474.0,Técnico,Cúcuta
+29.0,0,2042246,41,48,668.0,Técnico,Bga
+22.0,0,1977096,3,12,586.0,Secundaria,Barranquilla
+18.0,0,2594543,6,12,334.0,Posgrado,B/Quilla
+77.0,1765345,1121369,1,6,704.0,Secundaria,Cúcuta
+29.0,1669923,1201194,9,12,513.0,Primaria,Villavicencio
+,1749810,2036357,6,12,311.0,Secundaria,Medellín
+30.0,6545780,3840895,12,24,751.0,Universitario,Manizales
+68.0,0,508301,1,6,454.0,Técnico,Cali
+35.0,0,1721755,6,12,318.0,Primaria,Cúcuta
+76.0,1169037,1262405,4,12,403.0,Primaria,Santa Marta
+43.0,0,4857695,3,12,,Universitario,Mzl
+68.0,0,4232596,16,48,706.0,Universitario,Pereira
+62.0,2016618,1253467,2,12,574.0,Secundaria,Bucaramanga
+18.0,0,517255,4,6,733.0,Técnico,Pereira
+45.0,0,1173680,4,12,560.0,Secundaria,Barranqilla
+32.0,1782199,3888349,7,18,336.0,Técnico,Santa Marta
+,0,1564401,11,18,456.0,Técnico,Cúcuta
+,0,6858921,5,24,795.0,Técnico,Ibagué
+26.0,2026771,2034859,1,6,584.0,Técnico,Pereira
+72.0,0,816848,3,6,578.0,Tecnólogo,Bucaramanga
+,5023296,4207515,22,36,590.0,Tecnólogo,Barranquilla
+,0,1262975,15,18,581.0,Universitario,Bga
+65.0,1727464,1525121,18,24,487.0,Secundaria,B/Manga
+65.0,2419056,2838226,18,36,,Secundaria,Baq
+41.0,0,371522,15,18,,Tecnólogo,Medellín
+31.0,2243909,1483095,19,36,782.0,Secundaria,Manizales
+,0,443107,14,12,545.0,Primaria,Medellín
+76.0,1462160,3680148,4,18,819.0,Universitario,Pereira
+52.0,0,2284021,42,48,641.0,Secundaria,Manizales
+72.0,1237061,4450900,4,18,585.0,Secundaria,Cali
+33.0,2027728,9097853,10,36,458.0,Secundaria,Bogotá
+69.0,900000,2056752,5,12,429.0,Primaria,Santa Marta
+53.0,1047119,3298352,4,12,654.0,Técnico,Bta
+78.0,6496857,2407429,4,12,656.0,Posgrado,Barranquilla
+57.0,8030635,920239,7,12,806.0,Posgrado,Villavicencio
+43.0,0,5648065,10,48,604.0,Primaria,Pereira
+48.0,0,2934348,32,48,,Universitario,Medellín
+66.0,5554851,1323467,2,18,512.0,Posgrado,Villavicencio
+75.0,2376901,2451128,2,6,323.0,Secundaria,Pei
+48.0,4390708,2799786,2,12,658.0,Universitario,Cartagena
+52.0,2122868,652985,4,6,846.0,Secundaria,Cúcuta
+50.0,0,564903,2,6,667.0,Secundaria,Cúcuta
+37.0,2034080,4557811,31,48,,Técnico,Cúcuta
+22.0,0,4026592,17,48,832.0,Secundaria,Mdl
+41.0,2599960,2405576,12,18,510.0,Técnico,B/Quilla
+66.0,0,4552392,7,24,829.0,Primaria,Manizales
+23.0,2710544,8384285,13,36,413.0,Técnico,Cartagena
+41.0,1584114,6938054,14,36,660.0,Secundaria,Ibagué
+40.0,0,2547931,12,24,810.0,Tecnólogo,Pei
+38.0,1056279,1168675,30,36,505.0,Técnico,Baq
+69.0,3098359,1966400,1,6,420.0,Secundaria,Villavicencio
+65.0,3998337,8462991,5,36,539.0,Técnico,Cartagena
+66.0,1824838,3426828,52,48,745.0,Secundaria,Medellín
+45.0,0,5112984,25,48,334.0,Secundaria,Mdl
+52.0,5287497,1671762,16,24,543.0,Universitario,Bogotá
+72.0,2425887,8029935,7,24,,Secundaria,Bogotá
+33.0,0,4046291,26,36,496.0,Posgrado,Cúcuta
+44.0,0,5014106,6,24,731.0,Tecnólogo,Manizales
+68.0,0,6546965,7,24,528.0,Técnico,Manizales
+59.0,3501168,378096,14,18,762.0,Técnico,Cúcuta
+62.0,2499537,2798105,2,6,472.0,Tecnólogo,Manizales
+42.0,7263156,7589618,25,48,546.0,Posgrado,Pei
+55.0,0,2337789,11,18,341.0,Tecnólogo,Sta Marta
+,0,280284,10,12,479.0,Universitario,Manizales
+18.0,6311627,10476855,5,24,732.0,Universitario,Ibagué
+48.0,0,263058,5,6,437.0,Universitario,Ibagué
+27.0,3714132,3089469,11,18,674.0,Tecnólogo,Bogotá
+67.0,1719263,12162170,6,24,388.0,Secundaria,Cartagena
+47.0,1737313,2813801,10,18,817.0,Secundaria,Villavicencio
+78.0,0,3078125,41,48,342.0,Tecnólogo,Barranquilla
+55.0,4634671,2223751,9,24,700.0,Universitario,Bucaramanga
+28.0,0,1474755,22,36,473.0,Universitario,Medellín
+40.0,5571290,3002092,29,36,611.0,Universitario,Cartagena
+77.0,5824287,519996,2,6,579.0,Universitario,Bogotá
+60.0,4665113,314564,5,6,839.0,Tecnólogo,Ibagué
+44.0,0,5383460,6,36,708.0,Secundaria,Medellín
+20.0,2601174,5974709,6,24,509.0,Tecnólogo,Santa Marta
+53.0,4458267,1249760,3,6,379.0,Tecnólogo,Bga
+41.0,947553,11399382,27,24,,Tecnólogo,Bucaramanga
+42.0,3563104,6097789,17,36,566.0,Secundaria,Ibagué
+49.0,0,12415610,4,36,827.0,Universitario,Mzl
+74.0,2901634,1741257,13,18,448.0,Universitario,Villavicencio
+53.0,4925996,916998,19,24,370.0,Universitario,Cúcuta
+22.0,4222296,5512929,14,48,822.0,Universitario,Cal
+67.0,0,2705565,5,12,506.0,Primaria,Mdl
+30.0,2974920,808841,20,24,788.0,Técnico,Cúcuta
+42.0,12571902,901450,14,24,600.0,Posgrado,Barranquilla
+69.0,1541542,2517472,15,24,478.0,Secundaria,Santiago De Cali
+56.0,1072744,3348390,13,48,574.0,Técnico,Cali
+67.0,0,1898049,7,12,555.0,Técnico,Barranquilla
+44.0,0,7690830,21,48,570.0,Tecnólogo,Cartagena
+,0,8668449,1,18,,Tecnólogo,Barranquilla
+78.0,900000,4166750,7,18,669.0,Secundaria,Pei
+55.0,3283237,3641564,3,12,,Tecnólogo,Cartagena
+,3440517,5425195,17,36,573.0,Tecnólogo,Cúcuta
+34.0,2314852,2631693,13,24,683.0,Tecnólogo,Manizales
+70.0,900000,1141982,21,24,396.0,Tecnólogo,Santiago De Cali
+54.0,0,7594225,8,48,527.0,Universitario,Villavicencio
+69.0,2981272,438566,2,6,708.0,Tecnólogo,Santa Marta
+,3913965,530990,10,12,705.0,Técnico,Santa Marta
+72.0,0,4137239,12,24,451.0,Tecnólogo,Santa Marta
+29.0,2476491,1062343,3,6,589.0,Secundaria,Med.
+27.0,0,8076860,0,12,523.0,Tecnólogo,Ibagué
+24.0,5930578,613258,32,36,770.0,Tecnólogo,Bogotá
+42.0,3696872,936344,12,18,403.0,Secundaria,Bogotá
+45.0,3963471,3409719,31,48,570.0,Tecnólogo,Bta
+22.0,9013890,2263059,1,6,801.0,Posgrado,Barranqilla
+26.0,0,4842617,4,18,553.0,Secundaria,Bogotá
+35.0,1014270,3098251,9,18,704.0,Técnico,Ibagué
+44.0,2305151,177004,4,6,624.0,Secundaria,Medellín
+31.0,0,290877,3,6,720.0,Técnico,Ibagué
+36.0,0,1404442,12,6,300.0,Secundaria,Pereira
+30.0,1065368,4983719,0,12,456.0,Primaria,Cal
+26.0,0,6443870,4,24,384.0,Universitario,Medellín
+78.0,0,320566,15,18,828.0,Universitario,San José De Cúcuta
+18.0,2714682,6732386,19,36,594.0,Secundaria,Manizales
+61.0,1613193,2936594,4,12,,Secundaria,Santiago De Cali
+53.0,0,1225617,3,6,306.0,Técnico,Ibagué
+56.0,4480526,9253908,13,48,578.0,Tecnólogo,Cali
+54.0,0,2682886,11,18,491.0,Secundaria,Villavicencio
+,3404677,5033492,7,24,,Técnico,Villavicencio
+32.0,1682691,1025537,0,6,697.0,Técnico,San José De Cúcuta
+37.0,2621360,16756888,9,48,510.0,Universitario,Cartagena
+61.0,0,616634,3,6,512.0,Secundaria,Mdl
+23.0,0,5129203,9,24,467.0,Tecnólogo,Bucaramanga
+28.0,0,1261939,5,12,627.0,Tecnólogo,Ibagué
+33.0,3018397,2621924,5,18,344.0,Universitario,Cali
+58.0,12210508,1112437,12,18,678.0,Posgrado,Manizales
+54.0,0,3206774,7,24,838.0,Técnico,Villavicencio
+47.0,3056765,1971720,18,24,,Secundaria,Bucaramanga
+78.0,3373786,2200729,27,24,759.0,Tecnólogo,Manizales
+21.0,1295194,20649637,18,48,,Secundaria,B/Quilla
+65.0,2830494,951307,9,12,470.0,Secundaria,Med.
+64.0,2311093,1833692,19,24,670.0,Primaria,Ibagué
+34.0,0,11631010,20,48,486.0,Primaria,Barranquilla
+67.0,1350713,231301,4,6,495.0,Secundaria,Pei
+78.0,0,1655144,5,12,540.0,Secundaria,Bogotá
+23.0,3036602,1016896,8,18,737.0,Técnico,Santa Marta
+65.0,4014685,1016491,7,12,455.0,Universitario,Bogotá
+64.0,948696,3056023,6,18,717.0,Técnico,Bucaramanga
+,2723235,865204,3,6,493.0,Tecnólogo,Santa Marta
+20.0,0,2110137,16,24,821.0,Técnico,Bog
+42.0,3297930,4846031,26,48,823.0,Tecnólogo,Ibagué
+,2620728,1257271,2,12,748.0,Secundaria,Cali
+49.0,4212833,351055,3,6,723.0,Tecnólogo,Villavicencio
+28.0,4136816,6485077,13,36,511.0,Tecnólogo,Bga
+66.0,2845687,5454808,29,48,765.0,Tecnólogo,Santa Marta
+74.0,6817100,3548425,16,24,439.0,Posgrado,Santa Marta
+62.0,0,1483610,12,24,686.0,Técnico,Ibagué
+38.0,0,1091068,13,18,651.0,Técnico,Santa Marta
+31.0,2006306,248369,4,6,344.0,Secundaria,Cali
+58.0,0,19142492,17,48,748.0,Tecnólogo,Pereira
+37.0,0,2096415,12,24,431.0,Técnico,Ibagué
+75.0,3025902,2024940,1,6,,Tecnólogo,Cartagena
+45.0,5190737,2698537,41,48,587.0,Universitario,Cartagena
+56.0,2729851,748523,15,24,304.0,Tecnólogo,Bga
+73.0,0,601831,29,36,522.0,Tecnólogo,Sta Marta
+36.0,2077183,314308,5,6,478.0,Técnico,Bga
+40.0,1554233,3099060,4,12,648.0,Secundaria,Cúcuta
+67.0,6002032,1478899,12,24,557.0,Universitario,Villavicencio
+42.0,0,1464066,30,36,461.0,Universitario,Medellín
+73.0,0,2050851,1,6,809.0,Técnico,Ibagué
+28.0,0,1909321,28,36,438.0,Secundaria,Pei
+52.0,3599497,1557601,2,6,576.0,Universitario,San José De Cúcuta
+50.0,900000,6243553,8,24,385.0,Secundaria,Cartagena
+42.0,6545543,1673041,1,6,846.0,Posgrado,B/Quilla
+75.0,2183830,2671667,14,36,639.0,Tecnólogo,Villavicencio
+66.0,7320601,1091750,20,24,637.0,Universitario,Ibagué
+77.0,0,2216134,16,24,643.0,Posgrado,Bogotá
+45.0,0,3988757,21,36,453.0,Secundaria,Santiago De Cali
+79.0,2998088,6976753,28,48,810.0,Universitario,Ibagué
+30.0,5698925,7607348,20,48,810.0,Universitario,Barranqilla
+50.0,0,1538467,5,18,428.0,Secundaria,Cali
+31.0,0,9452097,6,24,,Tecnólogo,Bucaramanga
+41.0,1274369,375104,5,6,,Secundaria,Medellín
+29.0,0,7520771,30,48,561.0,Universitario,Medellín
+,2328042,1456663,2,12,569.0,Secundaria,Pei
+59.0,900000,2543225,9,18,504.0,Primaria,Cal
+30.0,4349484,1195300,37,36,360.0,Universitario,Villavicencio
+69.0,0,8668425,16,36,586.0,Universitario,Pei
+70.0,3889605,1555646,7,18,740.0,Universitario,Bucaramanga
+68.0,2039107,5004322,7,24,387.0,Secundaria,Bucaramanga
+26.0,0,1348821,0,6,716.0,Técnico,Cali
+24.0,0,857465,41,48,596.0,Técnico,Cartagena
+59.0,6181717,1584511,2,6,395.0,Universitario,Ibagué
+,900000,3236166,1,6,657.0,Primaria,Barranquilla
+70.0,4832723,10626085,18,48,619.0,Universitario,Ibagué
+46.0,900000,9837147,13,48,401.0,Secundaria,Manizales
+76.0,3217126,3152190,8,24,445.0,Universitario,Cartagena
+59.0,3346084,4887578,4,24,526.0,Universitario,Santa Marta
+53.0,2904615,6108669,4,18,673.0,Tecnólogo,Barranquilla
+64.0,4578330,5806746,3,18,699.0,Universitario,Cartagena
+43.0,1367269,1780744,4,12,746.0,Secundaria,Villavicencio
+57.0,2069230,1795689,10,18,791.0,Técnico,B/Quilla
+54.0,1874127,2526460,24,36,817.0,Secundaria,Med.
+38.0,0,2416051,0,6,,Posgrado,Villavo
+57.0,2756316,723057,4,6,843.0,Técnico,Barranquilla
+75.0,0,495159,4,6,386.0,Técnico,San José De Cúcuta
+75.0,7002515,2207131,1,6,625.0,Universitario,Cúcuta
+32.0,6613256,3039314,4,12,462.0,Posgrado,Ibagué
+37.0,7351497,678818,2,6,441.0,Universitario,Manizales
+43.0,0,1364066,25,36,743.0,Tecnólogo,Cúcuta
+53.0,2155378,644764,41,48,723.0,Secundaria,Bucaramanga
+60.0,0,4331497,2,12,692.0,Técnico,Barranqilla
+,4145268,6814117,12,48,488.0,Universitario,Pereira
+51.0,0,277872,10,12,305.0,Secundaria,Barranqilla
+63.0,5821545,2893588,3,12,469.0,Universitario,Medellín
+77.0,0,2427479,5,12,458.0,Secundaria,Bucaramanga
+,0,2680455,25,36,630.0,Primaria,Villavo
+39.0,0,1161897,9,12,390.0,Universitario,Pereira
+31.0,3335206,6619566,8,24,743.0,Tecnólogo,Santa Marta
+63.0,4909823,7850654,20,48,548.0,Universitario,Med.
+39.0,0,503108,19,24,495.0,Universitario,Med.
+40.0,2601987,1343904,2,6,761.0,Secundaria,Cartagena
+19.0,6863313,319269,3,6,837.0,Universitario,Pei
+60.0,0,6422869,13,36,349.0,Universitario,Barranquilla
+48.0,0,4786169,32,48,,Universitario,Bucaramanga
+74.0,900000,3315676,40,48,448.0,Secundaria,Cúcuta
+19.0,0,2012938,1,6,473.0,Técnico,Ibagué
+78.0,1910674,1454142,1,6,761.0,Tecnólogo,Ibagué
+59.0,0,5117533,8,24,809.0,Técnico,Ibagué
+77.0,0,12145066,9,36,516.0,Secundaria,Medellín
+35.0,0,1472606,13,18,332.0,Secundaria,Pei
+31.0,0,1121296,20,24,554.0,Primaria,Bogotá
+18.0,5817599,2707761,3,12,807.0,Tecnólogo,Cartagena
+57.0,3950753,531350,2,6,645.0,Técnico,Bogotá
+40.0,0,2143875,11,18,806.0,Técnico,Ibagué
+29.0,3026502,4253219,26,36,620.0,Técnico,Barranqilla
+48.0,1112541,825888,3,6,476.0,Primaria,Cali
+54.0,0,1163850,21,18,801.0,Universitario,Villavo
+46.0,0,5648311,4,18,546.0,Secundaria,Cartagena
+36.0,0,4831526,11,48,490.0,Universitario,Cartagena
+67.0,0,1825232,3,12,767.0,Secundaria,Sta Marta
+22.0,0,3676790,9,18,663.0,Técnico,Cali
+,4243772,3234171,7,36,784.0,Tecnólogo,Bogotá
+76.0,2093195,13625942,4,36,766.0,Tecnólogo,Santiago De Cali
+20.0,2979137,5493600,7,24,341.0,Secundaria,Ibagué
+39.0,1708910,1709858,8,12,429.0,Técnico,Cartagena
+22.0,0,1717958,8,12,346.0,Técnico,Cartagena
+20.0,0,1218409,8,12,646.0,Universitario,Bucaramanga
+66.0,0,776751,3,6,694.0,Técnico,Ibagué
+70.0,4258884,5327421,5,18,387.0,Técnico,Barranqilla
+27.0,1407124,1982130,12,36,577.0,Secundaria,Villavo
+,1693754,2571188,8,18,736.0,Secundaria,Cal
+43.0,5101480,204644,5,6,470.0,Universitario,Ibagué
+79.0,3289487,3904513,12,24,634.0,Universitario,Villavicencio
+23.0,1871987,2128502,5,18,441.0,Universitario,Ibagué
+22.0,0,2589751,25,36,486.0,Técnico,Cartagena
+73.0,2565509,3527470,19,48,476.0,Técnico,Cúcuta
+60.0,1784463,6728078,26,48,709.0,Universitario,Medellín
+26.0,1245101,1343000,4,12,437.0,Secundaria,Pereira
+45.0,2482154,6396328,0,12,,Técnico,Manizales
+,900000,2932574,0,6,713.0,Secundaria,Pereira
+71.0,916431,586233,10,12,638.0,Secundaria,Cali
+,3528149,1819761,9,18,688.0,Universitario,Cúcuta
