@@ -1,0 +1,25 @@
+variable_sensible,subgrupo,n,tasa_prediccion_positiva
+rango_edad,50-59,384,0.12239583333333333
+rango_edad,≤29,454,0.09911894273127753
+rango_edad,30-39,363,0.12121212121212122
+rango_edad,40-49,334,0.11377245508982035
+rango_edad,70+,370,0.07567567567567568
+rango_edad,60-69,377,0.07957559681697612
+nivel_educativo,Tecnólogo,429,0.10256410256410256
+nivel_educativo,Secundaria,607,0.09390444810543658
+nivel_educativo,Técnico,499,0.10420841683366733
+nivel_educativo,Universitario,592,0.1097972972972973
+nivel_educativo,Primaria,145,0.09655172413793103
+nivel_educativo,Posgrado,188,0.09042553191489362
+ciudad_auditoria,Cali,205,0.11707317073170732
+ciudad_auditoria,Bucaramanga,194,0.09278350515463918
+ciudad_auditoria,Manizales,218,0.12844036697247707
+ciudad_auditoria,Ibagué,197,0.08121827411167512
+ciudad_auditoria,Cúcuta,200,0.095
+ciudad_auditoria,Pereira,214,0.1261682242990654
+ciudad_auditoria,Medellín,217,0.1152073732718894
+ciudad_auditoria,Bogotá,225,0.12
+ciudad_auditoria,Villavicencio,191,0.09424083769633508
+ciudad_auditoria,Barranquilla,202,0.09405940594059406
+ciudad_auditoria,Santa Marta,198,0.06565656565656566
+ciudad_auditoria,Cartagena,199,0.07537688442211055

@@ -1,0 +1,4 @@
+variable_sensible,grupo_mayor_tasa,tasa_max,grupo_menor_tasa,tasa_min,brecha_dp,evaluacion
+rango_edad,50-59,0.12239583333333333,70+,0.07567567567567568,0.04672015765765765,OK
+nivel_educativo,Universitario,0.1097972972972973,Posgrado,0.09042553191489362,0.019371765382403677,OK
+ciudad_auditoria,Manizales,0.12844036697247707,Santa Marta,0.06565656565656566,0.06278380131591141,OK
