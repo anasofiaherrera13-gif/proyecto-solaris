@@ -1,0 +1,49 @@
+MÓDULO 5 · PROYECTO SOLARIS
+Feedback Dashboard V1
+Estudiante: Sofía Herrera Sánchez
+
+Base del análisis
+Este documento sintetiza el feedback obtenido a partir de la prueba de usabilidad simulada del Dashboard V1 de SOLARIS. La revisión se realizó siguiendo los principios del módulo: jerarquía de decisión, test de los 5 segundos, accesibilidad básica y regla de los 3 clics.
+
+1. PATRONES IDENTIFICADOS
+
+El dashboard comunica correctamente su propósito general: permite identificar distribuidores con mayor probabilidad de mora y priorizar su revisión. Los KPI superiores captan la atención rápidamente y la tabla de distribuidores prioritarios es percibida como la sección más accionable.
+
+Sin embargo, se identifican tres fricciones principales. Primero, el indicador “Valor en riesgo” puede resultar ambiguo porque no explica de manera inmediata qué representa ni deja explícita la moneda. Segundo, el gráfico “Riesgo promedio según fecha de vinculación” requiere más interpretación y no conduce claramente a una decisión de negocio; además, la fecha de vinculación no representa la fecha real de scoring o monitoreo del modelo. Tercero, el gráfico de riesgo promedio por ciudad permite comparar segmentos, pero la noción de “promedio” puede ser poco intuitiva para un usuario no técnico si no se acompaña con una explicación más directa o con el número de distribuidores afectados.
+
+2. MATRIZ IMPACTO × ESFUERZO
+
+Problema 1: El KPI “Valor en riesgo” no explica claramente qué significa y la notación “$10.55B” puede generar dudas sobre moneda y magnitud.
+Impacto: ALTO
+Esfuerzo: BAJO
+
+Problema 2: El gráfico temporal basado en fecha de vinculación es difícil de interpretar y aporta poca información para decidir qué hacer ahora.
+Impacto: ALTO
+Esfuerzo: BAJO
+
+Problema 3: El gráfico de riesgo promedio por ciudad puede ser entendido como una medida abstracta si el usuario no sabe qué significa la probabilidad promedio.
+Impacto: ALTO
+Esfuerzo: BAJO
+
+Problema 4: El dashboard depende parcialmente del uso de color para comunicar riesgo.
+Impacto: BAJO
+Esfuerzo: BAJO
+
+Problema 5: El rango de fechas puede no ser un filtro decisivo para todos los usuarios, ya que fecha_vinculacion no equivale a fecha de predicción.
+Impacto: BAJO
+Esfuerzo: BAJO
+
+3. TRES MEJORAS PRIORITARIAS
+
+MEJORA 1: El KPI “Valor en riesgo” es ambiguo y no deja suficientemente claro qué representa -> Voy a cambiar la etiqueta a “Saldo expuesto de distribuidores en riesgo”, indicar explícitamente que el valor está expresado en COP y añadir una ayuda breve que explique que corresponde a la suma del saldo_actual de los distribuidores cuya probabilidad de mora supera el umbral seleccionado -> Lo voy a verificar aplicando nuevamente el test de 5 segundos y comprobando que el usuario pueda explicar qué significa el indicador sin recibir instrucciones.
+
+MEJORA 2: El gráfico “Riesgo promedio según fecha de vinculación” requiere demasiada interpretación y no conduce directamente a una acción -> Voy a reemplazarlo por un gráfico más accionable, por ejemplo “Saldo en riesgo por ciudad” o “Distribuidores en riesgo por ciudad”, de manera que la vista permita identificar dónde se concentra la exposición que requiere seguimiento -> Lo voy a verificar pidiendo al usuario que identifique en menos de 30 segundos qué ciudad debería recibir atención prioritaria y comprobando que pueda responder sin ayuda.
+
+MEJORA 3: El gráfico “Riesgo promedio por ciudad” utiliza una medida que puede resultar abstracta para un usuario no técnico -> Voy a mantener la comparación por ciudad, pero añadiré etiquetas más explícitas, porcentaje visible y número de distribuidores analizados o en riesgo por cada ciudad, para que el usuario pueda interpretar la magnitud además del promedio -> Lo voy a verificar preguntando qué ciudad presenta mayor riesgo y por qué, esperando que el usuario pueda justificar su respuesta usando el porcentaje y el número de casos mostrados.
+
+4. PRIORIDAD DE IMPLEMENTACIÓN
+
+Las tres mejoras seleccionadas son de alto impacto y bajo esfuerzo, por lo que deben implementarse antes de cambios puramente estéticos. La prioridad es mejorar primero la comprensión de los KPI y gráficos que intervienen directamente en la decisión de negocio. Después de aplicar los cambios, se debe repetir el test de 5 segundos y una prueba de uso libre con una persona diferente para comprobar si la interpretación del Dashboard V2 coincide con la intención de diseño.
+
+Decisión de negocio que debe facilitar el Dashboard V2:
+“Permitir al equipo de Crédito y Cartera decidir qué distribuidores priorizar para revisión basándose en su probabilidad de mora y su exposición económica.”

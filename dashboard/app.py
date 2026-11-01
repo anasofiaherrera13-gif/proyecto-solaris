@@ -19,6 +19,19 @@ st.set_page_config(
 
 
 # ============================================================
+# PALETA ACCESIBLE
+# ============================================================
+# Tonos más oscuros para mejorar contraste sobre fondo blanco.
+# La información nunca depende únicamente del color.
+
+ROJO = "#C0392B"
+VERDE = "#1E8449"
+NARANJA = "#AF601A"
+AZUL = "#2471A3"
+GRIS = "#5D6D7E"
+
+
+# ============================================================
 # FUNCIONES AUXILIARES
 # ============================================================
 
@@ -108,10 +121,8 @@ def normalizar_ciudad(valor):
         "mzl": "Manizales",
         "manizales": "Manizales",
 
-        # Ibagué
+        # Otras
         "ibague": "Ibagué",
-
-        # Cartagena
         "cartagena": "Cartagena",
     }
 
@@ -195,7 +206,7 @@ def cargar_datos():
         )
 
     # --------------------------------------------------------
-    # Normalizar ciudades
+    # Normalización de ciudades
     # --------------------------------------------------------
 
     if "ciudad" in df.columns:
@@ -207,19 +218,6 @@ def cargar_datos():
         df["ciudad"] = (
             df["ciudad"]
             .apply(normalizar_ciudad)
-        )
-
-    # --------------------------------------------------------
-    # Fechas
-    # --------------------------------------------------------
-
-    if "fecha_vinculacion" in df.columns:
-
-        df["fecha_vinculacion"] = (
-            pd.to_datetime(
-                df["fecha_vinculacion"],
-                errors="coerce"
-            )
         )
 
     # --------------------------------------------------------
@@ -274,13 +272,22 @@ st.caption(
 # ============================================================
 # SIDEBAR
 # ============================================================
+# PASO 7:
+# Se mantienen únicamente los filtros que modifican
+# directamente una decisión de negocio.
+#
+# Se elimina fecha_vinculacion porque no representa la
+# fecha de scoring y no cambia claramente la priorización.
+# ============================================================
 
 with st.sidebar:
 
-    st.header("Filtros")
+    st.header(
+        "Filtros de decisión"
+    )
 
     # --------------------------------------------------------
-    # Ciudad
+    # FILTRO 1: CIUDAD
     # --------------------------------------------------------
 
     ciudades = (
@@ -295,57 +302,38 @@ with st.sidebar:
     )
 
     ciudad_seleccionada = st.selectbox(
-        "Ciudad",
-        ciudades
+        "Mostrando ciudad",
+        ciudades,
+        index=0,
+        help=(
+            "Selecciona una ciudad para concentrar "
+            "el análisis geográfico. "
+            "Por defecto se muestra toda la cartera."
+        )
     )
 
     # --------------------------------------------------------
-    # Fechas
-    # --------------------------------------------------------
-
-    rango_fechas = None
-
-    if (
-        "fecha_vinculacion" in df.columns
-        and
-        df["fecha_vinculacion"].notna().any()
-    ):
-
-        fecha_min = (
-            df["fecha_vinculacion"]
-            .min()
-        )
-
-        fecha_max = (
-            df["fecha_vinculacion"]
-            .max()
-        )
-
-        rango_fechas = st.date_input(
-            "Rango de fecha de vinculación",
-            value=(
-                fecha_min.date(),
-                fecha_max.date()
-            ),
-            min_value=fecha_min.date(),
-            max_value=fecha_max.date()
-        )
-
-    # --------------------------------------------------------
-    # Umbral
+    # FILTRO 2: UMBRAL DE RIESGO
     # --------------------------------------------------------
 
     umbral = st.slider(
-        "Umbral de riesgo",
+        "Umbral para definir prioridad",
         min_value=0.0,
         max_value=1.0,
         value=0.70,
         step=0.05,
+        format="%.2f",
         help=(
             "Un distribuidor se considera prioritario "
             "cuando su probabilidad de mora es igual "
             "o superior a este valor."
         )
+    )
+
+    st.caption(
+        f"Mostrando: "
+        f"{'todas las ciudades' if ciudad_seleccionada == 'Todos' else ciudad_seleccionada} "
+        f"· Prioridad desde {umbral:.0%}"
     )
 
 
@@ -358,41 +346,16 @@ df_filtrado = df.copy()
 
 if ciudad_seleccionada != "Todos":
 
-    df_filtrado = df_filtrado[
-        df_filtrado["ciudad"]
-        == ciudad_seleccionada
-    ]
-
-
-if (
-    rango_fechas is not None
-    and
-    len(rango_fechas) == 2
-):
-
-    fecha_inicio = pd.to_datetime(
-        rango_fechas[0]
+    df_filtrado = (
+        df_filtrado[
+            df_filtrado["ciudad"]
+            == ciudad_seleccionada
+        ]
     )
-
-    fecha_fin = pd.to_datetime(
-        rango_fechas[1]
-    )
-
-    df_filtrado = df_filtrado[
-        (
-            df_filtrado["fecha_vinculacion"]
-            >= fecha_inicio
-        )
-        &
-        (
-            df_filtrado["fecha_vinculacion"]
-            <= fecha_fin
-        )
-    ]
 
 
 # ============================================================
-# CLASIFICACIÓN DINÁMICA
+# CLASIFICACIÓN SEGÚN UMBRAL
 # ============================================================
 
 df_filtrado = df_filtrado.copy()
@@ -420,6 +383,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(
 
 # ============================================================
 # VISTA 1
+# PREGUNTA:
 # ¿Cuántos distribuidores requieren atención y cuáles primero?
 # ============================================================
 
@@ -435,8 +399,8 @@ with tab1:
         "distribuidores deben revisarse primero."
     )
 
-    total_distribuidores = len(
-        df_filtrado
+    total_distribuidores = (
+        len(df_filtrado)
     )
 
     distribuidores_riesgo = int(
@@ -492,9 +456,8 @@ with tab1:
             ),
             delta_color="inverse",
             help=(
-                "Distribuidores cuya probabilidad "
-                "de mora es igual o superior al "
-                "umbral seleccionado."
+                "▲ Un valor mayor implica más "
+                "distribuidores que requieren atención."
             )
         )
 
@@ -513,15 +476,10 @@ with tab1:
                 saldo_expuesto
             ),
             help=(
-                "Suma del saldo actual de los "
-                "distribuidores que superan "
-                "el umbral seleccionado."
+                "Suma del saldo actual de los distribuidores "
+                "que superan el umbral de prioridad."
             )
         )
-
-    # --------------------------------------------------------
-    # Tabla prioritaria
-    # --------------------------------------------------------
 
     st.subheader(
         "Casos que requieren atención"
@@ -646,13 +604,14 @@ with tab1:
     else:
 
         st.info(
-            "No hay distribuidores que superen "
+            "✓ No hay distribuidores que superen "
             "el umbral seleccionado."
         )
 
 
 # ============================================================
 # VISTA 2
+# PREGUNTA:
 # ¿En qué ciudades se concentra un mayor riesgo?
 # ============================================================
 
@@ -711,24 +670,20 @@ with tab2:
         )
     )
 
-
-    # ========================================================
-    # AJUSTE 1
-    # La barra = probabilidad promedio.
-    # El texto = porcentaje que supera el umbral.
-    # ========================================================
-
     fig_ciudad = px.bar(
         riesgo_ciudad,
         x="probabilidad_mora",
         y="ciudad",
         orientation="h",
         color="probabilidad_mora",
+
+        # Colores semánticos con tonos más oscuros
         color_continuous_scale=[
-            [0.0, "#27AE60"],
-            [0.5, "#F39C12"],
-            [1.0, "#E74C3C"]
+            [0.0, VERDE],
+            [0.5, NARANJA],
+            [1.0, ROJO]
         ],
+
         text=(
             riesgo_ciudad[
                 "porcentaje_en_riesgo"
@@ -738,12 +693,18 @@ with tab2:
                 f"{x:.1f}% supera el umbral"
             )
         ),
+
         hover_data={
-            "distribuidores": True,
-            "distribuidores_en_riesgo": True,
-            "porcentaje_en_riesgo": ":.1f",
-            "probabilidad_mora": ":.1%"
+            "distribuidores":
+                True,
+            "distribuidores_en_riesgo":
+                True,
+            "porcentaje_en_riesgo":
+                ":.1f",
+            "probabilidad_mora":
+                ":.1%"
         },
+
         labels={
             "probabilidad_mora":
                 "Probabilidad promedio de mora",
@@ -756,6 +717,7 @@ with tab2:
             "porcentaje_en_riesgo":
                 "% que supera el umbral"
         },
+
         title=(
             "Probabilidad promedio de mora por ciudad"
         )
@@ -791,7 +753,7 @@ with tab2:
 
     fig_ciudad.update_layout(
         coloraxis_colorbar=dict(
-            title="Riesgo"
+            title="Nivel de riesgo"
         ),
         xaxis_tickformat=".0%",
         yaxis_title=None,
@@ -816,11 +778,11 @@ with tab2:
             .iloc[0]
         )
 
-        st.info(
-            f"Prioridad geográfica: "
+        st.warning(
+            f"⚠ Atención prioritaria: "
             f"{ciudad_mayor_riesgo['ciudad']} "
-            f"presenta la mayor probabilidad "
-            f"promedio de mora "
+            f"presenta la mayor probabilidad promedio "
+            f"de mora "
             f"({ciudad_mayor_riesgo['probabilidad_mora']:.1%}). "
             f"Además, "
             f"{ciudad_mayor_riesgo['porcentaje_en_riesgo']:.1f}% "
@@ -831,7 +793,8 @@ with tab2:
 
 # ============================================================
 # VISTA 3
-# ¿Dónde se concentra el mayor saldo expuesto?
+# PREGUNTA:
+# ¿Dónde está concentrado el mayor saldo expuesto?
 # ============================================================
 
 with tab3:
@@ -885,25 +848,29 @@ with tab3:
             y="ciudad",
             orientation="h",
             color="saldo_en_riesgo",
+
             color_continuous_scale=[
-                [0.0, "#F39C12"],
-                [1.0, "#E74C3C"]
+                [0.0, NARANJA],
+                [1.0, ROJO]
             ],
+
             text=(
                 saldo_ciudad[
                     "distribuidores_en_riesgo"
                 ]
                 .apply(
                     lambda x:
-                    f"{x} casos"
+                    f"{x} casos prioritarios"
                 )
             ),
+
             hover_data={
                 "distribuidores_en_riesgo":
                     True,
                 "saldo_en_riesgo":
                     ":,.0f"
             },
+
             labels={
                 "saldo_en_riesgo":
                     "Saldo expuesto (COP)",
@@ -912,6 +879,7 @@ with tab3:
                 "distribuidores_en_riesgo":
                     "Distribuidores en riesgo"
             },
+
             title=(
                 "Saldo expuesto en riesgo por ciudad"
             )
@@ -931,7 +899,7 @@ with tab3:
                 title="Exposición"
             ),
             margin=dict(
-                r=80
+                r=100
             )
         )
 
@@ -950,26 +918,27 @@ with tab3:
         )
 
         st.warning(
-            f"Mayor exposición: "
+            f"⚠ Mayor exposición económica: "
             f"{ciudad_mayor_exposicion['ciudad']} "
             f"concentra "
             f"{formatear_cop(ciudad_mayor_exposicion['saldo_en_riesgo'])} "
-            f"en saldo expuesto y "
+            f"y "
             f"{int(ciudad_mayor_exposicion['distribuidores_en_riesgo'])} "
-            f"distribuidores en riesgo."
+            f"casos prioritarios."
         )
 
     else:
 
-        st.info(
-            "No existen distribuidores en riesgo "
-            "con el umbral seleccionado."
+        st.success(
+            "✓ No existen distribuidores que superen "
+            "el umbral seleccionado."
         )
 
 
 # ============================================================
 # VISTA 4
-# ¿Un distribuidor específico requiere revisión?
+# PREGUNTA:
+# ¿Un distribuidor específico requiere revisión prioritaria?
 # ============================================================
 
 with tab4:
@@ -983,13 +952,6 @@ with tab4:
         "distribuidor para ayudarte a decidir si requiere "
         "una revisión prioritaria."
     )
-
-
-    # ========================================================
-    # AJUSTE 2
-    # Ordenar primero por mayor probabilidad de mora.
-    # Así la vista abre mostrando el caso más crítico.
-    # ========================================================
 
     distribuidores_ordenados = (
         df_filtrado
@@ -1009,14 +971,18 @@ with tab4:
         .tolist()
     )
 
-
     if len(ids_disponibles) > 0:
 
         id_seleccionado = (
             st.selectbox(
                 "Selecciona un distribuidor",
                 ids_disponibles,
-                index=0
+                index=0,
+                help=(
+                    "La lista aparece ordenada desde "
+                    "el distribuidor con mayor probabilidad "
+                    "de mora."
+                )
             )
         )
 
@@ -1052,14 +1018,18 @@ with tab4:
 
         with c3:
 
-            cuotas_pagadas = caso.get(
-                "cuotas_pagadas",
-                np.nan
+            cuotas_pagadas = (
+                caso.get(
+                    "cuotas_pagadas",
+                    np.nan
+                )
             )
 
-            cuotas_totales = caso.get(
-                "cuotas_totales",
-                np.nan
+            cuotas_totales = (
+                caso.get(
+                    "cuotas_totales",
+                    np.nan
+                )
             )
 
             if (
@@ -1076,7 +1046,9 @@ with tab4:
 
             else:
 
-                valor_cuotas = "Sin dato"
+                valor_cuotas = (
+                    "Sin dato"
+                )
 
             st.metric(
                 "Cuotas pagadas",
@@ -1085,9 +1057,11 @@ with tab4:
 
         with c4:
 
-            score = caso.get(
-                "score_externo",
-                np.nan
+            score = (
+                caso.get(
+                    "score_externo",
+                    np.nan
+                )
             )
 
             if pd.notna(score):
@@ -1101,11 +1075,9 @@ with tab4:
                 score_mostrar
             )
 
-
         st.subheader(
             "Perfil del distribuidor"
         )
-
 
         perfil = pd.DataFrame(
             {
@@ -1159,7 +1131,9 @@ with tab4:
                     ),
 
                     formatear_cop(
-                        caso["saldo_actual"]
+                        caso[
+                            "saldo_actual"
+                        ]
                     ),
 
                     (
@@ -1195,26 +1169,31 @@ with tab4:
             width="stretch"
         )
 
-        accion = generar_accion(
-            caso
+        accion = (
+            generar_accion(
+                caso
+            )
         )
 
         if (
-            caso["probabilidad_mora"]
+            caso[
+                "probabilidad_mora"
+            ]
             >= umbral
         ):
 
             st.error(
+                f"⚠ REQUIERE ATENCIÓN. "
                 f"Acción sugerida: {accion}. "
                 f"Este distribuidor supera el "
                 f"umbral actual de {umbral:.0%}. "
-                f"Se recomienda revisión humana "
-                f"antes de tomar una decisión."
+                f"La decisión final requiere revisión humana."
             )
 
         else:
 
             st.success(
+                f"✓ POR DEBAJO DEL UMBRAL. "
                 f"Acción sugerida: {accion}. "
                 f"Este distribuidor está por debajo "
                 f"del umbral actual de {umbral:.0%}."
@@ -1230,7 +1209,8 @@ with tab4:
 
 # ============================================================
 # VISTA 5
-# ¿El modelo puede apoyar la priorización?
+# PREGUNTA:
+# ¿El modelo tiene desempeño suficiente para apoyar decisiones?
 # ============================================================
 
 with tab5:
@@ -1246,7 +1226,7 @@ with tab5:
     )
 
     # --------------------------------------------------------
-    # Métricas del Módulo 4
+    # Métricas obtenidas en Módulo 4
     # --------------------------------------------------------
 
     auc = 0.9588
@@ -1262,35 +1242,21 @@ with tab5:
 
         st.metric(
             "ROC-AUC",
-            f"{auc:.1%}",
-            help=(
-                "Capacidad global del modelo "
-                "para diferenciar casos con "
-                "y sin mora."
-            )
+            f"{auc:.1%}"
         )
 
     with m2:
 
         st.metric(
             "Precisión en Moroso",
-            f"{precision:.1%}",
-            help=(
-                "De los distribuidores clasificados "
-                "como morosos, qué proporción "
-                "realmente lo era."
-            )
+            f"{precision:.1%}"
         )
 
     with m3:
 
         st.metric(
             "Recall en Moroso",
-            f"{recall:.1%}",
-            help=(
-                "De los morosos reales, qué "
-                "proporción detectó el modelo."
-            )
+            f"{recall:.1%}"
         )
 
     with m4:
@@ -1300,19 +1266,23 @@ with tab5:
             f"{meta_recall:.0%}"
         )
 
+    st.caption(
+        "Leyenda accesible: "
+        "⚠ = requiere atención · "
+        "✓ = objetivo de negocio"
+    )
 
     # ========================================================
-    # AJUSTE 3
-    # Colores semánticos:
-    # rojo = recall actual por debajo de meta
-    # verde = meta de negocio
+    # ACCESIBILIDAD
+    # No dependemos únicamente de rojo/verde.
+    # Las categorías contienen iconos y texto explícito.
     # ========================================================
 
     comparacion_recall = pd.DataFrame(
         {
             "Indicador": [
-                "Recall actual",
-                "Meta de negocio"
+                "⚠ Recall actual",
+                "✓ Meta de negocio"
             ],
 
             "Valor": [
@@ -1322,21 +1292,26 @@ with tab5:
         }
     )
 
-
     fig_modelo = px.bar(
         comparacion_recall,
         x="Indicador",
         y="Valor",
         color="Indicador",
+
         color_discrete_map={
-            "Recall actual": "#E74C3C",
-            "Meta de negocio": "#27AE60"
+            "⚠ Recall actual":
+                ROJO,
+            "✓ Meta de negocio":
+                VERDE
         },
+
         text="Valor",
+
         labels={
             "Valor":
                 "Porcentaje (%)"
         },
+
         title=(
             "Recall actual vs meta de negocio"
         )
@@ -1363,7 +1338,6 @@ with tab5:
         width="stretch"
     )
 
-
     if recall < meta_recall:
 
         diferencia = (
@@ -1372,7 +1346,7 @@ with tab5:
         )
 
         st.warning(
-            f"El recall actual está "
+            f"⚠ El recall actual está "
             f"{diferencia:.1%} por debajo de la meta. "
             f"Decisión recomendada: utilizar SOLARIS "
             f"como herramienta de priorización y apoyo "
@@ -1384,8 +1358,7 @@ with tab5:
     else:
 
         st.success(
-            "El recall alcanza la meta de negocio "
-            "establecida."
+            "✓ El recall alcanza la meta de negocio."
         )
 
 
