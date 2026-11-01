@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import numpy as np
 import unicodedata
 import re
@@ -24,12 +23,6 @@ st.set_page_config(
 # ============================================================
 
 def limpiar_texto(texto):
-    """
-    Convierte un texto a una forma comparable.
-    Ejemplo:
-    Medellín -> medellin
-    B/Quilla -> b quilla
-    """
 
     if pd.isna(texto):
         return ""
@@ -63,9 +56,6 @@ def limpiar_texto(texto):
 
 
 def normalizar_ciudad(valor):
-    """
-    Agrupa distintas formas de escribir una misma ciudad.
-    """
 
     clave = limpiar_texto(valor)
 
@@ -135,9 +125,6 @@ def normalizar_ciudad(valor):
 
 
 def generar_accion(fila):
-    """
-    Genera una recomendación sencilla según la probabilidad de mora.
-    """
 
     probabilidad = fila["probabilidad_mora"]
 
@@ -154,6 +141,23 @@ def generar_accion(fila):
         return "Seguimiento habitual"
 
 
+def formatear_cop(valor):
+
+    if pd.isna(valor):
+        return "Sin dato"
+
+    if valor >= 1_000_000_000:
+        return f"COP {valor / 1_000_000_000:.2f} mil M"
+
+    elif valor >= 1_000_000:
+        return f"COP {valor / 1_000_000:.1f} M"
+
+    elif valor >= 1_000:
+        return f"COP {valor / 1_000:.1f} mil"
+
+    return f"COP {valor:,.0f}"
+
+
 # ============================================================
 # CARGA DE DATOS
 # ============================================================
@@ -162,6 +166,7 @@ def generar_accion(fila):
 def cargar_datos():
 
     try:
+
         df = pd.read_csv(
             "data/solaris_predicciones.csv"
         )
@@ -170,14 +175,13 @@ def cargar_datos():
 
         st.error(
             "No se encontró el archivo "
-            "data/solaris_predicciones.csv. "
-            "Verifica que exista dentro de dashboard/data."
+            "data/solaris_predicciones.csv."
         )
 
         return pd.DataFrame()
 
     # --------------------------------------------------------
-    # Identificador del distribuidor
+    # Identificador
     # --------------------------------------------------------
 
     if "id_distribuidor" not in df.columns:
@@ -191,12 +195,11 @@ def cargar_datos():
         )
 
     # --------------------------------------------------------
-    # Normalización de ciudades
+    # Normalizar ciudades
     # --------------------------------------------------------
 
     if "ciudad" in df.columns:
 
-        # Conservar valor original por trazabilidad
         df["ciudad_original"] = (
             df["ciudad"]
         )
@@ -207,7 +210,7 @@ def cargar_datos():
         )
 
     # --------------------------------------------------------
-    # Conversión de fecha
+    # Fechas
     # --------------------------------------------------------
 
     if "fecha_vinculacion" in df.columns:
@@ -220,7 +223,7 @@ def cargar_datos():
         )
 
     # --------------------------------------------------------
-    # Conversión de variables numéricas
+    # Variables numéricas
     # --------------------------------------------------------
 
     columnas_numericas = [
@@ -291,15 +294,13 @@ with st.sidebar:
         )
     )
 
-    ciudad_seleccionada = (
-        st.selectbox(
-            "Ciudad",
-            ciudades
-        )
+    ciudad_seleccionada = st.selectbox(
+        "Ciudad",
+        ciudades
     )
 
     # --------------------------------------------------------
-    # Rango de fechas
+    # Fechas
     # --------------------------------------------------------
 
     rango_fechas = None
@@ -331,7 +332,7 @@ with st.sidebar:
         )
 
     # --------------------------------------------------------
-    # Umbral de riesgo
+    # Umbral
     # --------------------------------------------------------
 
     umbral = st.slider(
@@ -355,23 +356,13 @@ with st.sidebar:
 df_filtrado = df.copy()
 
 
-# ------------------------------------------------------------
-# Filtro de ciudad
-# ------------------------------------------------------------
-
 if ciudad_seleccionada != "Todos":
 
-    df_filtrado = (
-        df_filtrado[
-            df_filtrado["ciudad"]
-            == ciudad_seleccionada
-        ]
-    )
+    df_filtrado = df_filtrado[
+        df_filtrado["ciudad"]
+        == ciudad_seleccionada
+    ]
 
-
-# ------------------------------------------------------------
-# Filtro de fechas
-# ------------------------------------------------------------
 
 if (
     rango_fechas is not None
@@ -379,39 +370,29 @@ if (
     len(rango_fechas) == 2
 ):
 
-    fecha_inicio = (
-        pd.to_datetime(
-            rango_fechas[0]
-        )
+    fecha_inicio = pd.to_datetime(
+        rango_fechas[0]
     )
 
-    fecha_fin = (
-        pd.to_datetime(
-            rango_fechas[1]
-        )
+    fecha_fin = pd.to_datetime(
+        rango_fechas[1]
     )
 
-    df_filtrado = (
-        df_filtrado[
-            (
-                df_filtrado[
-                    "fecha_vinculacion"
-                ]
-                >= fecha_inicio
-            )
-            &
-            (
-                df_filtrado[
-                    "fecha_vinculacion"
-                ]
-                <= fecha_fin
-            )
-        ]
-    )
+    df_filtrado = df_filtrado[
+        (
+            df_filtrado["fecha_vinculacion"]
+            >= fecha_inicio
+        )
+        &
+        (
+            df_filtrado["fecha_vinculacion"]
+            <= fecha_fin
+        )
+    ]
 
 
 # ============================================================
-# CLASIFICACIÓN DINÁMICA SEGÚN UMBRAL
+# CLASIFICACIÓN DINÁMICA
 # ============================================================
 
 df_filtrado = df_filtrado.copy()
@@ -423,134 +404,269 @@ df_filtrado["en_riesgo"] = (
 
 
 # ============================================================
-# ZONA SUPERIOR - KPI CARDS
+# 5 VISTAS FUNCIONALES
 # ============================================================
 
-st.subheader(
-    "Resumen ejecutivo"
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    [
+        "Identificar riesgo",
+        "Comparar ciudades",
+        "Priorizar exposición",
+        "Revisar distribuidor",
+        "Evaluar modelo"
+    ]
 )
 
 
-total_distribuidores = (
-    len(df_filtrado)
-)
+# ============================================================
+# VISTA 1
+# ¿Cuántos distribuidores requieren atención y cuáles primero?
+# ============================================================
 
+with tab1:
 
-distribuidores_riesgo = int(
-    df_filtrado[
-        "en_riesgo"
-    ].sum()
-)
-
-
-probabilidad_promedio = (
-    df_filtrado[
-        "probabilidad_mora"
-    ].mean()
-    if total_distribuidores > 0
-    else 0
-)
-
-
-valor_en_riesgo = (
-    df_filtrado.loc[
-        df_filtrado["en_riesgo"],
-        "saldo_actual"
-    ].sum()
-)
-
-
-porcentaje_riesgo = (
-    distribuidores_riesgo
-    / total_distribuidores
-    * 100
-    if total_distribuidores > 0
-    else 0
-)
-
-
-col1, col2, col3, col4 = (
-    st.columns(4)
-)
-
-
-with col1:
-
-    st.metric(
-        label="Distribuidores analizados",
-        value=f"{total_distribuidores:,}"
+    st.header(
+        "Identificar distribuidores en riesgo"
     )
 
+    st.caption(
+        "Esta vista muestra el volumen y los casos con mayor "
+        "probabilidad de mora para ayudarte a decidir qué "
+        "distribuidores deben revisarse primero."
+    )
 
-with col2:
+    total_distribuidores = len(
+        df_filtrado
+    )
 
-    st.metric(
-        label="Distribuidores en riesgo",
-        value=f"{distribuidores_riesgo:,}",
-        delta=(
-            f"{porcentaje_riesgo:.1f}% del total"
-        ),
-        delta_color="inverse",
-        help=(
-            "Distribuidores cuya probabilidad de mora "
-            "es igual o superior al umbral seleccionado."
+    distribuidores_riesgo = int(
+        df_filtrado[
+            "en_riesgo"
+        ].sum()
+    )
+
+    probabilidad_promedio = (
+        df_filtrado[
+            "probabilidad_mora"
+        ].mean()
+        if total_distribuidores > 0
+        else 0
+    )
+
+    saldo_expuesto = (
+        df_filtrado.loc[
+            df_filtrado[
+                "en_riesgo"
+            ],
+            "saldo_actual"
+        ].sum()
+    )
+
+    porcentaje_riesgo = (
+        distribuidores_riesgo
+        / total_distribuidores
+        * 100
+        if total_distribuidores > 0
+        else 0
+    )
+
+    col1, col2, col3, col4 = (
+        st.columns(4)
+    )
+
+    with col1:
+
+        st.metric(
+            "Distribuidores analizados",
+            f"{total_distribuidores:,}"
+        )
+
+    with col2:
+
+        st.metric(
+            "Distribuidores en riesgo",
+            f"{distribuidores_riesgo:,}",
+            delta=(
+                f"{porcentaje_riesgo:.1f}% "
+                f"del total"
+            ),
+            delta_color="inverse",
+            help=(
+                "Distribuidores cuya probabilidad "
+                "de mora es igual o superior al "
+                "umbral seleccionado."
+            )
+        )
+
+    with col3:
+
+        st.metric(
+            "Probabilidad promedio de mora",
+            f"{probabilidad_promedio:.1%}"
+        )
+
+    with col4:
+
+        st.metric(
+            "Saldo expuesto en riesgo",
+            formatear_cop(
+                saldo_expuesto
+            ),
+            help=(
+                "Suma del saldo actual de los "
+                "distribuidores que superan "
+                "el umbral seleccionado."
+            )
+        )
+
+    # --------------------------------------------------------
+    # Tabla prioritaria
+    # --------------------------------------------------------
+
+    st.subheader(
+        "Casos que requieren atención"
+    )
+
+    df_prioritarios = (
+        df_filtrado[
+            df_filtrado["en_riesgo"]
+        ]
+        .copy()
+        .sort_values(
+            by=[
+                "probabilidad_mora",
+                "saldo_actual"
+            ],
+            ascending=[
+                False,
+                False
+            ]
         )
     )
 
+    if not df_prioritarios.empty:
 
-with col3:
-
-    st.metric(
-        label="Probabilidad promedio de mora",
-        value=f"{probabilidad_promedio:.1%}",
-        help=(
-            "Promedio de la probabilidad de mora "
-            "para los distribuidores visibles."
+        df_prioritarios[
+            "accion_sugerida"
+        ] = (
+            df_prioritarios
+            .apply(
+                generar_accion,
+                axis=1
+            )
         )
+
+        tabla_prioritarios = (
+            df_prioritarios[
+                [
+                    "id_distribuidor",
+                    "ciudad",
+                    "probabilidad_mora",
+                    "saldo_actual",
+                    "nivel_riesgo",
+                    "accion_sugerida"
+                ]
+            ]
+            .copy()
+        )
+
+        tabla_prioritarios = (
+            tabla_prioritarios
+            .rename(
+                columns={
+                    "id_distribuidor":
+                        "ID",
+                    "ciudad":
+                        "Ciudad",
+                    "probabilidad_mora":
+                        "Probabilidad de mora",
+                    "saldo_actual":
+                        "Saldo actual",
+                    "nivel_riesgo":
+                        "Nivel de riesgo",
+                    "accion_sugerida":
+                        "Acción sugerida"
+                }
+            )
+        )
+
+        tabla_prioritarios[
+            "Probabilidad de mora"
+        ] = (
+            tabla_prioritarios[
+                "Probabilidad de mora"
+            ]
+            * 100
+        )
+
+        st.dataframe(
+            tabla_prioritarios,
+            hide_index=True,
+            width="stretch",
+            column_config={
+
+                "Probabilidad de mora":
+                    st.column_config.ProgressColumn(
+                        "Probabilidad de mora",
+                        format="%.1f%%",
+                        min_value=0,
+                        max_value=100
+                    ),
+
+                "Saldo actual":
+                    st.column_config.NumberColumn(
+                        "Saldo actual",
+                        format="COP %,.0f"
+                    )
+            }
+        )
+
+        csv_prioritarios = (
+            tabla_prioritarios
+            .to_csv(
+                index=False
+            )
+            .encode(
+                "utf-8-sig"
+            )
+        )
+
+        st.download_button(
+            label=(
+                "Descargar distribuidores "
+                "prioritarios"
+            ),
+            data=csv_prioritarios,
+            file_name=(
+                "solaris_clientes_prioritarios.csv"
+            ),
+            mime="text/csv"
+        )
+
+    else:
+
+        st.info(
+            "No hay distribuidores que superen "
+            "el umbral seleccionado."
+        )
+
+
+# ============================================================
+# VISTA 2
+# ¿En qué ciudades se concentra un mayor riesgo?
+# ============================================================
+
+with tab2:
+
+    st.header(
+        "Comparar ciudades"
     )
 
-
-# ============================================================
-# MEJORA 1
-# KPI MÁS CLARO DE EXPOSICIÓN ECONÓMICA
-# ============================================================
-
-with col4:
-
-    st.metric(
-        label="Saldo expuesto en riesgo",
-        value=(
-            f"COP "
-            f"{valor_en_riesgo / 1_000_000_000:.2f} "
-            f"mil M"
-        ),
-        help=(
-            "Suma del saldo actual de los distribuidores "
-            "cuya probabilidad de mora supera el "
-            "umbral seleccionado."
-        )
+    st.caption(
+        "Esta vista muestra cómo cambia el riesgo entre "
+        "ciudades para ayudarte a decidir dónde concentrar "
+        "el seguimiento de cartera."
     )
-
-
-# ============================================================
-# ZONA MEDIA - GRÁFICOS
-# ============================================================
-
-st.subheader(
-    "Contexto del riesgo"
-)
-
-graf_col1, graf_col2 = (
-    st.columns(2)
-)
-
-
-# ============================================================
-# MEJORA 3
-# RIESGO POR CIUDAD MÁS FÁCIL DE INTERPRETAR
-# ============================================================
-
-with graf_col1:
 
     riesgo_ciudad = (
         df_filtrado
@@ -574,7 +690,6 @@ with graf_col1:
         )
     )
 
-
     riesgo_ciudad[
         "porcentaje_en_riesgo"
     ] = (
@@ -588,7 +703,6 @@ with graf_col1:
         * 100
     )
 
-
     riesgo_ciudad = (
         riesgo_ciudad
         .sort_values(
@@ -597,6 +711,12 @@ with graf_col1:
         )
     )
 
+
+    # ========================================================
+    # AJUSTE 1
+    # La barra = probabilidad promedio.
+    # El texto = porcentaje que supera el umbral.
+    # ========================================================
 
     fig_ciudad = px.bar(
         riesgo_ciudad,
@@ -615,7 +735,7 @@ with graf_col1:
             ]
             .apply(
                 lambda x:
-                f"{x:.1f}% en riesgo"
+                f"{x:.1f}% supera el umbral"
             )
         ),
         hover_data={
@@ -632,19 +752,19 @@ with graf_col1:
             "distribuidores":
                 "Distribuidores analizados",
             "distribuidores_en_riesgo":
-                "Distribuidores en riesgo",
+                "Distribuidores que superan el umbral",
             "porcentaje_en_riesgo":
-                "% en riesgo"
+                "% que supera el umbral"
         },
-        title="Riesgo de mora por ciudad"
+        title=(
+            "Probabilidad promedio de mora por ciudad"
+        )
     )
-
 
     fig_ciudad.update_traces(
         textposition="outside",
         cliponaxis=False
     )
-
 
     if not riesgo_ciudad.empty:
 
@@ -658,7 +778,7 @@ with graf_col1:
             1,
             max(
                 0.20,
-                max_probabilidad * 1.40
+                max_probabilidad * 1.55
             )
         )
 
@@ -669,7 +789,6 @@ with graf_col1:
             ]
         )
 
-
     fig_ciudad.update_layout(
         coloraxis_colorbar=dict(
             title="Riesgo"
@@ -677,35 +796,68 @@ with graf_col1:
         xaxis_tickformat=".0%",
         yaxis_title=None,
         margin=dict(
-            r=90
+            r=160
         )
     )
-
 
     st.plotly_chart(
         fig_ciudad,
         width="stretch"
     )
 
+    if not riesgo_ciudad.empty:
+
+        ciudad_mayor_riesgo = (
+            riesgo_ciudad
+            .sort_values(
+                "probabilidad_mora",
+                ascending=False
+            )
+            .iloc[0]
+        )
+
+        st.info(
+            f"Prioridad geográfica: "
+            f"{ciudad_mayor_riesgo['ciudad']} "
+            f"presenta la mayor probabilidad "
+            f"promedio de mora "
+            f"({ciudad_mayor_riesgo['probabilidad_mora']:.1%}). "
+            f"Además, "
+            f"{ciudad_mayor_riesgo['porcentaje_en_riesgo']:.1f}% "
+            f"de sus distribuidores supera el "
+            f"umbral actual de {umbral:.0%}."
+        )
+
 
 # ============================================================
-# MEJORA 2
-# REEMPLAZAR GRÁFICO TEMPORAL POR EXPOSICIÓN ECONÓMICA
+# VISTA 3
+# ¿Dónde se concentra el mayor saldo expuesto?
 # ============================================================
 
-with graf_col2:
+with tab3:
+
+    st.header(
+        "Priorizar exposición económica"
+    )
+
+    st.caption(
+        "Esta vista muestra cuánto saldo está asociado a "
+        "distribuidores en riesgo para ayudarte a decidir "
+        "dónde priorizar recursos de seguimiento."
+    )
 
     df_en_riesgo = (
         df_filtrado[
-            df_filtrado["en_riesgo"]
+            df_filtrado[
+                "en_riesgo"
+            ]
         ]
         .copy()
     )
 
-
     if not df_en_riesgo.empty:
 
-        saldo_riesgo_ciudad = (
+        saldo_ciudad = (
             df_en_riesgo
             .groupby(
                 "ciudad",
@@ -727,9 +879,8 @@ with graf_col2:
             )
         )
 
-
         fig_saldo = px.bar(
-            saldo_riesgo_ciudad,
+            saldo_ciudad,
             x="saldo_en_riesgo",
             y="ciudad",
             orientation="h",
@@ -739,7 +890,7 @@ with graf_col2:
                 [1.0, "#E74C3C"]
             ],
             text=(
-                saldo_riesgo_ciudad[
+                saldo_ciudad[
                     "distribuidores_en_riesgo"
                 ]
                 .apply(
@@ -748,8 +899,10 @@ with graf_col2:
                 )
             ),
             hover_data={
-                "distribuidores_en_riesgo": True,
-                "saldo_en_riesgo": ":,.0f"
+                "distribuidores_en_riesgo":
+                    True,
+                "saldo_en_riesgo":
+                    ":,.0f"
             },
             labels={
                 "saldo_en_riesgo":
@@ -764,12 +917,10 @@ with graf_col2:
             )
         )
 
-
         fig_saldo.update_traces(
             textposition="outside",
             cliponaxis=False
         )
-
 
         fig_saldo.update_layout(
             yaxis_title=None,
@@ -780,289 +931,469 @@ with graf_col2:
                 title="Exposición"
             ),
             margin=dict(
-                r=70
+                r=80
             )
         )
-
 
         st.plotly_chart(
             fig_saldo,
             width="stretch"
         )
 
+        ciudad_mayor_exposicion = (
+            saldo_ciudad
+            .sort_values(
+                "saldo_en_riesgo",
+                ascending=False
+            )
+            .iloc[0]
+        )
+
+        st.warning(
+            f"Mayor exposición: "
+            f"{ciudad_mayor_exposicion['ciudad']} "
+            f"concentra "
+            f"{formatear_cop(ciudad_mayor_exposicion['saldo_en_riesgo'])} "
+            f"en saldo expuesto y "
+            f"{int(ciudad_mayor_exposicion['distribuidores_en_riesgo'])} "
+            f"distribuidores en riesgo."
+        )
 
     else:
 
         st.info(
-            "No hay distribuidores que superen "
-            "el umbral de riesgo seleccionado."
+            "No existen distribuidores en riesgo "
+            "con el umbral seleccionado."
         )
 
 
 # ============================================================
-# ZONA INFERIOR - DISTRIBUIDORES PRIORITARIOS
+# VISTA 4
+# ¿Un distribuidor específico requiere revisión?
 # ============================================================
 
-st.subheader(
-    "Distribuidores prioritarios"
-)
+with tab4:
+
+    st.header(
+        "Revisar un distribuidor"
+    )
+
+    st.caption(
+        "Esta vista muestra la situación individual de un "
+        "distribuidor para ayudarte a decidir si requiere "
+        "una revisión prioritaria."
+    )
 
 
-df_prioritarios = (
-    df_filtrado[
-        df_filtrado["en_riesgo"]
-    ]
-    .copy()
-)
+    # ========================================================
+    # AJUSTE 2
+    # Ordenar primero por mayor probabilidad de mora.
+    # Así la vista abre mostrando el caso más crítico.
+    # ========================================================
 
-
-# ------------------------------------------------------------
-# Ordenar primero por probabilidad y luego por saldo
-# ------------------------------------------------------------
-
-df_prioritarios = (
-    df_prioritarios
-    .sort_values(
-        by=[
+    distribuidores_ordenados = (
+        df_filtrado
+        .sort_values(
             "probabilidad_mora",
-            "saldo_actual"
-        ],
-        ascending=[
-            False,
-            False
-        ]
-    )
-)
-
-
-# ------------------------------------------------------------
-# Acción sugerida
-# ------------------------------------------------------------
-
-if not df_prioritarios.empty:
-
-    df_prioritarios[
-        "accion_sugerida"
-    ] = (
-        df_prioritarios
-        .apply(
-            generar_accion,
-            axis=1
+            ascending=False
         )
-    )
-
-
-# ============================================================
-# TABLA COMPACTA PARA PANTALLA
-# ============================================================
-
-if not df_prioritarios.empty:
-
-    columnas_tabla = [
-        "id_distribuidor",
-        "ciudad",
-        "probabilidad_mora",
-        "saldo_actual",
-        "nivel_riesgo",
-        "accion_sugerida"
-    ]
-
-
-    tabla_prioritarios = (
-        df_prioritarios[
-            columnas_tabla
-        ]
         .copy()
     )
 
+    ids_disponibles = (
+        distribuidores_ordenados[
+            "id_distribuidor"
+        ]
+        .dropna()
+        .astype(int)
+        .tolist()
+    )
 
-    tabla_prioritarios = (
-        tabla_prioritarios
-        .rename(
-            columns={
-                "id_distribuidor":
-                    "ID",
-                "ciudad":
+
+    if len(ids_disponibles) > 0:
+
+        id_seleccionado = (
+            st.selectbox(
+                "Selecciona un distribuidor",
+                ids_disponibles,
+                index=0
+            )
+        )
+
+        caso = (
+            df_filtrado[
+                df_filtrado[
+                    "id_distribuidor"
+                ]
+                == id_seleccionado
+            ]
+            .iloc[0]
+        )
+
+        c1, c2, c3, c4 = (
+            st.columns(4)
+        )
+
+        with c1:
+
+            st.metric(
+                "Probabilidad de mora",
+                f"{caso['probabilidad_mora']:.1%}"
+            )
+
+        with c2:
+
+            st.metric(
+                "Saldo actual",
+                formatear_cop(
+                    caso["saldo_actual"]
+                )
+            )
+
+        with c3:
+
+            cuotas_pagadas = caso.get(
+                "cuotas_pagadas",
+                np.nan
+            )
+
+            cuotas_totales = caso.get(
+                "cuotas_totales",
+                np.nan
+            )
+
+            if (
+                pd.notna(cuotas_pagadas)
+                and
+                pd.notna(cuotas_totales)
+            ):
+
+                valor_cuotas = (
+                    f"{cuotas_pagadas:.0f} "
+                    f"de "
+                    f"{cuotas_totales:.0f}"
+                )
+
+            else:
+
+                valor_cuotas = "Sin dato"
+
+            st.metric(
+                "Cuotas pagadas",
+                valor_cuotas
+            )
+
+        with c4:
+
+            score = caso.get(
+                "score_externo",
+                np.nan
+            )
+
+            if pd.notna(score):
+                score_mostrar = f"{score:.0f}"
+
+            else:
+                score_mostrar = "Sin dato"
+
+            st.metric(
+                "Score externo",
+                score_mostrar
+            )
+
+
+        st.subheader(
+            "Perfil del distribuidor"
+        )
+
+
+        perfil = pd.DataFrame(
+            {
+                "Variable": [
                     "Ciudad",
-                "probabilidad_mora":
-                    "Probabilidad de mora",
-                "saldo_actual":
+                    "Edad",
+                    "Nivel educativo",
+                    "Ingreso mensual",
                     "Saldo actual",
-                "nivel_riesgo":
-                    "Nivel de riesgo",
-                "accion_sugerida":
-                    "Acción sugerida"
+                    "Cuotas pagadas",
+                    "Cuotas totales",
+                    "Probabilidad de mora"
+                ],
+
+                "Valor": [
+
+                    caso.get(
+                        "ciudad",
+                        "Sin dato"
+                    ),
+
+                    (
+                        f"{caso['edad']:.0f}"
+                        if pd.notna(
+                            caso.get(
+                                "edad",
+                                np.nan
+                            )
+                        )
+                        else "Sin dato"
+                    ),
+
+                    caso.get(
+                        "nivel_educativo",
+                        "Sin dato"
+                    ),
+
+                    (
+                        formatear_cop(
+                            caso[
+                                "ingreso_mensual"
+                            ]
+                        )
+                        if pd.notna(
+                            caso.get(
+                                "ingreso_mensual",
+                                np.nan
+                            )
+                        )
+                        else "Sin dato"
+                    ),
+
+                    formatear_cop(
+                        caso["saldo_actual"]
+                    ),
+
+                    (
+                        f"{caso['cuotas_pagadas']:.0f}"
+                        if pd.notna(
+                            caso.get(
+                                "cuotas_pagadas",
+                                np.nan
+                            )
+                        )
+                        else "Sin dato"
+                    ),
+
+                    (
+                        f"{caso['cuotas_totales']:.0f}"
+                        if pd.notna(
+                            caso.get(
+                                "cuotas_totales",
+                                np.nan
+                            )
+                        )
+                        else "Sin dato"
+                    ),
+
+                    f"{caso['probabilidad_mora']:.1%}"
+                ]
             }
         )
+
+        st.dataframe(
+            perfil,
+            hide_index=True,
+            width="stretch"
+        )
+
+        accion = generar_accion(
+            caso
+        )
+
+        if (
+            caso["probabilidad_mora"]
+            >= umbral
+        ):
+
+            st.error(
+                f"Acción sugerida: {accion}. "
+                f"Este distribuidor supera el "
+                f"umbral actual de {umbral:.0%}. "
+                f"Se recomienda revisión humana "
+                f"antes de tomar una decisión."
+            )
+
+        else:
+
+            st.success(
+                f"Acción sugerida: {accion}. "
+                f"Este distribuidor está por debajo "
+                f"del umbral actual de {umbral:.0%}."
+            )
+
+    else:
+
+        st.info(
+            "No hay distribuidores disponibles "
+            "con los filtros seleccionados."
+        )
+
+
+# ============================================================
+# VISTA 5
+# ¿El modelo puede apoyar la priorización?
+# ============================================================
+
+with tab5:
+
+    st.header(
+        "Evaluar el modelo"
     )
 
-
-    # ProgressColumn trabaja de 0 a 100
-    tabla_prioritarios[
-        "Probabilidad de mora"
-    ] = (
-        tabla_prioritarios[
-            "Probabilidad de mora"
-        ]
-        * 100
+    st.caption(
+        "Esta vista muestra el desempeño validado de SOLARIS "
+        "para ayudarte a decidir bajo qué condiciones puede "
+        "utilizarse como apoyo a la gestión de cartera."
     )
 
+    # --------------------------------------------------------
+    # Métricas del Módulo 4
+    # --------------------------------------------------------
 
-    st.dataframe(
-        tabla_prioritarios,
-        hide_index=True,
-        width="stretch",
-        column_config={
+    auc = 0.9588
+    precision = 0.9076
+    recall = 0.6278
+    meta_recall = 0.75
 
-            "Probabilidad de mora":
-                st.column_config.ProgressColumn(
-                    "Probabilidad de mora",
-                    format="%.1f%%",
-                    min_value=0,
-                    max_value=100
-                ),
+    m1, m2, m3, m4 = (
+        st.columns(4)
+    )
 
-            "Saldo actual":
-                st.column_config.NumberColumn(
-                    "Saldo actual",
-                    format="COP %,.0f"
-                )
+    with m1:
+
+        st.metric(
+            "ROC-AUC",
+            f"{auc:.1%}",
+            help=(
+                "Capacidad global del modelo "
+                "para diferenciar casos con "
+                "y sin mora."
+            )
+        )
+
+    with m2:
+
+        st.metric(
+            "Precisión en Moroso",
+            f"{precision:.1%}",
+            help=(
+                "De los distribuidores clasificados "
+                "como morosos, qué proporción "
+                "realmente lo era."
+            )
+        )
+
+    with m3:
+
+        st.metric(
+            "Recall en Moroso",
+            f"{recall:.1%}",
+            help=(
+                "De los morosos reales, qué "
+                "proporción detectó el modelo."
+            )
+        )
+
+    with m4:
+
+        st.metric(
+            "Meta de recall",
+            f"{meta_recall:.0%}"
+        )
+
+
+    # ========================================================
+    # AJUSTE 3
+    # Colores semánticos:
+    # rojo = recall actual por debajo de meta
+    # verde = meta de negocio
+    # ========================================================
+
+    comparacion_recall = pd.DataFrame(
+        {
+            "Indicador": [
+                "Recall actual",
+                "Meta de negocio"
+            ],
+
+            "Valor": [
+                recall * 100,
+                meta_recall * 100
+            ]
         }
     )
 
 
-else:
-
-    st.info(
-        "No hay distribuidores prioritarios "
-        "para el umbral seleccionado."
+    fig_modelo = px.bar(
+        comparacion_recall,
+        x="Indicador",
+        y="Valor",
+        color="Indicador",
+        color_discrete_map={
+            "Recall actual": "#E74C3C",
+            "Meta de negocio": "#27AE60"
+        },
+        text="Valor",
+        labels={
+            "Valor":
+                "Porcentaje (%)"
+        },
+        title=(
+            "Recall actual vs meta de negocio"
+        )
     )
 
+    fig_modelo.update_traces(
+        texttemplate="%{text:.1f}%",
+        textposition="outside"
+    )
 
-# ============================================================
-# DESCARGA CSV
-# ============================================================
-
-if not df_prioritarios.empty:
-
-    columnas_descarga = [
-        "id_distribuidor",
-        "ciudad",
-        "probabilidad_mora",
-        "saldo_actual",
-        "cuotas_pagadas",
-        "cuotas_totales",
-        "score_externo",
-        "nivel_riesgo",
-        "accion_sugerida"
-    ]
-
-
-    # Solo tomar columnas que existan
-    columnas_descarga = [
-        columna
-        for columna in columnas_descarga
-        if columna in df_prioritarios.columns
-    ]
-
-
-    df_descarga = (
-        df_prioritarios[
-            columnas_descarga
+    fig_modelo.update_yaxes(
+        range=[
+            0,
+            100
         ]
-        .copy()
+    )
+
+    fig_modelo.update_layout(
+        showlegend=False
+    )
+
+    st.plotly_chart(
+        fig_modelo,
+        width="stretch"
     )
 
 
-    if (
-        "probabilidad_mora"
-        in df_descarga.columns
-    ):
+    if recall < meta_recall:
 
-        df_descarga[
-            "probabilidad_mora"
-        ] = (
-            df_descarga[
-                "probabilidad_mora"
-            ]
-            * 100
+        diferencia = (
+            meta_recall
+            - recall
         )
 
-
-    df_descarga = (
-        df_descarga
-        .rename(
-            columns={
-                "id_distribuidor":
-                    "ID distribuidor",
-                "ciudad":
-                    "Ciudad",
-                "probabilidad_mora":
-                    "Probabilidad de mora (%)",
-                "saldo_actual":
-                    "Saldo actual",
-                "cuotas_pagadas":
-                    "Cuotas pagadas",
-                "cuotas_totales":
-                    "Cuotas totales",
-                "score_externo":
-                    "Score externo",
-                "nivel_riesgo":
-                    "Nivel de riesgo",
-                "accion_sugerida":
-                    "Acción sugerida"
-            }
-        )
-    )
-
-
-    if (
-        "Score externo"
-        in df_descarga.columns
-    ):
-
-        df_descarga[
-            "Score externo"
-        ] = (
-            df_descarga[
-                "Score externo"
-            ]
-            .where(
-                df_descarga[
-                    "Score externo"
-                ].notna(),
-                "Sin dato"
-            )
+        st.warning(
+            f"El recall actual está "
+            f"{diferencia:.1%} por debajo de la meta. "
+            f"Decisión recomendada: utilizar SOLARIS "
+            f"como herramienta de priorización y apoyo "
+            f"a la revisión humana, pero no como "
+            f"mecanismo automático de rechazo o "
+            f"restricción de crédito."
         )
 
+    else:
 
-    csv_prioritarios = (
-        df_descarga
-        .to_csv(
-            index=False
+        st.success(
+            "El recall alcanza la meta de negocio "
+            "establecida."
         )
-        .encode(
-            "utf-8-sig"
-        )
-    )
-
-
-    st.download_button(
-        label=(
-            "Descargar lista de "
-            "distribuidores prioritarios"
-        ),
-        data=csv_prioritarios,
-        file_name=(
-            "solaris_clientes_prioritarios.csv"
-        ),
-        mime="text/csv"
-    )
 
 
 # ============================================================
-# NOTA DE USO
+# NOTA GENERAL
 # ============================================================
+
+st.divider()
 
 st.caption(
     "SOLARIS es una herramienta de apoyo a la priorización. "
