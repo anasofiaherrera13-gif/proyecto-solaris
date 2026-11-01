@@ -55,41 +55,66 @@ def normalizar_ciudad(valor):
     clave = limpiar_texto(valor)
 
     mapa_ciudades = {
-        # Medellín
-        "med": "Medellín",
-        "mdl": "Medellín",
-        "medellin": "Medellín",
 
-        # Bogotá
-        "bog": "Bogotá",
-        "bogota": "Bogotá",
+    # Medellín
+    "med": "Medellín",
+    "mdl": "Medellín",
+    "medellin": "Medellín",
 
-        # Cali
-        "cali": "Cali",
-        "santiago de cali": "Cali",
+    # Bogotá
+    "bta": "Bogotá",
+    "bog": "Bogotá",
+    "bogota": "Bogotá",
 
-        # Villavicencio
-        "villavo": "Villavicencio",
-        "villavicencio": "Villavicencio",
+    # Barranquilla
+    "baq": "Barranquilla",
+    "b quilla": "Barranquilla",
+    "barranqilla": "Barranquilla",
+    "barranquilla": "Barranquilla",
 
-        # Barranquilla
-        "b quilla": "Barranquilla",
-        "barranquilla": "Barranquilla",
+    # Bucaramanga
+    "bga": "Bucaramanga",
+    "b manga": "Bucaramanga",
+    "bucaramanga": "Bucaramanga",
 
-        # Bucaramanga
-        "b manga": "Bucaramanga",
-        "bucaramanga": "Bucaramanga",
+    # Cali
+    "cal": "Cali",
+    "cali": "Cali",
+    "santiago de cali": "Cali",
 
-        # Pereira
-        "pei": "Pereira",
-        "pereira": "Pereira",
+    # Villavicencio
+    "villavo": "Villavicencio",
+    "villavicencio": "Villavicencio",
 
-        # Otras ciudades
-        "ibague": "Ibagué",
-        "cartagena": "Cartagena",
-        "santa marta": "Santa Marta",
-        "cucuta": "Cúcuta",
-    }
+    # Barranquilla
+    "b quilla": "Barranquilla",
+    "barranquilla": "Barranquilla",
+
+    # Bucaramanga
+    "b manga": "Bucaramanga",
+    "bucaramanga": "Bucaramanga",
+
+    # Pereira
+    "pei": "Pereira",
+    "pereira": "Pereira",
+
+    # Santa Marta
+    "smr": "Santa Marta",
+    "sta marta": "Santa Marta",
+    "santa marta": "Santa Marta",
+
+    # Cúcuta
+    "san jose de cucuta": "Cúcuta",
+    "cucuta": "Cúcuta",
+
+    # Manizales
+    "mzl": "Manizales",
+    "manizales": "Manizales",
+
+    # Otras
+    "ibague": "Ibagué",
+    "cartagena": "Cartagena",
+}
 
     if clave in mapa_ciudades:
         return mapa_ciudades[clave]
@@ -109,7 +134,7 @@ def formatear_pesos(valor):
 
     if valor >= 1_000_000_000:
         numero = valor / 1_000_000_000
-        return f"${numero:.2f} mil M"
+        return f"${numero:.2f}B"
 
     elif valor >= 1_000_000:
         numero = valor / 1_000_000
